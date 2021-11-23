@@ -104,18 +104,19 @@ First, install PyTorch meeting your environment (at least 1.7, recommmended 1.10
 ```bash
 pip3 install torch==1.10.0+cu111 torchvision==0.11.1+cu111 torchaudio==0.10.0+cu111 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 ```
-Conda (w/ CUDA 10.1):
-```bash
-conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
-```
-
 Then, use the following command to install the rest of the libraries:
 ```bash
 pip3 install tqdm ninja h5py kornia matplotlib pandas sklearn scipy seaborn wandb PyYaml click requests pyspng imageio-ffmpeg prdc
 ```
+
+
+If you are using Conda (w/ CUDA 10.1) issue the following commands:
+```bash
+conda install pytorch torchvision torchaudio cudatoolkit=10.1 -c pytorch
+```
 Conda cannot install all the packages. However, install as many as possible via the conda command:
 ```bash
-conda install tqdm ninja h5py kornia matplotlib pandas scikit-learn scipy seaborn wandb PyYaml click requests pyspng imageio-ffmpeg prdc
+conda install tqdm ninja h5py matplotlib pandas scikit-learn scipy seaborn PyYaml click requests
 ```
 Make sure pip is installing in the conda venv by running ```which pip```, and install the remaining packages using pip: 
 ```bash
