@@ -150,7 +150,7 @@ def load_worker(local_rank, cfgs, gpus_per_node, run_name, hdf5_path):
                                       num_workers=cfgs.RUN.num_workers,
                                       sampler=train_sampler,
                                       drop_last=True,
-                                      persistent_workers=True)
+                                      persistent_workers=cfgs.RUN.num_workers!=0)
     else:
         train_dataloader = None
 
