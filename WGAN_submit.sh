@@ -26,5 +26,7 @@ python src/main.py \
 -data ./data/gpm_37_32px/ \
 -save ./output/ \
 --save_fake_images \
---num_workers 1 \
+--num_workers 0 \
+--load_train_hdf5 \
+--load_data_in_memory \
 --save_every 100
