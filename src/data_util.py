@@ -47,13 +47,13 @@ class CenterCropLongEdge(object):
     def __repr__(self):
         return self.__class__.__name__
 
-def alt_loader(path: str) -> Any:
+def alt_loader(path: str):
     """
     Adapted from the default_loader: https://pytorch.org/vision/stable/_modules/torchvision/datasets/folder.html
     """
     with open(path, 'rb') as f:
         img = Image.open(f)
-        return img
+        return img.convert('L')
 
 class Dataset_(Dataset):
     def __init__(self,
@@ -75,7 +75,8 @@ class Dataset_(Dataset):
         self.load_data_in_memory = load_data_in_memory
         self.img_channels = img_channels
         self.trsf_list = []
-
+       
+        print(resize_size) 
         if self.hdf5_path is None:
             if crop_long_edge:
                 crop_op = RandomCropLongEdge() if self.train else CenterCropLongEdge()
@@ -88,8 +89,10 @@ class Dataset_(Dataset):
 
         if self.random_flip:
             self.trsf_list += [transforms.RandomHorizontalFlip()]
-
-        self.trsf_list += [transforms.ToTensor(), transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])]
+        if self.img_channels == 1:
+            self.trsf_list += [transforms.Grayscale(), transforms.ToTensor(), transforms.Normalize([0.5], [0.5])]
+        else:
+            self.trsf_list += [transforms.ToTensor(), transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])]
         self.trsf = transforms.Compose(self.trsf_list)
 
         self.load_dataset()
@@ -113,11 +116,8 @@ class Dataset_(Dataset):
         else:
             mode = "train" if self.train == True else "valid"
             root = os.path.join(self.data_dir, mode)
-            if img_channels == 3:
-                self.data = ImageFolder(root=root)
-            else:
-                self.data = ImageFolder(root=root, loader=alt_loader)
-
+            self.data = ImageFolder(root=root)
+            
     def _get_hdf5(self, index):
         with h5.File(self.hdf5_path, "r") as f:
             img = np.transpose(f["imgs"][index], (1, 2, 0))
