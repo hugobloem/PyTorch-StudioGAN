@@ -47,6 +47,13 @@ class CenterCropLongEdge(object):
     def __repr__(self):
         return self.__class__.__name__
 
+def alt_loader(path: str) -> Any:
+    """
+    Adapted from the default_loader: https://pytorch.org/vision/stable/_modules/torchvision/datasets/folder.html
+    """
+    with open(path, 'rb') as f:
+        img = Image.open(f)
+        return img
 
 class Dataset_(Dataset):
     def __init__(self,
@@ -57,7 +64,8 @@ class Dataset_(Dataset):
                  resize_size=None,
                  random_flip=False,
                  hdf5_path=None,
-                 load_data_in_memory=False):
+                 load_data_in_memory=False,
+                 img_channels=3):
         super(Dataset_, self).__init__()
         self.data_name = data_name
         self.data_dir = data_dir
@@ -65,6 +73,7 @@ class Dataset_(Dataset):
         self.random_flip = random_flip
         self.hdf5_path = hdf5_path
         self.load_data_in_memory = load_data_in_memory
+        self.img_channels = img_channels
         self.trsf_list = []
 
         if self.hdf5_path is None:
@@ -104,7 +113,10 @@ class Dataset_(Dataset):
         else:
             mode = "train" if self.train == True else "valid"
             root = os.path.join(self.data_dir, mode)
-            self.data = ImageFolder(root=root)
+            if img_channels == 3:
+                self.data = ImageFolder(root=root)
+            else:
+                self.data = ImageFolder(root=root, loader=alt_loader)
 
     def _get_hdf5(self, index):
         with h5.File(self.hdf5_path, "r") as f:

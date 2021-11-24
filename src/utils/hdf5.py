@@ -49,7 +49,8 @@ def make_hdf5(name, img_size, crop_long_edge, resize_size, data_dir, DATA, RUN):
                            resize_size=resize_size,
                            random_flip=False,
                            hdf5_path=None,
-                           load_data_in_memory=False)
+                           load_data_in_memory=False,
+                           img_channels=cfgs.DATA.img_channels)
 
         dataloader = DataLoader(dataset,
                                 batch_size=500,
