@@ -1,0 +1,341 @@
+[INFO] 2021-11-24 10:06:38 > Run name : gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:06:38 > cfgs.DATA =
+[INFO] 2021-11-24 10:06:38 > {
+  "name": "gpm",
+  "img_size": 32,
+  "num_classes": 1,
+  "img_channels": 1
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.MODEL =
+[INFO] 2021-11-24 10:06:38 > {
+  "backbone": "big_resnet",
+  "g_cond_mtd": "cBN",
+  "d_cond_mtd": "PD",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": false,
+  "apply_d_sn": false,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": false,
+  "attn_g_loc": [
+    "N/A"
+  ],
+  "attn_d_loc": [
+    "N/A"
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 64,
+  "w_dim": "N/A",
+  "g_shared_dim": 8,
+  "g_conv_dim": 64,
+  "d_conv_dim": 64,
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": true,
+  "g_ema_decay": 0.9999,
+  "g_ema_start": 100,
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.LOSS =
+[INFO] 2021-11-24 10:06:38 > {
+  "adv_loss": "hinge",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": false,
+  "gp_lambda": "N/A",
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.OPTIMIZATION =
+[INFO] 2021-11-24 10:06:38 > {
+  "type_": "Adam",
+  "batch_size": 256,
+  "acml_steps": 1,
+  "g_lr": 0.0001,
+  "d_lr": 0.0004,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.0,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 1,
+  "total_steps": 100000,
+  "world_size": 1
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.PRE =
+[INFO] 2021-11-24 10:06:38 > {
+  "apply_rflip": true,
+  "crop_long_edge": true,
+  "resize_size": 32
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.AUG =
+[INFO] 2021-11-24 10:06:38 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.RUN =
+[INFO] 2021-11-24 10:06:38 > {
+  "entity": null,
+  "project": null,
+  "cfg_file": "src/configs/GPM/ICRGAN.yaml",
+  "data_dir": "./data/gpm_37_32px/",
+  "save_dir": "./output/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 2335,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 1,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": false,
+  "langevin_rate": -1,
+  "langevin_noise_std": -1,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": false,
+  "load_data_in_memory": false,
+  "eval": false,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 100,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2021-11-24 10:06:38 > cfgs.STYLEGAN2 =
+[INFO] 2021-11-24 10:06:38 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2021-11-24 10:06:38 > Load gpm train dataset.
+[INFO] 2021-11-24 10:06:38 > Train dataset size: 3831
+[INFO] 2021-11-24 10:06:38 > Build a Generative Adversarial Network.
+[INFO] 2021-11-24 10:06:38 > Modules are located on './src/models.big_resnet'.
+[INFO] 2021-11-24 10:06:40 > Prepare exponential moving average generator with decay rate of 0.9999.
+[INFO] 2021-11-24 10:06:40 > Number of parameters: 3888651
+[INFO] 2021-11-24 10:06:40 > Generator(
+  (linear0): Linear(in_features=16, out_features=4096, bias=True)
+  (shared): Embedding(1, 8)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=24, out_features=256, bias=False)
+          (bias): Linear(in_features=24, out_features=256, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=24, out_features=256, bias=False)
+          (bias): Linear(in_features=24, out_features=256, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=24, out_features=256, bias=False)
+          (bias): Linear(in_features=24, out_features=256, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=24, out_features=256, bias=False)
+          (bias): Linear(in_features=24, out_features=256, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=24, out_features=256, bias=False)
+          (bias): Linear(in_features=24, out_features=256, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=24, out_features=256, bias=False)
+          (bias): Linear(in_features=24, out_features=256, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (bn4): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (activation): ReLU(inplace=True)
+  (conv2d5): Conv2d(256, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2021-11-24 10:06:40 > Number of parameters: 1056007
+[INFO] 2021-11-24 10:06:40 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscOptBlock(
+        (conv2d0): Conv2d(3, 128, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(3, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn0): BatchNorm2d(3, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (1): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (3): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (linear1): Linear(in_features=128, out_features=1, bias=True)
+  (embedding): Embedding(1, 128)
+)
+[INFO] 2021-11-24 10:06:49 > Start training!
+[INFO] 2021-11-24 10:12:49 > Step:    100 Progress: 0.1% Elapsed: 0:05:57 Gen_loss: 14.62 Dis_loss: 0.005921 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:12:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:12:50 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_100.png
+[INFO] 2021-11-24 10:12:50 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:18:39 > Step:    200 Progress: 0.2% Elapsed: 0:11:47 Gen_loss: 4.542 Dis_loss: 0.03474 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:18:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:18:40 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_200.png
+[INFO] 2021-11-24 10:18:40 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:24:30 > Step:    300 Progress: 0.3% Elapsed: 0:17:38 Gen_loss: 5.146 Dis_loss: 0.03764 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:24:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:24:31 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_300.png
+[INFO] 2021-11-24 10:24:31 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:30:21 > Step:    400 Progress: 0.4% Elapsed: 0:23:29 Gen_loss: 2.284 Dis_loss: 4.46 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:30:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:30:22 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_400.png
+[INFO] 2021-11-24 10:30:22 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:36:12 > Step:    500 Progress: 0.5% Elapsed: 0:29:20 Gen_loss: 3.107 Dis_loss: 0.03845 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:36:12 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:36:13 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_500.png
+[INFO] 2021-11-24 10:36:13 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:42:02 > Step:    600 Progress: 0.6% Elapsed: 0:35:10 Gen_loss: 2.236 Dis_loss: 0.06961 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:42:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:42:03 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_600.png
+[INFO] 2021-11-24 10:42:03 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38
+[INFO] 2021-11-24 10:47:53 > Step:    700 Progress: 0.7% Elapsed: 0:41:01 Gen_loss: 3.86 Dis_loss: 0.02682 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-24 10:47:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-24 10:47:53 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_24_10_06_38/generated_canvas_700.png
+[INFO] 2021-11-24 10:47:54 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_24_10_06_38

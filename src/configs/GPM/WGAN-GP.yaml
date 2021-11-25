@@ -12,7 +12,8 @@ LOSS:
   apply_gp: True
   gp_lambda: 10.0
 OPTIMIZATION:
-  batch_size: 2048
+  batch_size: 512
+  total_steps: 30000
   g_lr: 0.0001
   d_lr: 0.0004
   beta1: 0.0

@@ -1,0 +1,394 @@
+[INFO] 2021-11-25 11:30:40 > Run name : gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:30:40 > cfgs.DATA =
+[INFO] 2021-11-25 11:30:40 > {
+  "name": "gpm",
+  "img_size": 32,
+  "num_classes": 1,
+  "img_channels": 1
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.MODEL =
+[INFO] 2021-11-25 11:30:40 > {
+  "backbone": "resnet",
+  "g_cond_mtd": "W/O",
+  "d_cond_mtd": "W/O",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": false,
+  "apply_d_sn": false,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": false,
+  "attn_g_loc": [
+    "N/A"
+  ],
+  "attn_d_loc": [
+    "N/A"
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 8,
+  "w_dim": "N/A",
+  "g_shared_dim": "N/A",
+  "g_conv_dim": 16,
+  "d_conv_dim": 16,
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": false,
+  "g_ema_decay": "N/A",
+  "g_ema_start": "N/A",
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.LOSS =
+[INFO] 2021-11-25 11:30:40 > {
+  "adv_loss": "wasserstein",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": true,
+  "gp_lambda": 10.0,
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.OPTIMIZATION =
+[INFO] 2021-11-25 11:30:40 > {
+  "type_": "Adam",
+  "batch_size": 2048,
+  "acml_steps": 1,
+  "g_lr": 0.0001,
+  "d_lr": 0.0004,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.0,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 1,
+  "total_steps": 30000,
+  "world_size": 1
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.PRE =
+[INFO] 2021-11-25 11:30:40 > {
+  "apply_rflip": true,
+  "crop_long_edge": false,
+  "resize_size": null
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.AUG =
+[INFO] 2021-11-25 11:30:40 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.RUN =
+[INFO] 2021-11-25 11:30:40 > {
+  "entity": null,
+  "project": null,
+  "cfg_file": "src/configs/GPM/WGAN-GP.yaml",
+  "data_dir": "./data/gpm_37_32px/",
+  "save_dir": "./output/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 2228,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 0,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": false,
+  "langevin_rate": -1,
+  "langevin_noise_std": -1,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": true,
+  "load_data_in_memory": true,
+  "eval": false,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 100,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2021-11-25 11:30:40 > cfgs.STYLEGAN2 =
+[INFO] 2021-11-25 11:30:40 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2021-11-25 11:30:40 > Load gpm train dataset.
+[INFO] 2021-11-25 11:30:40 > Train dataset size: 3831
+[INFO] 2021-11-25 11:30:40 > Build a Generative Adversarial Network.
+[INFO] 2021-11-25 11:30:40 > Modules are located on './src/models.resnet'.
+[INFO] 2021-11-25 11:30:49 > Number of parameters: 244737
+[INFO] 2021-11-25 11:30:49 > Generator(
+  (linear0): Linear(in_features=8, out_features=1024, bias=True)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(64, 64, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (bn4): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (activation): ReLU(inplace=True)
+  (conv2d5): Conv2d(64, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2021-11-25 11:30:49 > Number of parameters: 66723
+[INFO] 2021-11-25 11:30:49 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscOptBlock(
+        (conv2d0): Conv2d(1, 32, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn0): BatchNorm2d(1, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (1): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(32, 32, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (3): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (linear1): Linear(in_features=32, out_features=1, bias=True)
+)
+[INFO] 2021-11-25 11:30:59 > Start training!
+[INFO] 2021-11-25 11:34:09 > Step:    100 Progress: 0.3% Elapsed: 0:03:08 Gen_loss: -10.53 Dis_loss: 4.804 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:34:09 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:34:10 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_100.png
+[INFO] 2021-11-25 11:34:11 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:37:24 > Step:    200 Progress: 0.7% Elapsed: 0:06:24 Gen_loss: -13.27 Dis_loss: 1.425 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:37:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:37:26 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_200.png
+[INFO] 2021-11-25 11:37:27 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:40:41 > Step:    300 Progress: 1.0% Elapsed: 0:09:41 Gen_loss: -22.79 Dis_loss: 1.385 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:40:41 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:40:42 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_300.png
+[INFO] 2021-11-25 11:40:43 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:43:57 > Step:    400 Progress: 1.3% Elapsed: 0:12:57 Gen_loss: -24.54 Dis_loss: 0.5457 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:43:57 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:43:58 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_400.png
+[INFO] 2021-11-25 11:43:59 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:47:13 > Step:    500 Progress: 1.7% Elapsed: 0:16:13 Gen_loss: -24.73 Dis_loss: 0.4912 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:47:13 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:47:14 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_500.png
+[INFO] 2021-11-25 11:47:15 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:50:29 > Step:    600 Progress: 2.0% Elapsed: 0:19:28 Gen_loss: -24.32 Dis_loss: 0.4329 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:50:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:50:30 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_600.png
+[INFO] 2021-11-25 11:50:31 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:53:44 > Step:    700 Progress: 2.3% Elapsed: 0:22:44 Gen_loss: -23.3 Dis_loss: 0.4056 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:53:44 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:53:45 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_700.png
+[INFO] 2021-11-25 11:53:46 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 11:57:00 > Step:    800 Progress: 2.7% Elapsed: 0:26:00 Gen_loss: -22.41 Dis_loss: 0.3523 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 11:57:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 11:57:01 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_800.png
+[INFO] 2021-11-25 11:57:02 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:00:15 > Step:    900 Progress: 3.0% Elapsed: 0:29:15 Gen_loss: -22.2 Dis_loss: 0.4046 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:00:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:00:16 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_900.png
+[INFO] 2021-11-25 12:00:17 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:03:30 > Step:   1000 Progress: 3.3% Elapsed: 0:32:30 Gen_loss: -21.9 Dis_loss: 0.3774 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:03:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:03:31 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1000.png
+[INFO] 2021-11-25 12:03:32 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:06:46 > Step:   1100 Progress: 3.7% Elapsed: 0:35:46 Gen_loss: -21.69 Dis_loss: 0.4018 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:06:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:06:47 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1100.png
+[INFO] 2021-11-25 12:06:48 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:10:02 > Step:   1200 Progress: 4.0% Elapsed: 0:39:01 Gen_loss: -21.02 Dis_loss: 0.3689 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:10:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:10:03 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1200.png
+[INFO] 2021-11-25 12:10:04 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:13:18 > Step:   1300 Progress: 4.3% Elapsed: 0:42:18 Gen_loss: -19.76 Dis_loss: 0.3562 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:13:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:13:19 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1300.png
+[INFO] 2021-11-25 12:13:20 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:16:34 > Step:   1400 Progress: 4.7% Elapsed: 0:45:34 Gen_loss: -22.0 Dis_loss: 0.3827 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:16:34 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:16:35 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1400.png
+[INFO] 2021-11-25 12:16:36 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:19:50 > Step:   1500 Progress: 5.0% Elapsed: 0:48:50 Gen_loss: -21.24 Dis_loss: 0.3163 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:19:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:19:51 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1500.png
+[INFO] 2021-11-25 12:19:52 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:23:06 > Step:   1600 Progress: 5.3% Elapsed: 0:52:05 Gen_loss: -21.42 Dis_loss: 0.2702 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:23:06 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:23:07 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1600.png
+[INFO] 2021-11-25 12:23:08 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:26:21 > Step:   1700 Progress: 5.7% Elapsed: 0:55:21 Gen_loss: -21.92 Dis_loss: 0.2271 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:26:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:26:22 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1700.png
+[INFO] 2021-11-25 12:26:23 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:29:37 > Step:   1800 Progress: 6.0% Elapsed: 0:58:37 Gen_loss: -22.3 Dis_loss: 0.195 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:29:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:29:38 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1800.png
+[INFO] 2021-11-25 12:29:39 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:32:53 > Step:   1900 Progress: 6.3% Elapsed: 1:01:52 Gen_loss: -22.44 Dis_loss: 0.1478 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:32:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:32:54 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_1900.png
+[INFO] 2021-11-25 12:32:55 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:36:08 > Step:   2000 Progress: 6.7% Elapsed: 1:05:08 Gen_loss: -22.73 Dis_loss: 0.6358 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:36:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:36:09 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2000.png
+[INFO] 2021-11-25 12:36:10 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:39:24 > Step:   2100 Progress: 7.0% Elapsed: 1:08:24 Gen_loss: -24.86 Dis_loss: 0.3913 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:39:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:39:25 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2100.png
+[INFO] 2021-11-25 12:39:26 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:42:40 > Step:   2200 Progress: 7.3% Elapsed: 1:11:39 Gen_loss: -24.41 Dis_loss: 0.2356 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:42:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:42:41 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2200.png
+[INFO] 2021-11-25 12:42:42 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:45:55 > Step:   2300 Progress: 7.7% Elapsed: 1:14:55 Gen_loss: -21.93 Dis_loss: 0.2116 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:45:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:45:56 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2300.png
+[INFO] 2021-11-25 12:45:57 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:49:11 > Step:   2400 Progress: 8.0% Elapsed: 1:18:10 Gen_loss: -22.4 Dis_loss: 0.154 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:49:11 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:49:12 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2400.png
+[INFO] 2021-11-25 12:49:13 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:52:27 > Step:   2500 Progress: 8.3% Elapsed: 1:21:26 Gen_loss: -21.64 Dis_loss: 0.104 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:52:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:52:28 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2500.png
+[INFO] 2021-11-25 12:52:28 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:55:42 > Step:   2600 Progress: 8.7% Elapsed: 1:24:42 Gen_loss: -21.25 Dis_loss: 0.07892 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:55:42 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:55:43 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2600.png
+[INFO] 2021-11-25 12:55:44 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
+[INFO] 2021-11-25 12:58:58 > Step:   2700 Progress: 9.0% Elapsed: 1:27:58 Gen_loss: -21.18 Dis_loss: 0.06794 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 12:58:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 12:58:59 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_25_11_30_40/generated_canvas_2700.png
+[INFO] 2021-11-25 12:59:00 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_25_11_30_40
