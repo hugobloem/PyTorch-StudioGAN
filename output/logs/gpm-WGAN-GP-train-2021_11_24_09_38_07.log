@@ -736,3 +736,303 @@
 [INFO] 2021-11-25 12:48:40 > Visualize (num_rows x 8) fake image canvans.
 [INFO] 2021-11-25 12:48:40 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11300.png
 [INFO] 2021-11-25 12:48:41 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 13:05:36 > Step:  11400 Progress: 11.4% Elapsed: 1 day, 3:27:06 Gen_loss: -5.908e+03 Dis_loss: 190.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 13:05:36 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 13:05:36 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11400.png
+[INFO] 2021-11-25 13:05:36 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 13:23:07 > Step:  11500 Progress: 11.5% Elapsed: 1 day, 3:44:37 Gen_loss: -6.108e+03 Dis_loss: 117.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 13:23:07 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 13:23:07 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11500.png
+[INFO] 2021-11-25 13:23:07 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 13:40:40 > Step:  11600 Progress: 11.6% Elapsed: 1 day, 4:02:10 Gen_loss: -6.047e+03 Dis_loss: 115.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 13:40:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 13:40:40 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11600.png
+[INFO] 2021-11-25 13:40:40 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 13:57:49 > Step:  11700 Progress: 11.7% Elapsed: 1 day, 4:19:19 Gen_loss: -7.013e+03 Dis_loss: 90.82 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 13:57:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 13:57:49 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11700.png
+[INFO] 2021-11-25 13:57:50 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 14:15:22 > Step:  11800 Progress: 11.8% Elapsed: 1 day, 4:36:52 Gen_loss: -7.824e+03 Dis_loss: 58.82 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 14:15:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 14:15:22 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11800.png
+[INFO] 2021-11-25 14:15:23 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 14:32:43 > Step:  11900 Progress: 11.9% Elapsed: 1 day, 4:54:13 Gen_loss: -8.253e+03 Dis_loss: 48.78 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 14:32:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 14:32:43 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_11900.png
+[INFO] 2021-11-25 14:32:44 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 14:49:32 > Step:  12000 Progress: 12.0% Elapsed: 1 day, 5:11:02 Gen_loss: -8.169e+03 Dis_loss: 20.85 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 14:49:32 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 14:49:32 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12000.png
+[INFO] 2021-11-25 14:49:32 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 15:09:18 > Step:  12100 Progress: 12.1% Elapsed: 1 day, 5:30:48 Gen_loss: -7.992e+03 Dis_loss: 7.094 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 15:09:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 15:09:18 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12100.png
+[INFO] 2021-11-25 15:09:18 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 15:29:19 > Step:  12200 Progress: 12.2% Elapsed: 1 day, 5:50:50 Gen_loss: -7.949e+03 Dis_loss: 5.575 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 15:29:19 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 15:29:20 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12200.png
+[INFO] 2021-11-25 15:29:20 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 15:49:24 > Step:  12300 Progress: 12.3% Elapsed: 1 day, 6:10:54 Gen_loss: -7.657e+03 Dis_loss: -0.1092 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 15:49:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 15:49:24 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12300.png
+[INFO] 2021-11-25 15:49:24 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 16:06:46 > Step:  12400 Progress: 12.4% Elapsed: 1 day, 6:28:16 Gen_loss: -7.034e+03 Dis_loss: -8.856 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 16:06:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 16:06:46 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12400.png
+[INFO] 2021-11-25 16:06:46 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 16:24:48 > Step:  12500 Progress: 12.5% Elapsed: 1 day, 6:46:18 Gen_loss: -6.58e+03 Dis_loss: -11.45 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 16:24:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 16:24:48 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12500.png
+[INFO] 2021-11-25 16:24:49 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 16:43:14 > Step:  12600 Progress: 12.6% Elapsed: 1 day, 7:04:45 Gen_loss: -6.388e+03 Dis_loss: -33.98 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 16:43:14 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 16:43:14 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12600.png
+[INFO] 2021-11-25 16:43:15 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 17:01:58 > Step:  12700 Progress: 12.7% Elapsed: 1 day, 7:23:28 Gen_loss: -5.975e+03 Dis_loss: -134.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 17:01:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 17:01:58 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12700.png
+[INFO] 2021-11-25 17:01:58 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 17:19:40 > Step:  12800 Progress: 12.8% Elapsed: 1 day, 7:41:10 Gen_loss: -6.983e+03 Dis_loss: 178.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 17:19:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 17:19:40 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12800.png
+[INFO] 2021-11-25 17:19:41 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 17:36:07 > Step:  12900 Progress: 12.9% Elapsed: 1 day, 7:57:37 Gen_loss: -6.766e+03 Dis_loss: 119.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 17:36:07 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 17:36:07 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_12900.png
+[INFO] 2021-11-25 17:36:08 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 17:52:28 > Step:  13000 Progress: 13.0% Elapsed: 1 day, 8:13:58 Gen_loss: -6.358e+03 Dis_loss: 58.19 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 17:52:28 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 17:52:28 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13000.png
+[INFO] 2021-11-25 17:52:28 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 18:08:48 > Step:  13100 Progress: 13.1% Elapsed: 1 day, 8:30:19 Gen_loss: -6.115e+03 Dis_loss: 17.44 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 18:08:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 18:08:49 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13100.png
+[INFO] 2021-11-25 18:08:49 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 18:25:17 > Step:  13200 Progress: 13.2% Elapsed: 1 day, 8:46:47 Gen_loss: -5.626e+03 Dis_loss: -6.812 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 18:25:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 18:25:17 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13200.png
+[INFO] 2021-11-25 18:25:18 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 18:41:58 > Step:  13300 Progress: 13.3% Elapsed: 1 day, 9:03:29 Gen_loss: -5.432e+03 Dis_loss: -50.85 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 18:41:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 18:41:59 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13300.png
+[INFO] 2021-11-25 18:41:59 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 18:58:26 > Step:  13400 Progress: 13.4% Elapsed: 1 day, 9:19:57 Gen_loss: -5e+03 Dis_loss: -152.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 18:58:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 18:58:27 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13400.png
+[INFO] 2021-11-25 18:58:27 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 19:14:40 > Step:  13500 Progress: 13.5% Elapsed: 1 day, 9:36:11 Gen_loss: -3.601e+03 Dis_loss: -847.2 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 19:14:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 19:14:41 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13500.png
+[INFO] 2021-11-25 19:14:41 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 19:30:56 > Step:  13600 Progress: 13.6% Elapsed: 1 day, 9:52:26 Gen_loss: -3.541e+03 Dis_loss: -29.78 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 19:30:56 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 19:30:56 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13600.png
+[INFO] 2021-11-25 19:30:56 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 19:47:01 > Step:  13700 Progress: 13.7% Elapsed: 1 day, 10:08:32 Gen_loss: -1.719e+03 Dis_loss: -908.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 19:47:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 19:47:01 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13700.png
+[INFO] 2021-11-25 19:47:02 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 20:03:12 > Step:  13800 Progress: 13.8% Elapsed: 1 day, 10:24:42 Gen_loss: -1.843e+04 Dis_loss: 1.272e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 20:03:12 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 20:03:12 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13800.png
+[INFO] 2021-11-25 20:03:12 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 20:19:18 > Step:  13900 Progress: 13.9% Elapsed: 1 day, 10:40:49 Gen_loss: -1.686e+04 Dis_loss: 47.58 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 20:19:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 20:19:19 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_13900.png
+[INFO] 2021-11-25 20:19:19 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 20:35:18 > Step:  14000 Progress: 14.0% Elapsed: 1 day, 10:56:49 Gen_loss: -8.667e+03 Dis_loss: -429.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 20:35:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 20:35:19 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14000.png
+[INFO] 2021-11-25 20:35:19 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 20:51:21 > Step:  14100 Progress: 14.1% Elapsed: 1 day, 11:12:52 Gen_loss: -6.008e+03 Dis_loss: 1.672e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 20:51:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 20:51:22 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14100.png
+[INFO] 2021-11-25 20:51:22 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 21:07:17 > Step:  14200 Progress: 14.2% Elapsed: 1 day, 11:28:48 Gen_loss: -5.475e+03 Dis_loss: 333.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 21:07:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 21:07:18 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14200.png
+[INFO] 2021-11-25 21:07:18 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 21:23:16 > Step:  14300 Progress: 14.3% Elapsed: 1 day, 11:44:47 Gen_loss: -4.671e+03 Dis_loss: 202.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 21:23:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 21:23:17 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14300.png
+[INFO] 2021-11-25 21:23:17 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 21:39:18 > Step:  14400 Progress: 14.4% Elapsed: 1 day, 12:00:48 Gen_loss: -1.694e+03 Dis_loss: -394.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 21:39:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 21:39:18 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14400.png
+[INFO] 2021-11-25 21:39:18 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 21:55:26 > Step:  14500 Progress: 14.5% Elapsed: 1 day, 12:16:56 Gen_loss: 1.115e+04 Dis_loss: -2.977e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 21:55:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 21:55:26 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14500.png
+[INFO] 2021-11-25 21:55:26 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 22:11:33 > Step:  14600 Progress: 14.6% Elapsed: 1 day, 12:33:03 Gen_loss: -5.428e+03 Dis_loss: 1.193e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 22:11:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 22:11:33 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14600.png
+[INFO] 2021-11-25 22:11:34 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 22:27:49 > Step:  14700 Progress: 14.7% Elapsed: 1 day, 12:49:19 Gen_loss: -1.082e+04 Dis_loss: 701.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 22:27:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 22:27:49 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14700.png
+[INFO] 2021-11-25 22:27:49 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 22:44:00 > Step:  14800 Progress: 14.8% Elapsed: 1 day, 13:05:31 Gen_loss: -1.217e+04 Dis_loss: 415.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 22:44:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 22:44:01 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14800.png
+[INFO] 2021-11-25 22:44:01 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 23:00:13 > Step:  14900 Progress: 14.9% Elapsed: 1 day, 13:21:43 Gen_loss: -1.36e+04 Dis_loss: 183.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 23:00:13 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 23:00:13 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_14900.png
+[INFO] 2021-11-25 23:00:13 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 23:16:34 > Step:  15000 Progress: 15.0% Elapsed: 1 day, 13:38:04 Gen_loss: -1.352e+04 Dis_loss: 137.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 23:16:34 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 23:16:34 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15000.png
+[INFO] 2021-11-25 23:16:35 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 23:32:48 > Step:  15100 Progress: 15.1% Elapsed: 1 day, 13:54:19 Gen_loss: -1.222e+04 Dis_loss: 87.38 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 23:32:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 23:32:49 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15100.png
+[INFO] 2021-11-25 23:32:49 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-25 23:49:07 > Step:  15200 Progress: 15.2% Elapsed: 1 day, 14:10:37 Gen_loss: -1.231e+04 Dis_loss: 78.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-25 23:49:07 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-25 23:49:07 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15200.png
+[INFO] 2021-11-25 23:49:07 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 00:05:28 > Step:  15300 Progress: 15.3% Elapsed: 1 day, 14:26:59 Gen_loss: -1.228e+04 Dis_loss: 30.29 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 00:05:28 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 00:05:29 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15300.png
+[INFO] 2021-11-26 00:05:29 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 00:21:46 > Step:  15400 Progress: 15.4% Elapsed: 1 day, 14:43:16 Gen_loss: -1.201e+04 Dis_loss: 16.38 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 00:21:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 00:21:46 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15400.png
+[INFO] 2021-11-26 00:21:46 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 00:38:09 > Step:  15500 Progress: 15.5% Elapsed: 1 day, 14:59:39 Gen_loss: -1.147e+04 Dis_loss: 6.694 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 00:38:09 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 00:38:09 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15500.png
+[INFO] 2021-11-26 00:38:09 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 00:54:27 > Step:  15600 Progress: 15.6% Elapsed: 1 day, 15:15:57 Gen_loss: -1.087e+04 Dis_loss: 3.877 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 00:54:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 00:54:27 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15600.png
+[INFO] 2021-11-26 00:54:28 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 01:10:50 > Step:  15700 Progress: 15.7% Elapsed: 1 day, 15:32:20 Gen_loss: -1.075e+04 Dis_loss: -2.251 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 01:10:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 01:10:50 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15700.png
+[INFO] 2021-11-26 01:10:50 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 01:27:15 > Step:  15800 Progress: 15.8% Elapsed: 1 day, 15:48:45 Gen_loss: -1.058e+04 Dis_loss: -4.63 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 01:27:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 01:27:15 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15800.png
+[INFO] 2021-11-26 01:27:16 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 01:43:39 > Step:  15900 Progress: 15.9% Elapsed: 1 day, 16:05:09 Gen_loss: -1.035e+04 Dis_loss: -7.736 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 01:43:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 01:43:39 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_15900.png
+[INFO] 2021-11-26 01:43:40 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 01:59:57 > Step:  16000 Progress: 16.0% Elapsed: 1 day, 16:21:27 Gen_loss: -9.772e+03 Dis_loss: -13.55 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 01:59:57 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 01:59:57 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16000.png
+[INFO] 2021-11-26 01:59:57 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 02:16:17 > Step:  16100 Progress: 16.1% Elapsed: 1 day, 16:37:48 Gen_loss: -8.119e+03 Dis_loss: -24.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 02:16:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 02:16:18 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16100.png
+[INFO] 2021-11-26 02:16:18 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 02:32:41 > Step:  16200 Progress: 16.2% Elapsed: 1 day, 16:54:11 Gen_loss: -4.836e+03 Dis_loss: 1.047e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 02:32:41 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 02:32:41 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16200.png
+[INFO] 2021-11-26 02:32:41 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 02:48:58 > Step:  16300 Progress: 16.3% Elapsed: 1 day, 17:10:29 Gen_loss: 2.322e+03 Dis_loss: 46.61 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 02:48:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 02:48:59 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16300.png
+[INFO] 2021-11-26 02:48:59 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 03:05:13 > Step:  16400 Progress: 16.4% Elapsed: 1 day, 17:26:43 Gen_loss: 1.086e+04 Dis_loss: 23.63 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 03:05:13 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 03:05:13 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16400.png
+[INFO] 2021-11-26 03:05:14 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 03:21:10 > Step:  16500 Progress: 16.5% Elapsed: 1 day, 17:42:40 Gen_loss: 1.963e+04 Dis_loss: -1.868e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 03:21:10 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 03:21:10 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16500.png
+[INFO] 2021-11-26 03:21:10 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 03:36:52 > Step:  16600 Progress: 16.6% Elapsed: 1 day, 17:58:23 Gen_loss: 2.391e+04 Dis_loss: -1.586e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 03:36:52 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 03:36:53 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16600.png
+[INFO] 2021-11-26 03:36:53 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 03:52:32 > Step:  16700 Progress: 16.7% Elapsed: 1 day, 18:14:02 Gen_loss: 2.026e+04 Dis_loss: 1.314e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 03:52:32 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 03:52:32 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16700.png
+[INFO] 2021-11-26 03:52:32 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 04:08:16 > Step:  16800 Progress: 16.8% Elapsed: 1 day, 18:29:46 Gen_loss: 1.682e+04 Dis_loss: 707.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 04:08:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 04:08:16 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16800.png
+[INFO] 2021-11-26 04:08:17 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 04:23:59 > Step:  16900 Progress: 16.9% Elapsed: 1 day, 18:45:30 Gen_loss: 1.419e+04 Dis_loss: 409.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 04:23:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 04:24:00 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_16900.png
+[INFO] 2021-11-26 04:24:00 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 04:39:39 > Step:  17000 Progress: 17.0% Elapsed: 1 day, 19:01:09 Gen_loss: 1.174e+04 Dis_loss: 460.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 04:39:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 04:39:39 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17000.png
+[INFO] 2021-11-26 04:39:39 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 04:55:21 > Step:  17100 Progress: 17.1% Elapsed: 1 day, 19:16:51 Gen_loss: 1.04e+04 Dis_loss: 335.8 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 04:55:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 04:55:21 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17100.png
+[INFO] 2021-11-26 04:55:22 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 05:10:57 > Step:  17200 Progress: 17.2% Elapsed: 1 day, 19:32:27 Gen_loss: 8.564e+03 Dis_loss: 194.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 05:10:57 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 05:10:57 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17200.png
+[INFO] 2021-11-26 05:10:57 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 05:26:38 > Step:  17300 Progress: 17.3% Elapsed: 1 day, 19:48:08 Gen_loss: 7.246e+03 Dis_loss: 191.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 05:26:38 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 05:26:38 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17300.png
+[INFO] 2021-11-26 05:26:38 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 05:42:21 > Step:  17400 Progress: 17.4% Elapsed: 1 day, 20:03:51 Gen_loss: 5.577e+03 Dis_loss: 148.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 05:42:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 05:42:21 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17400.png
+[INFO] 2021-11-26 05:42:21 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 05:58:03 > Step:  17500 Progress: 17.5% Elapsed: 1 day, 20:19:33 Gen_loss: 4.18e+03 Dis_loss: 157.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 05:58:03 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 05:58:03 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17500.png
+[INFO] 2021-11-26 05:58:03 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 06:13:48 > Step:  17600 Progress: 17.6% Elapsed: 1 day, 20:35:18 Gen_loss: 3.312e+03 Dis_loss: 84.86 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 06:13:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 06:13:48 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17600.png
+[INFO] 2021-11-26 06:13:49 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 06:29:37 > Step:  17700 Progress: 17.7% Elapsed: 1 day, 20:51:07 Gen_loss: 2.681e+03 Dis_loss: 82.41 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 06:29:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 06:29:37 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17700.png
+[INFO] 2021-11-26 06:29:37 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 06:45:29 > Step:  17800 Progress: 17.8% Elapsed: 1 day, 21:06:59 Gen_loss: 2.883e+03 Dis_loss: 63.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 06:45:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 06:45:29 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17800.png
+[INFO] 2021-11-26 06:45:29 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 07:01:15 > Step:  17900 Progress: 17.9% Elapsed: 1 day, 21:22:45 Gen_loss: 1.901e+03 Dis_loss: 46.53 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 07:01:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 07:01:15 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_17900.png
+[INFO] 2021-11-26 07:01:15 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 07:16:57 > Step:  18000 Progress: 18.0% Elapsed: 1 day, 21:38:28 Gen_loss: 391.3 Dis_loss: 30.81 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 07:16:57 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 07:16:58 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18000.png
+[INFO] 2021-11-26 07:16:58 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 07:32:43 > Step:  18100 Progress: 18.1% Elapsed: 1 day, 21:54:13 Gen_loss: 71.11 Dis_loss: 15.39 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 07:32:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 07:32:43 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18100.png
+[INFO] 2021-11-26 07:32:43 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 07:48:37 > Step:  18200 Progress: 18.2% Elapsed: 1 day, 22:10:07 Gen_loss: -506.0 Dis_loss: 26.55 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 07:48:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 07:48:37 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18200.png
+[INFO] 2021-11-26 07:48:37 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 08:04:36 > Step:  18300 Progress: 18.3% Elapsed: 1 day, 22:26:06 Gen_loss: -932.4 Dis_loss: 17.71 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 08:04:36 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 08:04:36 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18300.png
+[INFO] 2021-11-26 08:04:36 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 08:20:48 > Step:  18400 Progress: 18.4% Elapsed: 1 day, 22:42:19 Gen_loss: -2.752e+03 Dis_loss: 6.571 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 08:20:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 08:20:49 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18400.png
+[INFO] 2021-11-26 08:20:49 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 08:36:56 > Step:  18500 Progress: 18.5% Elapsed: 1 day, 22:58:26 Gen_loss: -2.529e+03 Dis_loss: 6.813 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 08:36:56 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 08:36:56 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18500.png
+[INFO] 2021-11-26 08:36:57 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 08:52:53 > Step:  18600 Progress: 18.6% Elapsed: 1 day, 23:14:23 Gen_loss: -2.611e+03 Dis_loss: 3.345 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 08:52:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 08:52:53 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18600.png
+[INFO] 2021-11-26 08:52:53 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 09:08:54 > Step:  18700 Progress: 18.7% Elapsed: 1 day, 23:30:25 Gen_loss: -2.475e+03 Dis_loss: -3.142 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 09:08:54 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 09:08:55 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18700.png
+[INFO] 2021-11-26 09:08:55 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
+[INFO] 2021-11-26 09:25:12 > Step:  18800 Progress: 18.8% Elapsed: 1 day, 23:46:43 Gen_loss: -2.498e+03 Dis_loss: -7.793 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-26 09:25:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-26 09:25:15 > Save image canvas to ./output/figures/gpm-WGAN-GP-train-2021_11_24_09_38_07/generated_canvas_18800.png
+[INFO] 2021-11-26 09:25:18 > Save model to ./output/checkpoints/gpm-WGAN-GP-train-2021_11_24_09_38_07
