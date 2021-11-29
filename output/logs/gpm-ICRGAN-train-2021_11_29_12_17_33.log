@@ -1,0 +1,1025 @@
+[INFO] 2021-11-29 12:17:33 > Run name : gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:17:33 > cfgs.DATA =
+[INFO] 2021-11-29 12:17:33 > {
+  "name": "gpm",
+  "img_size": 32,
+  "num_classes": 1,
+  "img_channels": 1
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.MODEL =
+[INFO] 2021-11-29 12:17:33 > {
+  "backbone": "big_resnet",
+  "g_cond_mtd": "cBN",
+  "d_cond_mtd": "PD",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": false,
+  "apply_d_sn": false,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": false,
+  "attn_g_loc": [
+    "N/A"
+  ],
+  "attn_d_loc": [
+    "N/A"
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 8,
+  "w_dim": "N/A",
+  "g_shared_dim": 8,
+  "g_conv_dim": 64,
+  "d_conv_dim": 64,
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": true,
+  "g_ema_decay": 0.9999,
+  "g_ema_start": 100,
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.LOSS =
+[INFO] 2021-11-29 12:17:33 > {
+  "adv_loss": "hinge",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": false,
+  "gp_lambda": "N/A",
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.OPTIMIZATION =
+[INFO] 2021-11-29 12:17:33 > {
+  "type_": "Adam",
+  "batch_size": 256,
+  "acml_steps": 1,
+  "g_lr": 0.0001,
+  "d_lr": 0.0004,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.0,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 1,
+  "total_steps": 100000,
+  "world_size": 1
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.PRE =
+[INFO] 2021-11-29 12:17:33 > {
+  "apply_rflip": true,
+  "crop_long_edge": false,
+  "resize_size": null
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.AUG =
+[INFO] 2021-11-29 12:17:33 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.RUN =
+[INFO] 2021-11-29 12:17:33 > {
+  "entity": null,
+  "project": null,
+  "cfg_file": "src/configs/GPM/ICRGAN.yaml",
+  "data_dir": "./data/gpm/",
+  "save_dir": "./output/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 2754,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 0,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": false,
+  "langevin_rate": -1,
+  "langevin_noise_std": -1,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": true,
+  "load_data_in_memory": true,
+  "eval": false,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 100,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2021-11-29 12:17:33 > cfgs.STYLEGAN2 =
+[INFO] 2021-11-29 12:17:33 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2021-11-29 12:17:33 > Load gpm train dataset.
+[INFO] 2021-11-29 12:17:33 > Train dataset size: 532
+[INFO] 2021-11-29 12:17:33 > Build a Generative Adversarial Network.
+[INFO] 2021-11-29 12:17:33 > Modules are located on './src/models.big_resnet'.
+[INFO] 2021-11-29 12:17:44 > Prepare exponential moving average generator with decay rate of 0.9999.
+[INFO] 2021-11-29 12:17:44 > Number of parameters: 3783689
+[INFO] 2021-11-29 12:17:44 > Generator(
+  (linear0): Linear(in_features=2, out_features=4096, bias=True)
+  (shared): Embedding(1, 8)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=10, out_features=256, bias=False)
+          (bias): Linear(in_features=10, out_features=256, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=10, out_features=256, bias=False)
+          (bias): Linear(in_features=10, out_features=256, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=10, out_features=256, bias=False)
+          (bias): Linear(in_features=10, out_features=256, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=10, out_features=256, bias=False)
+          (bias): Linear(in_features=10, out_features=256, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=10, out_features=256, bias=False)
+          (bias): Linear(in_features=10, out_features=256, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=10, out_features=256, bias=False)
+          (bias): Linear(in_features=10, out_features=256, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (bn4): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (activation): ReLU(inplace=True)
+  (conv2d5): Conv2d(256, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2021-11-29 12:17:44 > Number of parameters: 1053443
+[INFO] 2021-11-29 12:17:44 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscOptBlock(
+        (conv2d0): Conv2d(1, 128, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(1, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn0): BatchNorm2d(1, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (1): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (3): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (linear1): Linear(in_features=128, out_features=1, bias=True)
+  (embedding): Embedding(1, 128)
+)
+[INFO] 2021-11-29 12:17:55 > Start training!
+[INFO] 2021-11-29 12:19:04 > Step:    100 Progress: 0.1% Elapsed: 0:01:08 Gen_loss: 1.876 Dis_loss: 1.57 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:19:04 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:19:04 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_100.png
+[INFO] 2021-11-29 12:19:05 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:20:17 > Step:    200 Progress: 0.2% Elapsed: 0:02:21 Gen_loss: -0.1725 Dis_loss: 1.558 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:20:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:20:17 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_200.png
+[INFO] 2021-11-29 12:20:17 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:21:29 > Step:    300 Progress: 0.3% Elapsed: 0:03:33 Gen_loss: 2.532 Dis_loss: 0.7072 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:21:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:21:29 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_300.png
+[INFO] 2021-11-29 12:21:30 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:22:42 > Step:    400 Progress: 0.4% Elapsed: 0:04:46 Gen_loss: 2.488 Dis_loss: 0.8483 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:22:42 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:22:42 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_400.png
+[INFO] 2021-11-29 12:22:43 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:23:55 > Step:    500 Progress: 0.5% Elapsed: 0:05:59 Gen_loss: 1.984 Dis_loss: 0.85 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:23:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:23:55 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_500.png
+[INFO] 2021-11-29 12:23:55 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:25:08 > Step:    600 Progress: 0.6% Elapsed: 0:07:12 Gen_loss: 0.2008 Dis_loss: 1.325 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:25:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:25:08 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_600.png
+[INFO] 2021-11-29 12:25:08 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:26:21 > Step:    700 Progress: 0.7% Elapsed: 0:08:25 Gen_loss: 2.182 Dis_loss: 0.6921 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:26:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:26:21 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_700.png
+[INFO] 2021-11-29 12:26:21 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:27:33 > Step:    800 Progress: 0.8% Elapsed: 0:09:37 Gen_loss: 2.29 Dis_loss: 0.6696 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:27:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:27:33 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_800.png
+[INFO] 2021-11-29 12:27:34 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:28:46 > Step:    900 Progress: 0.9% Elapsed: 0:10:50 Gen_loss: 0.3909 Dis_loss: 0.7224 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:28:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:28:46 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_900.png
+[INFO] 2021-11-29 12:28:46 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:29:58 > Step:   1000 Progress: 1.0% Elapsed: 0:12:03 Gen_loss: 0.2498 Dis_loss: 1.063 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:29:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:29:59 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1000.png
+[INFO] 2021-11-29 12:29:59 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:31:11 > Step:   1100 Progress: 1.1% Elapsed: 0:13:15 Gen_loss: 1.611 Dis_loss: 0.4327 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:31:11 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:31:12 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1100.png
+[INFO] 2021-11-29 12:31:12 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:32:24 > Step:   1200 Progress: 1.2% Elapsed: 0:14:28 Gen_loss: 0.9717 Dis_loss: 0.1666 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:32:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:32:24 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1200.png
+[INFO] 2021-11-29 12:32:25 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:33:37 > Step:   1300 Progress: 1.3% Elapsed: 0:15:41 Gen_loss: 1.049 Dis_loss: 0.5634 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:33:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:33:37 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1300.png
+[INFO] 2021-11-29 12:33:37 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:34:50 > Step:   1400 Progress: 1.4% Elapsed: 0:16:54 Gen_loss: -0.1091 Dis_loss: 0.9858 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:34:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:34:50 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1400.png
+[INFO] 2021-11-29 12:34:50 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:36:02 > Step:   1500 Progress: 1.5% Elapsed: 0:18:06 Gen_loss: 1.074 Dis_loss: 0.4591 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:36:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:36:03 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1500.png
+[INFO] 2021-11-29 12:36:03 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:37:15 > Step:   1600 Progress: 1.6% Elapsed: 0:19:19 Gen_loss: 1.359 Dis_loss: 0.2525 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:37:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:37:15 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1600.png
+[INFO] 2021-11-29 12:37:16 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:38:28 > Step:   1700 Progress: 1.7% Elapsed: 0:20:32 Gen_loss: 0.9914 Dis_loss: 0.3736 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:38:28 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:38:28 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1700.png
+[INFO] 2021-11-29 12:38:28 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:39:41 > Step:   1800 Progress: 1.8% Elapsed: 0:21:45 Gen_loss: 2.203 Dis_loss: 0.4253 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:39:41 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:39:41 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1800.png
+[INFO] 2021-11-29 12:39:41 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:40:53 > Step:   1900 Progress: 1.9% Elapsed: 0:22:57 Gen_loss: 2.337 Dis_loss: 0.4697 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:40:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:40:54 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_1900.png
+[INFO] 2021-11-29 12:40:54 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:42:06 > Step:   2000 Progress: 2.0% Elapsed: 0:24:10 Gen_loss: 1.398 Dis_loss: 1.275 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:42:06 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:42:06 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2000.png
+[INFO] 2021-11-29 12:42:07 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:43:19 > Step:   2100 Progress: 2.1% Elapsed: 0:25:23 Gen_loss: 2.098 Dis_loss: 1.072 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:43:19 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:43:19 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2100.png
+[INFO] 2021-11-29 12:43:19 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:44:32 > Step:   2200 Progress: 2.2% Elapsed: 0:26:36 Gen_loss: 1.054 Dis_loss: 2.891 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:44:32 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:44:32 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2200.png
+[INFO] 2021-11-29 12:44:32 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:45:44 > Step:   2300 Progress: 2.3% Elapsed: 0:27:48 Gen_loss: -1.403 Dis_loss: 1.413 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:45:44 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:45:45 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2300.png
+[INFO] 2021-11-29 12:45:45 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:46:57 > Step:   2400 Progress: 2.4% Elapsed: 0:29:01 Gen_loss: -0.1729 Dis_loss: 1.261 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:46:57 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:46:57 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2400.png
+[INFO] 2021-11-29 12:46:58 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:48:10 > Step:   2500 Progress: 2.5% Elapsed: 0:30:14 Gen_loss: -0.4131 Dis_loss: 1.111 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:48:10 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:48:10 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2500.png
+[INFO] 2021-11-29 12:48:10 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:49:22 > Step:   2600 Progress: 2.6% Elapsed: 0:31:26 Gen_loss: 0.4667 Dis_loss: 1.102 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:49:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:49:23 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2600.png
+[INFO] 2021-11-29 12:49:23 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:50:35 > Step:   2700 Progress: 2.7% Elapsed: 0:32:39 Gen_loss: 0.2032 Dis_loss: 0.9239 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:50:35 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:50:35 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2700.png
+[INFO] 2021-11-29 12:50:36 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:51:48 > Step:   2800 Progress: 2.8% Elapsed: 0:33:52 Gen_loss: 1.682 Dis_loss: 1.695 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:51:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:51:48 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2800.png
+[INFO] 2021-11-29 12:51:48 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:53:00 > Step:   2900 Progress: 2.9% Elapsed: 0:35:04 Gen_loss: 1.82 Dis_loss: 0.4979 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:53:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:53:01 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_2900.png
+[INFO] 2021-11-29 12:53:01 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:54:13 > Step:   3000 Progress: 3.0% Elapsed: 0:36:17 Gen_loss: 1.763 Dis_loss: 0.8543 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:54:13 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:54:13 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3000.png
+[INFO] 2021-11-29 12:54:14 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:55:26 > Step:   3100 Progress: 3.1% Elapsed: 0:37:30 Gen_loss: 0.9255 Dis_loss: 0.7187 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:55:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:55:26 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3100.png
+[INFO] 2021-11-29 12:55:26 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:56:38 > Step:   3200 Progress: 3.2% Elapsed: 0:38:42 Gen_loss: 0.824 Dis_loss: 0.8387 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:56:38 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:56:38 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3200.png
+[INFO] 2021-11-29 12:56:39 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:57:51 > Step:   3300 Progress: 3.3% Elapsed: 0:39:55 Gen_loss: 0.921 Dis_loss: 0.6094 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:57:51 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:57:51 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3300.png
+[INFO] 2021-11-29 12:57:52 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 12:59:04 > Step:   3400 Progress: 3.4% Elapsed: 0:41:08 Gen_loss: 0.3483 Dis_loss: 1.313 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 12:59:04 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 12:59:04 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3400.png
+[INFO] 2021-11-29 12:59:04 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:00:16 > Step:   3500 Progress: 3.5% Elapsed: 0:42:20 Gen_loss: 1.328 Dis_loss: 0.1664 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:00:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:00:17 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3500.png
+[INFO] 2021-11-29 13:00:17 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:01:29 > Step:   3600 Progress: 3.6% Elapsed: 0:43:33 Gen_loss: 2.538 Dis_loss: 0.9193 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:01:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:01:29 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3600.png
+[INFO] 2021-11-29 13:01:29 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:02:42 > Step:   3700 Progress: 3.7% Elapsed: 0:44:46 Gen_loss: 2.064 Dis_loss: 0.3336 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:02:42 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:02:42 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3700.png
+[INFO] 2021-11-29 13:02:42 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:03:54 > Step:   3800 Progress: 3.8% Elapsed: 0:45:58 Gen_loss: 2.575 Dis_loss: 0.5105 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:03:54 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:03:55 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3800.png
+[INFO] 2021-11-29 13:03:55 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:05:07 > Step:   3900 Progress: 3.9% Elapsed: 0:47:11 Gen_loss: 1.684 Dis_loss: 0.07389 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:05:07 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:05:08 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_3900.png
+[INFO] 2021-11-29 13:05:08 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:06:20 > Step:   4000 Progress: 4.0% Elapsed: 0:48:24 Gen_loss: 2.611 Dis_loss: 0.1176 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:06:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:06:20 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4000.png
+[INFO] 2021-11-29 13:06:20 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:07:33 > Step:   4100 Progress: 4.1% Elapsed: 0:49:37 Gen_loss: 1.566 Dis_loss: 0.05174 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:07:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:07:33 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4100.png
+[INFO] 2021-11-29 13:07:33 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:08:45 > Step:   4200 Progress: 4.2% Elapsed: 0:50:49 Gen_loss: 2.72 Dis_loss: 0.4079 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:08:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:08:46 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4200.png
+[INFO] 2021-11-29 13:08:46 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:09:58 > Step:   4300 Progress: 4.3% Elapsed: 0:52:02 Gen_loss: 0.9584 Dis_loss: 0.4945 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:09:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:09:58 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4300.png
+[INFO] 2021-11-29 13:09:59 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:11:11 > Step:   4400 Progress: 4.4% Elapsed: 0:53:15 Gen_loss: 0.5544 Dis_loss: 1.019 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:11:11 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:11:11 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4400.png
+[INFO] 2021-11-29 13:11:11 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:12:24 > Step:   4500 Progress: 4.5% Elapsed: 0:54:28 Gen_loss: 1.451 Dis_loss: 0.04875 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:12:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:12:24 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4500.png
+[INFO] 2021-11-29 13:12:24 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:13:36 > Step:   4600 Progress: 4.6% Elapsed: 0:55:40 Gen_loss: 1.91 Dis_loss: 0.01345 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:13:36 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:13:37 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4600.png
+[INFO] 2021-11-29 13:13:37 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:14:49 > Step:   4700 Progress: 4.7% Elapsed: 0:56:53 Gen_loss: 2.22 Dis_loss: 0.0007429 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:14:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:14:49 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4700.png
+[INFO] 2021-11-29 13:14:49 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:16:01 > Step:   4800 Progress: 4.8% Elapsed: 0:58:05 Gen_loss: 3.367 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:16:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:16:01 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4800.png
+[INFO] 2021-11-29 13:16:02 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:17:14 > Step:   4900 Progress: 4.9% Elapsed: 0:59:18 Gen_loss: 0.7928 Dis_loss: 1.117 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:17:14 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:17:14 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_4900.png
+[INFO] 2021-11-29 13:17:14 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:18:26 > Step:   5000 Progress: 5.0% Elapsed: 1:00:30 Gen_loss: 1.141 Dis_loss: 1.222 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:18:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:18:27 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5000.png
+[INFO] 2021-11-29 13:18:27 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:19:39 > Step:   5100 Progress: 5.1% Elapsed: 1:01:43 Gen_loss: 1.85 Dis_loss: 0.7355 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:19:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:19:39 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5100.png
+[INFO] 2021-11-29 13:19:39 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:20:52 > Step:   5200 Progress: 5.2% Elapsed: 1:02:56 Gen_loss: 2.024 Dis_loss: 0.4533 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:20:52 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:20:52 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5200.png
+[INFO] 2021-11-29 13:20:52 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:22:04 > Step:   5300 Progress: 5.3% Elapsed: 1:04:08 Gen_loss: 2.307 Dis_loss: 0.09612 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:22:04 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:22:04 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5300.png
+[INFO] 2021-11-29 13:22:05 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:23:17 > Step:   5400 Progress: 5.4% Elapsed: 1:05:21 Gen_loss: 2.218 Dis_loss: 0.07372 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:23:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:23:17 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5400.png
+[INFO] 2021-11-29 13:23:17 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:24:30 > Step:   5500 Progress: 5.5% Elapsed: 1:06:34 Gen_loss: 1.188 Dis_loss: 0.06051 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:24:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:24:30 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5500.png
+[INFO] 2021-11-29 13:24:30 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:25:42 > Step:   5600 Progress: 5.6% Elapsed: 1:07:46 Gen_loss: 0.77 Dis_loss: 2.638 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:25:42 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:25:43 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5600.png
+[INFO] 2021-11-29 13:25:43 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:26:55 > Step:   5700 Progress: 5.7% Elapsed: 1:08:59 Gen_loss: 1.705 Dis_loss: 0.03784 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:26:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:26:55 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5700.png
+[INFO] 2021-11-29 13:26:56 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:28:08 > Step:   5800 Progress: 5.8% Elapsed: 1:10:12 Gen_loss: 2.231 Dis_loss: 0.0488 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:28:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:28:08 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5800.png
+[INFO] 2021-11-29 13:28:08 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:29:20 > Step:   5900 Progress: 5.9% Elapsed: 1:11:24 Gen_loss: 1.142 Dis_loss: 1.691 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:29:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:29:21 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_5900.png
+[INFO] 2021-11-29 13:29:21 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:30:33 > Step:   6000 Progress: 6.0% Elapsed: 1:12:37 Gen_loss: 2.576 Dis_loss: 0.009688 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:30:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:30:33 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6000.png
+[INFO] 2021-11-29 13:30:34 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:31:46 > Step:   6100 Progress: 6.1% Elapsed: 1:13:50 Gen_loss: 2.174 Dis_loss: 0.01658 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:31:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:31:46 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6100.png
+[INFO] 2021-11-29 13:31:46 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:32:59 > Step:   6200 Progress: 6.2% Elapsed: 1:15:03 Gen_loss: 0.5576 Dis_loss: 0.8582 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:32:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:32:59 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6200.png
+[INFO] 2021-11-29 13:32:59 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:34:11 > Step:   6300 Progress: 6.3% Elapsed: 1:16:15 Gen_loss: 1.709 Dis_loss: 0.01187 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:34:11 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:34:12 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6300.png
+[INFO] 2021-11-29 13:34:12 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:35:24 > Step:   6400 Progress: 6.4% Elapsed: 1:17:28 Gen_loss: 2.004 Dis_loss: 0.00109 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:35:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:35:24 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6400.png
+[INFO] 2021-11-29 13:35:24 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:36:37 > Step:   6500 Progress: 6.5% Elapsed: 1:18:41 Gen_loss: 1.823 Dis_loss: 0.002035 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:36:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:36:37 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6500.png
+[INFO] 2021-11-29 13:36:37 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:37:49 > Step:   6600 Progress: 6.6% Elapsed: 1:19:53 Gen_loss: 2.828 Dis_loss: 1.489 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:37:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:37:49 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6600.png
+[INFO] 2021-11-29 13:37:50 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:39:02 > Step:   6700 Progress: 6.7% Elapsed: 1:21:06 Gen_loss: 1.866 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:39:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:39:02 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6700.png
+[INFO] 2021-11-29 13:39:03 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:40:15 > Step:   6800 Progress: 6.8% Elapsed: 1:22:19 Gen_loss: 1.917 Dis_loss: 0.008165 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:40:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:40:15 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6800.png
+[INFO] 2021-11-29 13:40:15 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:41:27 > Step:   6900 Progress: 6.9% Elapsed: 1:23:31 Gen_loss: 1.801 Dis_loss: 0.008929 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:41:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:41:28 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_6900.png
+[INFO] 2021-11-29 13:41:28 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:42:40 > Step:   7000 Progress: 7.0% Elapsed: 1:24:44 Gen_loss: 1.855 Dis_loss: 0.1855 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:42:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:42:40 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7000.png
+[INFO] 2021-11-29 13:42:41 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:43:53 > Step:   7100 Progress: 7.1% Elapsed: 1:25:57 Gen_loss: 1.217 Dis_loss: 0.4513 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:43:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:43:53 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7100.png
+[INFO] 2021-11-29 13:43:53 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:45:06 > Step:   7200 Progress: 7.2% Elapsed: 1:27:10 Gen_loss: 3.32 Dis_loss: 0.2747 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:45:06 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:45:06 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7200.png
+[INFO] 2021-11-29 13:45:06 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:46:18 > Step:   7300 Progress: 7.3% Elapsed: 1:28:22 Gen_loss: 3.71 Dis_loss: 1.208 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:46:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:46:19 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7300.png
+[INFO] 2021-11-29 13:46:19 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:47:31 > Step:   7400 Progress: 7.4% Elapsed: 1:29:35 Gen_loss: 2.758 Dis_loss: 0.003459 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:47:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:47:31 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7400.png
+[INFO] 2021-11-29 13:47:31 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:48:44 > Step:   7500 Progress: 7.5% Elapsed: 1:30:48 Gen_loss: 2.061 Dis_loss: 0.003153 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:48:44 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:48:44 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7500.png
+[INFO] 2021-11-29 13:48:44 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:49:56 > Step:   7600 Progress: 7.6% Elapsed: 1:32:00 Gen_loss: 2.702 Dis_loss: 0.01286 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:49:56 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:49:56 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7600.png
+[INFO] 2021-11-29 13:49:57 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:51:09 > Step:   7700 Progress: 7.7% Elapsed: 1:33:13 Gen_loss: 2.62 Dis_loss: 0.03671 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:51:09 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:51:09 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7700.png
+[INFO] 2021-11-29 13:51:10 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:52:22 > Step:   7800 Progress: 7.8% Elapsed: 1:34:26 Gen_loss: 2.187 Dis_loss: 0.00972 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:52:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:52:22 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7800.png
+[INFO] 2021-11-29 13:52:22 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:53:35 > Step:   7900 Progress: 7.9% Elapsed: 1:35:39 Gen_loss: 1.782 Dis_loss: 0.003545 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:53:35 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:53:35 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_7900.png
+[INFO] 2021-11-29 13:53:35 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:54:47 > Step:   8000 Progress: 8.0% Elapsed: 1:36:51 Gen_loss: 2.083 Dis_loss: 0.006749 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:54:47 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:54:48 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8000.png
+[INFO] 2021-11-29 13:54:48 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:56:00 > Step:   8100 Progress: 8.1% Elapsed: 1:38:04 Gen_loss: 2.001 Dis_loss: 0.001367 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:56:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:56:00 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8100.png
+[INFO] 2021-11-29 13:56:01 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:57:13 > Step:   8200 Progress: 8.2% Elapsed: 1:39:17 Gen_loss: 2.697 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:57:13 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:57:13 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8200.png
+[INFO] 2021-11-29 13:57:13 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:58:25 > Step:   8300 Progress: 8.3% Elapsed: 1:40:29 Gen_loss: 2.286 Dis_loss: 0.0006125 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:58:25 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:58:25 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8300.png
+[INFO] 2021-11-29 13:58:26 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 13:59:38 > Step:   8400 Progress: 8.4% Elapsed: 1:41:42 Gen_loss: 1.833 Dis_loss: 0.00752 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 13:59:38 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 13:59:38 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8400.png
+[INFO] 2021-11-29 13:59:38 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:00:50 > Step:   8500 Progress: 8.5% Elapsed: 1:42:54 Gen_loss: 2.532 Dis_loss: 0.4948 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:00:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:00:51 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8500.png
+[INFO] 2021-11-29 14:00:51 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:02:03 > Step:   8600 Progress: 8.6% Elapsed: 1:44:07 Gen_loss: 1.702 Dis_loss: 0.0006196 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:02:03 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:02:03 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8600.png
+[INFO] 2021-11-29 14:02:04 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:03:16 > Step:   8700 Progress: 8.7% Elapsed: 1:45:20 Gen_loss: 2.523 Dis_loss: 0.04021 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:03:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:03:16 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8700.png
+[INFO] 2021-11-29 14:03:16 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:04:28 > Step:   8800 Progress: 8.8% Elapsed: 1:46:32 Gen_loss: 1.992 Dis_loss: 0.02316 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:04:28 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:04:28 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8800.png
+[INFO] 2021-11-29 14:04:29 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:05:40 > Step:   8900 Progress: 8.9% Elapsed: 1:47:45 Gen_loss: 2.492 Dis_loss: 0.000713 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:05:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:05:41 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_8900.png
+[INFO] 2021-11-29 14:05:41 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:06:53 > Step:   9000 Progress: 9.0% Elapsed: 1:48:57 Gen_loss: 2.158 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:06:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:06:54 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9000.png
+[INFO] 2021-11-29 14:06:54 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:08:06 > Step:   9100 Progress: 9.1% Elapsed: 1:50:10 Gen_loss: 4.284 Dis_loss: 0.7607 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:08:06 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:08:06 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9100.png
+[INFO] 2021-11-29 14:08:06 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:09:19 > Step:   9200 Progress: 9.2% Elapsed: 1:51:23 Gen_loss: 1.875 Dis_loss: 0.001667 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:09:19 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:09:19 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9200.png
+[INFO] 2021-11-29 14:09:19 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:10:31 > Step:   9300 Progress: 9.3% Elapsed: 1:52:35 Gen_loss: 1.904 Dis_loss: 0.0006175 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:10:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:10:31 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9300.png
+[INFO] 2021-11-29 14:10:32 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:11:44 > Step:   9400 Progress: 9.4% Elapsed: 1:53:48 Gen_loss: 1.938 Dis_loss: 0.002634 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:11:44 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:11:44 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9400.png
+[INFO] 2021-11-29 14:11:44 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:12:56 > Step:   9500 Progress: 9.5% Elapsed: 1:55:00 Gen_loss: 1.778 Dis_loss: 0.0006098 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:12:56 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:12:56 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9500.png
+[INFO] 2021-11-29 14:12:57 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:14:09 > Step:   9600 Progress: 9.6% Elapsed: 1:56:13 Gen_loss: 3.339 Dis_loss: 0.218 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:14:09 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:14:09 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9600.png
+[INFO] 2021-11-29 14:14:09 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:15:21 > Step:   9700 Progress: 9.7% Elapsed: 1:57:25 Gen_loss: 2.052 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:15:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:15:21 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9700.png
+[INFO] 2021-11-29 14:15:22 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:16:34 > Step:   9800 Progress: 9.8% Elapsed: 1:58:38 Gen_loss: 2.969 Dis_loss: 0.02494 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:16:34 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:16:34 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9800.png
+[INFO] 2021-11-29 14:16:34 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:17:46 > Step:   9900 Progress: 9.9% Elapsed: 1:59:50 Gen_loss: 3.007 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:17:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:17:46 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_9900.png
+[INFO] 2021-11-29 14:17:47 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:18:59 > Step:  10000 Progress: 10.0% Elapsed: 2:01:03 Gen_loss: 2.358 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:18:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:18:59 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10000.png
+[INFO] 2021-11-29 14:18:59 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:20:11 > Step:  10100 Progress: 10.1% Elapsed: 2:02:15 Gen_loss: 1.838 Dis_loss: 0.002486 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:20:11 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:20:12 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10100.png
+[INFO] 2021-11-29 14:20:12 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:21:24 > Step:  10200 Progress: 10.2% Elapsed: 2:03:28 Gen_loss: 2.613 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:21:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:21:24 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10200.png
+[INFO] 2021-11-29 14:21:24 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:22:37 > Step:  10300 Progress: 10.3% Elapsed: 2:04:41 Gen_loss: -3.598 Dis_loss: 0.5274 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:22:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:22:37 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10300.png
+[INFO] 2021-11-29 14:22:37 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:23:49 > Step:  10400 Progress: 10.4% Elapsed: 2:05:53 Gen_loss: 0.8128 Dis_loss: 0.6623 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:23:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:23:49 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10400.png
+[INFO] 2021-11-29 14:23:50 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:25:02 > Step:  10500 Progress: 10.5% Elapsed: 2:07:06 Gen_loss: 2.259 Dis_loss: 0.002281 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:25:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:25:02 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10500.png
+[INFO] 2021-11-29 14:25:02 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:26:14 > Step:  10600 Progress: 10.6% Elapsed: 2:08:18 Gen_loss: 5.074 Dis_loss: 0.3402 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:26:14 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:26:15 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10600.png
+[INFO] 2021-11-29 14:26:15 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:27:27 > Step:  10700 Progress: 10.7% Elapsed: 2:09:31 Gen_loss: 2.564 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:27:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:27:27 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10700.png
+[INFO] 2021-11-29 14:27:27 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:28:39 > Step:  10800 Progress: 10.8% Elapsed: 2:10:43 Gen_loss: 1.861 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:28:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:28:40 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10800.png
+[INFO] 2021-11-29 14:28:40 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:29:52 > Step:  10900 Progress: 10.9% Elapsed: 2:11:56 Gen_loss: 2.863 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:29:52 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:29:52 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_10900.png
+[INFO] 2021-11-29 14:29:52 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:31:04 > Step:  11000 Progress: 11.0% Elapsed: 2:13:08 Gen_loss: 2.896 Dis_loss: 0.1074 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:31:04 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:31:05 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11000.png
+[INFO] 2021-11-29 14:31:05 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:32:17 > Step:  11100 Progress: 11.1% Elapsed: 2:14:21 Gen_loss: 2.029 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:32:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:32:17 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11100.png
+[INFO] 2021-11-29 14:32:18 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:33:30 > Step:  11200 Progress: 11.2% Elapsed: 2:15:34 Gen_loss: 2.13 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:33:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:33:30 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11200.png
+[INFO] 2021-11-29 14:33:30 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:34:42 > Step:  11300 Progress: 11.3% Elapsed: 2:16:46 Gen_loss: 0.9836 Dis_loss: 2.137 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:34:42 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:34:42 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11300.png
+[INFO] 2021-11-29 14:34:43 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:35:55 > Step:  11400 Progress: 11.4% Elapsed: 2:17:59 Gen_loss: 3.098 Dis_loss: 0.3004 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:35:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:35:55 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11400.png
+[INFO] 2021-11-29 14:35:55 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:37:07 > Step:  11500 Progress: 11.5% Elapsed: 2:19:11 Gen_loss: 4.402 Dis_loss: 0.5896 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:37:07 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:37:08 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11500.png
+[INFO] 2021-11-29 14:37:08 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:38:20 > Step:  11600 Progress: 11.6% Elapsed: 2:20:24 Gen_loss: 2.776 Dis_loss: 0.006718 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:38:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:38:20 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11600.png
+[INFO] 2021-11-29 14:38:21 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:39:33 > Step:  11700 Progress: 11.7% Elapsed: 2:21:37 Gen_loss: 4.672 Dis_loss: 0.3402 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:39:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:39:33 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11700.png
+[INFO] 2021-11-29 14:39:33 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:40:45 > Step:  11800 Progress: 11.8% Elapsed: 2:22:49 Gen_loss: 2.143 Dis_loss: 5.369e-05 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:40:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:40:46 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11800.png
+[INFO] 2021-11-29 14:40:46 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:41:58 > Step:  11900 Progress: 11.9% Elapsed: 2:24:02 Gen_loss: 2.607 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:41:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:41:58 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_11900.png
+[INFO] 2021-11-29 14:41:58 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:43:11 > Step:  12000 Progress: 12.0% Elapsed: 2:25:15 Gen_loss: -0.3789 Dis_loss: 0.1332 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:43:11 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:43:11 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12000.png
+[INFO] 2021-11-29 14:43:11 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:44:23 > Step:  12100 Progress: 12.1% Elapsed: 2:26:27 Gen_loss: 2.486 Dis_loss: 0.0002665 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:44:23 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:44:23 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12100.png
+[INFO] 2021-11-29 14:44:24 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:45:36 > Step:  12200 Progress: 12.2% Elapsed: 2:27:40 Gen_loss: 2.809 Dis_loss: 0.07828 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:45:36 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:45:36 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12200.png
+[INFO] 2021-11-29 14:45:36 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:46:48 > Step:  12300 Progress: 12.3% Elapsed: 2:28:52 Gen_loss: 1.83 Dis_loss: 0.03007 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:46:48 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:46:49 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12300.png
+[INFO] 2021-11-29 14:46:49 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:48:01 > Step:  12400 Progress: 12.4% Elapsed: 2:30:05 Gen_loss: 2.428 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:48:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:48:01 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12400.png
+[INFO] 2021-11-29 14:48:01 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:49:14 > Step:  12500 Progress: 12.5% Elapsed: 2:31:18 Gen_loss: 2.316 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:49:14 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:49:14 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12500.png
+[INFO] 2021-11-29 14:49:14 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:50:26 > Step:  12600 Progress: 12.6% Elapsed: 2:32:30 Gen_loss: 4.767 Dis_loss: 0.4484 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:50:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:50:26 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12600.png
+[INFO] 2021-11-29 14:50:26 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:51:39 > Step:  12700 Progress: 12.7% Elapsed: 2:33:43 Gen_loss: 2.367 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:51:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:51:39 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12700.png
+[INFO] 2021-11-29 14:51:39 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:52:51 > Step:  12800 Progress: 12.8% Elapsed: 2:34:55 Gen_loss: 2.913 Dis_loss: 0.954 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:52:51 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:52:51 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12800.png
+[INFO] 2021-11-29 14:52:51 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:54:03 > Step:  12900 Progress: 12.9% Elapsed: 2:36:07 Gen_loss: 2.513 Dis_loss: 3.29 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:54:03 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:54:04 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_12900.png
+[INFO] 2021-11-29 14:54:04 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:55:16 > Step:  13000 Progress: 13.0% Elapsed: 2:37:20 Gen_loss: 2.328 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:55:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:55:16 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13000.png
+[INFO] 2021-11-29 14:55:16 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:56:28 > Step:  13100 Progress: 13.1% Elapsed: 2:38:32 Gen_loss: 1.839 Dis_loss: 0.01731 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:56:28 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:56:28 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13100.png
+[INFO] 2021-11-29 14:56:29 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:57:41 > Step:  13200 Progress: 13.2% Elapsed: 2:39:45 Gen_loss: 3.688 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:57:41 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:57:41 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13200.png
+[INFO] 2021-11-29 14:57:41 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 14:58:53 > Step:  13300 Progress: 13.3% Elapsed: 2:40:57 Gen_loss: 1.843 Dis_loss: 0.05326 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:58:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:58:53 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13300.png
+[INFO] 2021-11-29 14:58:54 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:00:05 > Step:  13400 Progress: 13.4% Elapsed: 2:42:10 Gen_loss: 2.113 Dis_loss: 0.002828 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:00:06 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:00:06 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13400.png
+[INFO] 2021-11-29 15:00:06 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:01:18 > Step:  13500 Progress: 13.5% Elapsed: 2:43:22 Gen_loss: 1.671 Dis_loss: 0.01776 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:01:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:01:18 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13500.png
+[INFO] 2021-11-29 15:01:19 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:02:30 > Step:  13600 Progress: 13.6% Elapsed: 2:44:34 Gen_loss: 2.395 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:02:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:02:31 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13600.png
+[INFO] 2021-11-29 15:02:31 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:03:43 > Step:  13700 Progress: 13.7% Elapsed: 2:45:47 Gen_loss: 2.283 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:03:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:03:43 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13700.png
+[INFO] 2021-11-29 15:03:43 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:04:55 > Step:  13800 Progress: 13.8% Elapsed: 2:46:59 Gen_loss: 2.154 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:04:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:04:56 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13800.png
+[INFO] 2021-11-29 15:04:56 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:06:08 > Step:  13900 Progress: 13.9% Elapsed: 2:48:12 Gen_loss: 1.736 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:06:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:06:08 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_13900.png
+[INFO] 2021-11-29 15:06:08 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:07:20 > Step:  14000 Progress: 14.0% Elapsed: 2:49:24 Gen_loss: 2.176 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:07:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:07:20 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14000.png
+[INFO] 2021-11-29 15:07:21 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:08:33 > Step:  14100 Progress: 14.1% Elapsed: 2:50:37 Gen_loss: 1.991 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:08:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:08:33 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14100.png
+[INFO] 2021-11-29 15:08:33 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:09:45 > Step:  14200 Progress: 14.2% Elapsed: 2:51:49 Gen_loss: 2.134 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:09:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:09:45 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14200.png
+[INFO] 2021-11-29 15:09:45 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:10:57 > Step:  14300 Progress: 14.3% Elapsed: 2:53:02 Gen_loss: 1.82 Dis_loss: 0.009468 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:10:57 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:10:58 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14300.png
+[INFO] 2021-11-29 15:10:58 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:12:10 > Step:  14400 Progress: 14.4% Elapsed: 2:54:14 Gen_loss: 2.462 Dis_loss: 0.02955 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:12:10 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:12:10 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14400.png
+[INFO] 2021-11-29 15:12:10 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:13:22 > Step:  14500 Progress: 14.5% Elapsed: 2:55:26 Gen_loss: 2.184 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:13:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:13:22 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14500.png
+[INFO] 2021-11-29 15:13:23 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:14:35 > Step:  14600 Progress: 14.6% Elapsed: 2:56:39 Gen_loss: 2.0 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:14:35 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:14:35 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14600.png
+[INFO] 2021-11-29 15:14:35 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:15:47 > Step:  14700 Progress: 14.7% Elapsed: 2:57:51 Gen_loss: 2.113 Dis_loss: 0.009299 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:15:47 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:15:48 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14700.png
+[INFO] 2021-11-29 15:15:48 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:17:00 > Step:  14800 Progress: 14.8% Elapsed: 2:59:04 Gen_loss: 2.764 Dis_loss: 2.915 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:17:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:17:00 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14800.png
+[INFO] 2021-11-29 15:17:01 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:18:12 > Step:  14900 Progress: 14.9% Elapsed: 3:00:16 Gen_loss: 3.128 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:18:12 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:18:13 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_14900.png
+[INFO] 2021-11-29 15:18:13 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:19:25 > Step:  15000 Progress: 15.0% Elapsed: 3:01:29 Gen_loss: 1.47 Dis_loss: 2.597e-05 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:19:25 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:19:25 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15000.png
+[INFO] 2021-11-29 15:19:25 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:20:37 > Step:  15100 Progress: 15.1% Elapsed: 3:02:41 Gen_loss: 1.627 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:20:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:20:38 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15100.png
+[INFO] 2021-11-29 15:20:38 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:21:50 > Step:  15200 Progress: 15.2% Elapsed: 3:03:54 Gen_loss: 1.972 Dis_loss: 0.00305 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:21:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:21:50 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15200.png
+[INFO] 2021-11-29 15:21:50 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:23:02 > Step:  15300 Progress: 15.3% Elapsed: 3:05:06 Gen_loss: 2.826 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:23:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:23:03 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15300.png
+[INFO] 2021-11-29 15:23:03 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:24:15 > Step:  15400 Progress: 15.4% Elapsed: 3:06:19 Gen_loss: 5.478 Dis_loss: 1.12 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:24:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:24:15 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15400.png
+[INFO] 2021-11-29 15:24:15 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:25:27 > Step:  15500 Progress: 15.5% Elapsed: 3:07:31 Gen_loss: 2.088 Dis_loss: 8.385e-05 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:25:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:25:28 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15500.png
+[INFO] 2021-11-29 15:25:28 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:26:40 > Step:  15600 Progress: 15.6% Elapsed: 3:08:44 Gen_loss: 3.448 Dis_loss: 0.0254 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:26:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:26:40 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15600.png
+[INFO] 2021-11-29 15:26:40 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:27:52 > Step:  15700 Progress: 15.7% Elapsed: 3:09:56 Gen_loss: 2.523 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:27:52 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:27:53 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15700.png
+[INFO] 2021-11-29 15:27:53 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:29:05 > Step:  15800 Progress: 15.8% Elapsed: 3:11:09 Gen_loss: 2.747 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:29:05 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:29:05 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15800.png
+[INFO] 2021-11-29 15:29:05 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:30:18 > Step:  15900 Progress: 15.9% Elapsed: 3:12:22 Gen_loss: 3.036 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:30:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:30:18 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_15900.png
+[INFO] 2021-11-29 15:30:18 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:31:30 > Step:  16000 Progress: 16.0% Elapsed: 3:13:34 Gen_loss: 5.03 Dis_loss: 1.342 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:31:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:31:30 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16000.png
+[INFO] 2021-11-29 15:31:31 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:32:43 > Step:  16100 Progress: 16.1% Elapsed: 3:14:47 Gen_loss: 1.885 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:32:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:32:43 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16100.png
+[INFO] 2021-11-29 15:32:43 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:33:55 > Step:  16200 Progress: 16.2% Elapsed: 3:15:59 Gen_loss: 1.972 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:33:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:33:55 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16200.png
+[INFO] 2021-11-29 15:33:56 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:35:08 > Step:  16300 Progress: 16.3% Elapsed: 3:17:12 Gen_loss: 2.33 Dis_loss: 0.001759 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:35:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:35:08 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16300.png
+[INFO] 2021-11-29 15:35:08 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:36:20 > Step:  16400 Progress: 16.4% Elapsed: 3:18:24 Gen_loss: 1.725 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:36:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:36:20 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16400.png
+[INFO] 2021-11-29 15:36:21 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:37:33 > Step:  16500 Progress: 16.5% Elapsed: 3:19:37 Gen_loss: 1.855 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:37:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:37:33 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16500.png
+[INFO] 2021-11-29 15:37:33 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:38:45 > Step:  16600 Progress: 16.6% Elapsed: 3:20:49 Gen_loss: 2.216 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:38:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:38:46 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16600.png
+[INFO] 2021-11-29 15:38:46 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:39:58 > Step:  16700 Progress: 16.7% Elapsed: 3:22:02 Gen_loss: 2.897 Dis_loss: 0.002195 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:39:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:39:58 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16700.png
+[INFO] 2021-11-29 15:39:58 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:41:10 > Step:  16800 Progress: 16.8% Elapsed: 3:23:14 Gen_loss: 1.948 Dis_loss: 0.005293 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:41:10 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:41:10 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16800.png
+[INFO] 2021-11-29 15:41:11 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:42:23 > Step:  16900 Progress: 16.9% Elapsed: 3:24:27 Gen_loss: 2.626 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:42:23 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:42:23 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_16900.png
+[INFO] 2021-11-29 15:42:23 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:43:35 > Step:  17000 Progress: 17.0% Elapsed: 3:25:39 Gen_loss: 1.711 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:43:35 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:43:35 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17000.png
+[INFO] 2021-11-29 15:43:35 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:44:47 > Step:  17100 Progress: 17.1% Elapsed: 3:26:52 Gen_loss: 2.395 Dis_loss: 0.001152 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:44:47 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:44:48 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17100.png
+[INFO] 2021-11-29 15:44:48 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:46:00 > Step:  17200 Progress: 17.2% Elapsed: 3:28:04 Gen_loss: 2.051 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:46:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:46:00 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17200.png
+[INFO] 2021-11-29 15:46:00 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:47:12 > Step:  17300 Progress: 17.3% Elapsed: 3:29:16 Gen_loss: 2.229 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:47:12 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:47:13 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17300.png
+[INFO] 2021-11-29 15:47:13 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:48:25 > Step:  17400 Progress: 17.4% Elapsed: 3:30:29 Gen_loss: 2.768 Dis_loss: 0.007746 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:48:25 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:48:25 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17400.png
+[INFO] 2021-11-29 15:48:25 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:49:37 > Step:  17500 Progress: 17.5% Elapsed: 3:31:42 Gen_loss: 2.607 Dis_loss: 0.01074 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:49:38 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:49:38 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17500.png
+[INFO] 2021-11-29 15:49:38 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:50:50 > Step:  17600 Progress: 17.6% Elapsed: 3:32:54 Gen_loss: 1.928 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:50:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:50:50 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17600.png
+[INFO] 2021-11-29 15:50:51 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:52:03 > Step:  17700 Progress: 17.7% Elapsed: 3:34:07 Gen_loss: 2.236 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:52:03 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:52:03 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17700.png
+[INFO] 2021-11-29 15:52:03 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33
+[INFO] 2021-11-29 15:53:15 > Step:  17800 Progress: 17.8% Elapsed: 3:35:19 Gen_loss: 2.021 Dis_loss: 0.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:53:15 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:53:15 > Save image canvas to ./output/figures/gpm-ICRGAN-train-2021_11_29_12_17_33/generated_canvas_17800.png
+[INFO] 2021-11-29 15:53:16 > Save model to ./output/checkpoints/gpm-ICRGAN-train-2021_11_29_12_17_33

@@ -1,0 +1,460 @@
+[INFO] 2021-11-29 14:30:09 > Run name : gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:30:09 > cfgs.DATA =
+[INFO] 2021-11-29 14:30:09 > {
+  "name": "gpm",
+  "img_size": 32,
+  "num_classes": 1,
+  "img_channels": 1
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.MODEL =
+[INFO] 2021-11-29 14:30:09 > {
+  "backbone": "big_resnet",
+  "g_cond_mtd": "cBN",
+  "d_cond_mtd": "PD",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": true,
+  "apply_d_sn": true,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": true,
+  "attn_g_loc": [
+    2
+  ],
+  "attn_d_loc": [
+    1
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 8,
+  "w_dim": "N/A",
+  "g_shared_dim": 128,
+  "g_conv_dim": 96,
+  "d_conv_dim": 96,
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": true,
+  "g_ema_decay": 0.9999,
+  "g_ema_start": 1000,
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.LOSS =
+[INFO] 2021-11-29 14:30:09 > {
+  "adv_loss": "hinge",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": false,
+  "gp_lambda": "N/A",
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.OPTIMIZATION =
+[INFO] 2021-11-29 14:30:09 > {
+  "type_": "Adam",
+  "batch_size": 64,
+  "acml_steps": 1,
+  "g_lr": 0.0002,
+  "d_lr": 0.0002,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.5,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 5,
+  "total_steps": 100000,
+  "world_size": 1
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.PRE =
+[INFO] 2021-11-29 14:30:09 > {
+  "apply_rflip": true,
+  "crop_long_edge": false,
+  "resize_size": null
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.AUG =
+[INFO] 2021-11-29 14:30:09 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.RUN =
+[INFO] 2021-11-29 14:30:09 > {
+  "entity": null,
+  "project": null,
+  "cfg_file": "src/configs/GPM/BigGAN-Mod.yaml",
+  "data_dir": "./data/gpm_35_32px/",
+  "save_dir": "./output/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 537,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 0,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": false,
+  "langevin_rate": -1,
+  "langevin_noise_std": -1,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": true,
+  "load_data_in_memory": true,
+  "eval": false,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 100,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2021-11-29 14:30:09 > cfgs.STYLEGAN2 =
+[INFO] 2021-11-29 14:30:09 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2021-11-29 14:30:09 > Load gpm train dataset.
+[INFO] 2021-11-29 14:30:09 > Train dataset size: 1849
+[INFO] 2021-11-29 14:30:09 > Build a Generative Adversarial Network.
+[INFO] 2021-11-29 14:30:09 > Modules are located on './src/models.big_resnet'.
+[INFO] 2021-11-29 14:30:20 > Prepare exponential moving average generator with decay rate of 0.9999.
+[INFO] 2021-11-29 14:30:20 > Number of parameters: 9214594
+[INFO] 2021-11-29 14:30:20 > Generator(
+  (linear0): Linear(in_features=2, out_features=6144, bias=True)
+  (shared): Embedding(1, 128)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=130, out_features=384, bias=False)
+          (bias): Linear(in_features=130, out_features=384, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=130, out_features=384, bias=False)
+          (bias): Linear(in_features=130, out_features=384, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=130, out_features=384, bias=False)
+          (bias): Linear(in_features=130, out_features=384, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=130, out_features=384, bias=False)
+          (bias): Linear(in_features=130, out_features=384, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ModuleList(
+      (0): SelfAttention(
+        (conv1x1_theta): Conv2d(384, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (conv1x1_phi): Conv2d(384, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (conv1x1_g): Conv2d(384, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (conv1x1_attn): Conv2d(192, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        (softmax): Softmax(dim=-1)
+      )
+    )
+    (3): ModuleList(
+      (0): GenBlock(
+        (bn1): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=130, out_features=384, bias=False)
+          (bias): Linear(in_features=130, out_features=384, bias=False)
+        )
+        (bn2): BigGANConditionalBatchNorm2d(
+          (bn): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=False, track_running_stats=True)
+          (gain): Linear(in_features=130, out_features=384, bias=False)
+          (bias): Linear(in_features=130, out_features=384, bias=False)
+        )
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(384, 384, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(384, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (bn4): BatchNorm2d(384, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (activation): ReLU(inplace=True)
+  (conv2d5): Conv2d(384, 1, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2021-11-29 14:30:20 > Number of parameters: 2409602
+[INFO] 2021-11-29 14:30:20 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscOptBlock(
+        (conv2d0): Conv2d(1, 192, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(1, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (activation): ReLU(inplace=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (1): ModuleList(
+      (0): SelfAttention(
+        (conv1x1_theta): Conv2d(192, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (conv1x1_phi): Conv2d(192, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (conv1x1_g): Conv2d(192, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (conv1x1_attn): Conv2d(96, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+        (softmax): Softmax(dim=-1)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(192, 192, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (3): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (4): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d1): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (linear1): Linear(in_features=192, out_features=1, bias=True)
+  (embedding): Embedding(1, 192)
+)
+[INFO] 2021-11-29 14:30:31 > Start training!
+[INFO] 2021-11-29 14:32:13 > Step:    100 Progress: 0.1% Elapsed: 0:01:42 Gen_loss: 1.196 Dis_loss: 1.023 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:32:13 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:32:14 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_100.png
+[INFO] 2021-11-29 14:32:14 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:33:58 > Step:    200 Progress: 0.2% Elapsed: 0:03:26 Gen_loss: 1.091 Dis_loss: 1.171 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:33:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:33:58 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_200.png
+[INFO] 2021-11-29 14:33:58 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:35:43 > Step:    300 Progress: 0.3% Elapsed: 0:05:11 Gen_loss: 1.544 Dis_loss: 1.032 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:35:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:35:43 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_300.png
+[INFO] 2021-11-29 14:35:44 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:37:27 > Step:    400 Progress: 0.4% Elapsed: 0:06:55 Gen_loss: 1.058 Dis_loss: 0.6092 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:37:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:37:27 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_400.png
+[INFO] 2021-11-29 14:37:27 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:39:10 > Step:    500 Progress: 0.5% Elapsed: 0:08:38 Gen_loss: 1.13 Dis_loss: 0.3896 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:39:10 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:39:10 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_500.png
+[INFO] 2021-11-29 14:39:10 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:40:53 > Step:    600 Progress: 0.6% Elapsed: 0:10:21 Gen_loss: 1.277 Dis_loss: 0.2581 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:40:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:40:53 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_600.png
+[INFO] 2021-11-29 14:40:53 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:42:35 > Step:    700 Progress: 0.7% Elapsed: 0:12:03 Gen_loss: 1.376 Dis_loss: 0.3752 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:42:35 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:42:35 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_700.png
+[INFO] 2021-11-29 14:42:35 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:44:18 > Step:    800 Progress: 0.8% Elapsed: 0:13:46 Gen_loss: 1.134 Dis_loss: 0.4999 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:44:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:44:18 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_800.png
+[INFO] 2021-11-29 14:44:19 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:46:01 > Step:    900 Progress: 0.9% Elapsed: 0:15:29 Gen_loss: 1.315 Dis_loss: 0.3289 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:46:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:46:01 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_900.png
+[INFO] 2021-11-29 14:46:01 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:47:43 > Step:   1000 Progress: 1.0% Elapsed: 0:17:11 Gen_loss: 1.122 Dis_loss: 0.1842 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:47:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:47:43 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1000.png
+[INFO] 2021-11-29 14:47:43 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:49:26 > Step:   1100 Progress: 1.1% Elapsed: 0:18:54 Gen_loss: 0.983 Dis_loss: 0.1881 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:49:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:49:26 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1100.png
+[INFO] 2021-11-29 14:49:26 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:51:08 > Step:   1200 Progress: 1.2% Elapsed: 0:20:36 Gen_loss: 1.294 Dis_loss: 0.2032 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:51:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:51:08 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1200.png
+[INFO] 2021-11-29 14:51:09 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:52:51 > Step:   1300 Progress: 1.3% Elapsed: 0:22:19 Gen_loss: 1.133 Dis_loss: 0.1772 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:52:51 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:52:51 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1300.png
+[INFO] 2021-11-29 14:52:51 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:54:33 > Step:   1400 Progress: 1.4% Elapsed: 0:24:01 Gen_loss: 1.11 Dis_loss: 0.08545 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:54:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:54:33 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1400.png
+[INFO] 2021-11-29 14:54:33 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:56:16 > Step:   1500 Progress: 1.5% Elapsed: 0:25:44 Gen_loss: 1.075 Dis_loss: 0.2293 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:56:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:56:16 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1500.png
+[INFO] 2021-11-29 14:56:16 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:57:58 > Step:   1600 Progress: 1.6% Elapsed: 0:27:26 Gen_loss: 1.223 Dis_loss: 0.144 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:57:58 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:57:58 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1600.png
+[INFO] 2021-11-29 14:57:58 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 14:59:40 > Step:   1700 Progress: 1.7% Elapsed: 0:29:08 Gen_loss: 1.142 Dis_loss: 0.0002727 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 14:59:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 14:59:40 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1700.png
+[INFO] 2021-11-29 14:59:41 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:01:22 > Step:   1800 Progress: 1.8% Elapsed: 0:30:51 Gen_loss: 1.495 Dis_loss: 0.01824 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:01:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:01:22 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1800.png
+[INFO] 2021-11-29 15:01:23 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:03:05 > Step:   1900 Progress: 1.9% Elapsed: 0:32:33 Gen_loss: 1.087 Dis_loss: 0.1263 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:03:05 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:03:05 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_1900.png
+[INFO] 2021-11-29 15:03:05 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:04:47 > Step:   2000 Progress: 2.0% Elapsed: 0:34:16 Gen_loss: 1.084 Dis_loss: 0.06469 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:04:47 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:04:47 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2000.png
+[INFO] 2021-11-29 15:04:48 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:06:30 > Step:   2100 Progress: 2.1% Elapsed: 0:35:58 Gen_loss: 1.08 Dis_loss: 0.333 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:06:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:06:30 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2100.png
+[INFO] 2021-11-29 15:06:30 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:08:12 > Step:   2200 Progress: 2.2% Elapsed: 0:37:40 Gen_loss: 1.054 Dis_loss: 0.102 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:08:12 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:08:12 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2200.png
+[INFO] 2021-11-29 15:08:13 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:09:54 > Step:   2300 Progress: 2.3% Elapsed: 0:39:23 Gen_loss: 1.045 Dis_loss: 0.09223 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:09:54 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:09:54 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2300.png
+[INFO] 2021-11-29 15:09:55 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:11:37 > Step:   2400 Progress: 2.4% Elapsed: 0:41:05 Gen_loss: 1.69 Dis_loss: 0.5361 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:11:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:11:37 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2400.png
+[INFO] 2021-11-29 15:11:37 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:13:19 > Step:   2500 Progress: 2.5% Elapsed: 0:42:47 Gen_loss: 1.012 Dis_loss: 0.1347 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:13:19 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:13:19 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2500.png
+[INFO] 2021-11-29 15:13:19 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:15:01 > Step:   2600 Progress: 2.6% Elapsed: 0:44:29 Gen_loss: 1.188 Dis_loss: 0.08555 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:15:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:15:01 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2600.png
+[INFO] 2021-11-29 15:15:01 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:16:43 > Step:   2700 Progress: 2.7% Elapsed: 0:46:12 Gen_loss: 1.098 Dis_loss: 0.03128 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:16:44 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:16:44 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2700.png
+[INFO] 2021-11-29 15:16:44 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:18:26 > Step:   2800 Progress: 2.8% Elapsed: 0:47:54 Gen_loss: 1.122 Dis_loss: 0.002668 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:18:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:18:26 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2800.png
+[INFO] 2021-11-29 15:18:26 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:20:08 > Step:   2900 Progress: 2.9% Elapsed: 0:49:36 Gen_loss: 1.092 Dis_loss: 0.04733 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:20:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:20:08 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_2900.png
+[INFO] 2021-11-29 15:20:08 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:21:49 > Step:   3000 Progress: 3.0% Elapsed: 0:51:17 Gen_loss: 1.256 Dis_loss: 0.06858 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:21:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:21:49 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_3000.png
+[INFO] 2021-11-29 15:21:52 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:23:33 > Step:   3100 Progress: 3.1% Elapsed: 0:53:01 Gen_loss: 1.126 Dis_loss: 0.09974 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:23:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:23:35 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_3100.png
+[INFO] 2021-11-29 15:23:39 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:25:21 > Step:   3200 Progress: 3.2% Elapsed: 0:54:49 Gen_loss: 1.213 Dis_loss: 0.03465 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:25:21 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:25:21 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_3200.png
+[INFO] 2021-11-29 15:25:21 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:27:03 > Step:   3300 Progress: 3.3% Elapsed: 0:56:31 Gen_loss: 1.306 Dis_loss: 0.1034 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:27:03 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:27:03 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_3300.png
+[INFO] 2021-11-29 15:27:03 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
+[INFO] 2021-11-29 15:28:45 > Step:   3400 Progress: 3.4% Elapsed: 0:58:13 Gen_loss: 1.283 Dis_loss: 0.1709 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2021-11-29 15:28:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2021-11-29 15:28:45 > Save image canvas to ./output/figures/gpm-BigGAN-Mod-train-2021_11_29_14_30_09/generated_canvas_3400.png
+[INFO] 2021-11-29 15:28:45 > Save model to ./output/checkpoints/gpm-BigGAN-Mod-train-2021_11_29_14_30_09
