@@ -23,7 +23,7 @@ WANDB_DIR="/exports/eddie/scratch/s1959730/wandb"
 python src/main.py \
 --train \
 -cfg src/configs/GPM/WGAN-GP.yaml \
--data ./data/gpm/ \
+-data ./data/gpm_35_32px/ \
 -save ./output/ \
 --save_fake_images \
 --num_workers 0 \
