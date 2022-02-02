@@ -144,6 +144,7 @@ def generate_images(z_prior, truncation_factor, batch_size, z_dim, num_classes, 
                                                    truncation_cutoff=RUN.truncation_cutoff)
     else:
         fake_images = generator(zs, fake_labels, eval=not is_train)
+        print(fake_labels.shape, fake_images.shape)
         ws = None
 
     if zs_eps is not None:
