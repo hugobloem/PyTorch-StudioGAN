@@ -109,7 +109,8 @@ def load_worker(local_rank, cfgs, gpus_per_node, run_name, hdf5_path):
                                  random_flip=cfgs.PRE.apply_rflip,
                                  hdf5_path=hdf5_path,
                                  load_data_in_memory=cfgs.RUN.load_data_in_memory,
-                                 img_channels=cfgs.DATA.img_channels)
+                                 img_channels=cfgs.DATA.img_channels,
+                                 num_dims=cfgs.DATA.num_dims)
         if local_rank == 0:
             logger.info("Train dataset size: {dataset_size}".format(dataset_size=len(train_dataset)))
     else:
@@ -126,7 +127,8 @@ def load_worker(local_rank, cfgs, gpus_per_node, run_name, hdf5_path):
                                 random_flip=False,
                                 hdf5_path=None,
                                 load_data_in_memory=False,
-                                img_channels=cfgs.DATA.img_channels)
+                                img_channels=cfgs.DATA.img_channels,
+                                num_dims=cfgs.DATA.num_dims)
         if local_rank == 0:
             logger.info("Eval dataset size: {dataset_size}".format(dataset_size=len(eval_dataset)))
     else:

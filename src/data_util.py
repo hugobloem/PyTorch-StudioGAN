@@ -9,7 +9,7 @@ import random
 
 from torch.utils.data import Dataset
 from torchvision.datasets import CIFAR10, CIFAR100
-from torchvision.datasets import ImageFolder
+from torchvision.datasets import DatasetFolder, ImageFolder
 from scipy import io
 from PIL import ImageOps, Image
 import torch
@@ -47,13 +47,8 @@ class CenterCropLongEdge(object):
     def __repr__(self):
         return self.__class__.__name__
 
-def alt_loader(path: str):
-    """
-    Adapted from the default_loader: https://pytorch.org/vision/stable/_modules/torchvision/datasets/folder.html
-    """
-    with open(path, 'rb') as f:
-        img = Image.open(f)
-        return img.convert('L')
+def pth_loader(path: str):
+    return torch.load(path)
 
 class Dataset_(Dataset):
     def __init__(self,
@@ -65,7 +60,8 @@ class Dataset_(Dataset):
                  random_flip=False,
                  hdf5_path=None,
                  load_data_in_memory=False,
-                 img_channels=3):
+                 img_channels=3,
+                 num_dims=2):
         super(Dataset_, self).__init__()
         self.data_name = data_name
         self.data_dir = data_dir
@@ -74,6 +70,7 @@ class Dataset_(Dataset):
         self.hdf5_path = hdf5_path
         self.load_data_in_memory = load_data_in_memory
         self.img_channels = img_channels
+        self.num_dims = num_dims
         self.trsf_list = []
        
         print(resize_size) 
@@ -93,6 +90,8 @@ class Dataset_(Dataset):
             self.trsf_list += [transforms.Grayscale(), transforms.ToTensor(), transforms.Normalize([0.5], [0.5])]
         else:
             self.trsf_list += [transforms.ToTensor(), transforms.Normalize([0.5, 0.5, 0.5], [0.5, 0.5, 0.5])]
+        if num_dims == 3: # New set of transforms for 3D GAN
+            self.trsf_list = [transforms.Lambda(lambda xin: torch.from_numpy(xin).float())]
         self.trsf = transforms.Compose(self.trsf_list)
 
         self.load_dataset()
@@ -116,11 +115,17 @@ class Dataset_(Dataset):
         else:
             mode = "train" if self.train == True else "valid"
             root = os.path.join(self.data_dir, mode)
-            self.data = ImageFolder(root=root)
+            if self.num_dims == 2:
+                self.data = ImageFolder(root=root)
+            elif self.num_dims == 3:
+                self.data = DatasetFolder(root=root, loader=pth_loader, extensions=".pt")
             
     def _get_hdf5(self, index):
         with h5.File(self.hdf5_path, "r") as f:
-            img = np.transpose(f["imgs"][index], (1, 2, 0))
+            if self.num_dims == 2:            
+                img = np.transpose(f["imgs"][index], (1, 2, 0))
+            elif self.num_dims == 3:
+                img = f["imgs"][index]
             label = f["labels"][index]
         return img, label
 
@@ -136,7 +141,10 @@ class Dataset_(Dataset):
             img, label = self.data[index]
         else:
             if self.load_data_in_memory:
-                img, label = np.transpose(self.data[index], (1, 2, 0)), self.labels[index]
+                if self.num_dims == 2:
+                    img, label = np.transpose(self.data[index], (1, 2, 0)), self.labels[index]
+                elif self.num_dims == 3:
+                    img, label = self.data[index], self.labels[index]
             else:
                 img, label = self._get_hdf5(index)
         return self.trsf(img), int(label)

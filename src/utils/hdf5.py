@@ -50,7 +50,8 @@ def make_hdf5(name, img_size, crop_long_edge, resize_size, data_dir, DATA, RUN):
                            random_flip=False,
                            hdf5_path=None,
                            load_data_in_memory=False,
-                           img_channels=DATA.img_channels)
+                           img_channels=DATA.img_channels,
+                           num_dims=DATA.num_dims)
 
         dataloader = DataLoader(dataset,
                                 batch_size=500,
@@ -66,11 +67,13 @@ def make_hdf5(name, img_size, crop_long_edge, resize_size, data_dir, DATA, RUN):
             if i == 0:
                 with h5.File(file_path, "w") as f:
                     print("Produce dataset of len {num_dataset}".format(num_dataset=len(dataset)))
+                    print((len(dataset), DATA.img_channels, *[img_size]*DATA.num_dims))
+                    print((500, DATA.img_channels, *[img_size]*DATA.num_dims))
                     imgs_dset = f.create_dataset("imgs",
                                                  x.shape,
                                                  dtype="uint8",
-                                                 maxshape=(len(dataset), DATA.img_channels, img_size, img_size),
-                                                 chunks=(500, DATA.img_channels, img_size, img_size),
+                                                 maxshape=(len(dataset), DATA.img_channels, *[img_size]*DATA.num_dims),
+                                                 chunks=(500, DATA.img_channels, *[img_size]*DATA.num_dims),
                                                  compression=False)
                     print("Image chunks chosen as {chunk}".format(chunk=str(imgs_dset.chunks)))
                     imgs_dset[...] = x

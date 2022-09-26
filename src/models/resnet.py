@@ -59,7 +59,7 @@ class GenBlock(nn.Module):
 
 
 class Generator(nn.Module):
-    def __init__(self, z_dim, g_shared_dim, img_size, img_channels, g_conv_dim, apply_attn, attn_g_loc, g_cond_mtd, num_classes, g_init, g_depth,
+    def __init__(self, z_dim, g_shared_dim, img_size, img_channels, num_dims, g_conv_dim, apply_attn, attn_g_loc, g_cond_mtd, num_classes, g_init, g_depth,
                  mixed_precision, MODULES):
         super(Generator, self).__init__()
         g_in_dims_collection = {
@@ -83,6 +83,7 @@ class Generator(nn.Module):
         self.z_dim = z_dim
         self.g_shared_dim = g_shared_dim
         self.num_classes = num_classes
+        self.num_dims = num_dims
         self.mixed_precision = mixed_precision
         self.in_dims = g_in_dims_collection[str(img_size)]
         self.out_dims = g_out_dims_collection[str(img_size)]
@@ -106,7 +107,7 @@ class Generator(nn.Module):
 
         self.blocks = nn.ModuleList([nn.ModuleList(block) for block in self.blocks])
 
-        self.bn4 = ops.batchnorm_2d(in_features=self.out_dims[-1])
+        self.bn4 = MODULES.g_bn(in_features=self.out_dims[-1])
         self.activation = MODULES.g_act_fn
         self.conv2d5 = MODULES.g_conv2d(in_channels=self.out_dims[-1], out_channels=img_channels, kernel_size=3, stride=1, padding=1)
         self.tanh = nn.Tanh()
@@ -116,7 +117,7 @@ class Generator(nn.Module):
     def forward(self, z, label, eval=False):
         with torch.cuda.amp.autocast() if self.mixed_precision and not eval else misc.dummy_context_mgr() as mp:
             act = self.linear0(z)
-            act = act.view(-1, self.in_dims[0], self.bottom, self.bottom)
+            act = act.view(-1, self.in_dims[0], *[self.bottom]*self.num_dims)
             for index, blocklist in enumerate(self.blocks):
                 for block in blocklist:
                     if isinstance(block, ops.SelfAttention):
@@ -146,7 +147,7 @@ class DiscOptBlock(nn.Module):
 
         self.activation = MODULES.d_act_fn
 
-        self.average_pooling = nn.AvgPool2d(2)
+        self.average_pooling = MODULES.AvgPool(2)
 
     def forward(self, x):
         x0 = x
@@ -190,7 +191,7 @@ class DiscBlock(nn.Module):
             self.bn1 = MODULES.d_bn(in_features=in_channels)
             self.bn2 = MODULES.d_bn(in_features=out_channels)
 
-        self.average_pooling = nn.AvgPool2d(2)
+        self.average_pooling = MODULES.AvgPool(2)
 
     def forward(self, x):
         x0 = x
@@ -218,7 +219,7 @@ class DiscBlock(nn.Module):
 
 class Discriminator(nn.Module):
     def __init__(self, img_size, img_channels, d_conv_dim, apply_d_sn, apply_attn, attn_d_loc, d_cond_mtd, aux_cls_type, d_embed_dim, normalize_d_embed,
-                 num_classes, d_init, d_depth, mixed_precision, MODULES):
+                 num_classes, num_dims, d_init, d_depth, mixed_precision, MODULES):
         super(Discriminator, self).__init__()
         d_in_dims_collection = {
             "32": [img_channels] + [d_conv_dim * 2, d_conv_dim * 2, d_conv_dim * 2],
@@ -249,6 +250,7 @@ class Discriminator(nn.Module):
         self.aux_cls_type = aux_cls_type
         self.normalize_d_embed = normalize_d_embed
         self.num_classes = num_classes
+        self.num_dims = num_dims
         self.mixed_precision = mixed_precision
         self.in_dims = d_in_dims_collection[str(img_size)]
         self.out_dims = d_out_dims_collection[str(img_size)]
@@ -321,8 +323,8 @@ class Discriminator(nn.Module):
                 for block in blocklist:
                     h = block(h)
             h = self.activation(h)
-            h = torch.sum(h, dim=[2, 3])
-
+            h = torch.sum(h, dim=[-1, -2, -3][:self.num_dims])
+            
             # adversarial training
             adv_output = torch.squeeze(self.linear1(h))
 

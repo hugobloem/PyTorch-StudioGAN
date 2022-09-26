@@ -47,6 +47,8 @@ class Configurations(object):
         self.DATA.num_classes = 10
         # number of image channels in dataset. //image_shape[0]
         self.DATA.img_channels = 3
+        # number of dimensions in dataset
+        self.DATA.num_dims = 2
 
         # -----------------------------------------------------------------------------
         # Model settings
@@ -401,67 +403,141 @@ class Configurations(object):
             self.LOSS.d_loss = d_losses[self.LOSS.adv_loss]
 
     def define_modules(self):
-        if self.MODEL.apply_g_sn:
-            self.MODULES.g_conv2d = ops.snconv2d
-            self.MODULES.g_deconv2d = ops.sndeconv2d
-            self.MODULES.g_linear = ops.snlinear
-            self.MODULES.g_embedding = ops.sn_embedding
-        else:
-            self.MODULES.g_conv2d = ops.conv2d
-            self.MODULES.g_deconv2d = ops.deconv2d
-            self.MODULES.g_linear = ops.linear
-            self.MODULES.g_embedding = ops.embedding
+        # 2D
+        if self.DATA.num_dims == 2:
+            if self.MODEL.apply_g_sn:
+                self.MODULES.g_conv2d = ops.snconv2d
+                self.MODULES.g_deconv2d = ops.sndeconv2d
+                self.MODULES.g_linear = ops.snlinear
+                self.MODULES.g_embedding = ops.sn_embedding
+            else:
+                self.MODULES.g_conv2d = ops.conv2d
+                self.MODULES.g_deconv2d = ops.deconv2d
+                self.MODULES.g_linear = ops.linear
+                self.MODULES.g_embedding = ops.embedding
 
-        if self.MODEL.apply_d_sn:
-            self.MODULES.d_conv2d = ops.snconv2d
-            self.MODULES.d_deconv2d = ops.sndeconv2d
-            self.MODULES.d_linear = ops.snlinear
-            self.MODULES.d_embedding = ops.sn_embedding
-        else:
-            self.MODULES.d_conv2d = ops.conv2d
-            self.MODULES.d_deconv2d = ops.deconv2d
-            self.MODULES.d_linear = ops.linear
-            self.MODULES.d_embedding = ops.embedding
+            if self.MODEL.apply_d_sn:
+                self.MODULES.d_conv2d = ops.snconv2d
+                self.MODULES.d_deconv2d = ops.sndeconv2d
+                self.MODULES.d_linear = ops.snlinear
+                self.MODULES.d_embedding = ops.sn_embedding
+            else:
+                self.MODULES.d_conv2d = ops.conv2d
+                self.MODULES.d_deconv2d = ops.deconv2d
+                self.MODULES.d_linear = ops.linear
+                self.MODULES.d_embedding = ops.embedding
 
-        if self.MODEL.g_cond_mtd == "cBN" and self.MODEL.backbone in ["big_resnet", "deep_big_resnet"]:
-            self.MODULES.g_bn = ops.BigGANConditionalBatchNorm2d
-        elif self.MODEL.g_cond_mtd == "cBN":
-            self.MODULES.g_bn = ops.ConditionalBatchNorm2d
-        elif self.MODEL.g_cond_mtd == "W/O":
-            self.MODULES.g_bn = ops.batchnorm_2d
-        elif self.MODEL.g_cond_mtd == "cAdaIN":
-            pass
+            if self.MODEL.g_cond_mtd == "cBN" and self.MODEL.backbone in ["big_resnet", "deep_big_resnet"]:
+                self.MODULES.g_bn = ops.BigGANConditionalBatchNorm2d
+            elif self.MODEL.g_cond_mtd == "cBN":
+                self.MODULES.g_bn = ops.ConditionalBatchNorm2d
+            elif self.MODEL.g_cond_mtd == "W/O":
+                self.MODULES.g_bn = ops.batchnorm_2d
+            elif self.MODEL.g_cond_mtd == "cAdaIN":
+                pass
+            else:
+                raise NotImplementedError
+
+            if not self.MODEL.apply_d_sn:
+                self.MODULES.d_bn = ops.batchnorm_2d
+
+            if self.MODEL.g_act_fn == "ReLU":
+                self.MODULES.g_act_fn = nn.ReLU(inplace=True)
+            elif self.MODEL.g_act_fn == "Leaky_ReLU":
+                self.MODULES.g_act_fn = nn.LeakyReLU(negative_slope=0.1, inplace=True)
+            elif self.MODEL.g_act_fn == "ELU":
+                self.MODULES.g_act_fn = nn.ELU(alpha=1.0, inplace=True)
+            elif self.MODEL.g_act_fn == "GELU":
+                self.MODULES.g_act_fn = nn.GELU()
+            elif self.MODEL.g_act_fn == "Auto":
+                pass
+            else:
+                raise NotImplementedError
+
+            if self.MODEL.d_act_fn == "ReLU":
+                self.MODULES.d_act_fn = nn.ReLU(inplace=True)
+            elif self.MODEL.d_act_fn == "Leaky_ReLU":
+                self.MODULES.d_act_fn = nn.LeakyReLU(negative_slope=0.1, inplace=True)
+            elif self.MODEL.d_act_fn == "ELU":
+                self.MODULES.d_act_fn = nn.ELU(alpha=1.0, inplace=True)
+            elif self.MODEL.d_act_fn == "GELU":
+                self.MODULES.d_act_fn = nn.GELU()
+            elif self.MODEL.g_act_fn == "Auto":
+                pass
+            else:
+                raise NotImplementedError
+
+            self.MODULES.AvgPool = nn.AvgPool3d
+
+        # 3D
+        elif self.DATA.num_dims == 3:
+            if self.MODEL.apply_g_sn:
+                self.MODULES.g_conv2d = ops.snconv3d
+                self.MODULES.g_deconv2d = ops.sndeconv3d
+                self.MODULES.g_linear = ops.snlinear
+                self.MODULES.g_embedding = ops.sn_embedding
+            else:
+                self.MODULES.g_conv2d = ops.conv3d
+                self.MODULES.g_deconv2d = ops.deconv3d
+                self.MODULES.g_linear = ops.linear
+                self.MODULES.g_embedding = ops.embedding
+
+            if self.MODEL.apply_d_sn:
+                self.MODULES.d_conv2d = ops.snconv3d
+                self.MODULES.d_deconv2d = ops.sndeconv3d
+                self.MODULES.d_linear = ops.snlinear
+                self.MODULES.d_embedding = ops.sn_embedding
+            else:
+                self.MODULES.d_conv2d = ops.conv3d
+                self.MODULES.d_deconv2d = ops.deconv3d
+                self.MODULES.d_linear = ops.linear
+                self.MODULES.d_embedding = ops.embedding
+
+            if self.MODEL.g_cond_mtd == "cBN" and self.MODEL.backbone in ["big_resnet", "deep_big_resnet"]:
+                self.MODULES.g_bn = ops.BigGANConditionalBatchNorm2d
+            elif self.MODEL.g_cond_mtd == "cBN":
+                self.MODULES.g_bn = ops.ConditionalBatchNorm3d
+            elif self.MODEL.g_cond_mtd == "W/O":
+                self.MODULES.g_bn = ops.batchnorm_3d
+            elif self.MODEL.g_cond_mtd == "cAdaIN":
+                pass
+            else:
+                raise NotImplementedError
+
+            if not self.MODEL.apply_d_sn:
+                self.MODULES.d_bn = ops.batchnorm_3d
+
+            if self.MODEL.g_act_fn == "ReLU":
+                self.MODULES.g_act_fn = nn.ReLU(inplace=True)
+            elif self.MODEL.g_act_fn == "Leaky_ReLU":
+                self.MODULES.g_act_fn = nn.LeakyReLU(negative_slope=0.1, inplace=True)
+            elif self.MODEL.g_act_fn == "ELU":
+                self.MODULES.g_act_fn = nn.ELU(alpha=1.0, inplace=True)
+            elif self.MODEL.g_act_fn == "GELU":
+                self.MODULES.g_act_fn = nn.GELU()
+            elif self.MODEL.g_act_fn == "Auto":
+                pass
+            else:
+                raise NotImplementedError
+
+            if self.MODEL.d_act_fn == "ReLU":
+                self.MODULES.d_act_fn = nn.ReLU(inplace=True)
+            elif self.MODEL.d_act_fn == "Leaky_ReLU":
+                self.MODULES.d_act_fn = nn.LeakyReLU(negative_slope=0.1, inplace=True)
+            elif self.MODEL.d_act_fn == "ELU":
+                self.MODULES.d_act_fn = nn.ELU(alpha=1.0, inplace=True)
+            elif self.MODEL.d_act_fn == "GELU":
+                self.MODULES.d_act_fn = nn.GELU()
+            elif self.MODEL.g_act_fn == "Auto":
+                pass
+            else:
+                raise NotImplementedError
+
+            self.MODULES.AvgPool = nn.AvgPool3d
         else:
+            print(f"Unknown dimensionality: DATA.num_dims= {self.DATA.num_dims}")
             raise NotImplementedError
 
-        if not self.MODEL.apply_d_sn:
-            self.MODULES.d_bn = ops.batchnorm_2d
-
-        if self.MODEL.g_act_fn == "ReLU":
-            self.MODULES.g_act_fn = nn.ReLU(inplace=True)
-        elif self.MODEL.g_act_fn == "Leaky_ReLU":
-            self.MODULES.g_act_fn = nn.LeakyReLU(negative_slope=0.1, inplace=True)
-        elif self.MODEL.g_act_fn == "ELU":
-            self.MODULES.g_act_fn = nn.ELU(alpha=1.0, inplace=True)
-        elif self.MODEL.g_act_fn == "GELU":
-            self.MODULES.g_act_fn = nn.GELU()
-        elif self.MODEL.g_act_fn == "Auto":
-            pass
-        else:
-            raise NotImplementedError
-
-        if self.MODEL.d_act_fn == "ReLU":
-            self.MODULES.d_act_fn = nn.ReLU(inplace=True)
-        elif self.MODEL.d_act_fn == "Leaky_ReLU":
-            self.MODULES.d_act_fn = nn.LeakyReLU(negative_slope=0.1, inplace=True)
-        elif self.MODEL.d_act_fn == "ELU":
-            self.MODULES.d_act_fn = nn.ELU(alpha=1.0, inplace=True)
-        elif self.MODEL.d_act_fn == "GELU":
-            self.MODULES.d_act_fn = nn.GELU()
-        elif self.MODEL.g_act_fn == "Auto":
-            pass
-        else:
-            raise NotImplementedError
         return self.MODULES
 
     def define_optimizer(self, Gen, Dis):
