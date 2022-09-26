@@ -1,0 +1,25 @@
+DATA:
+  name: "gpm"
+  img_size: 32
+  num_classes: 1
+  img_channels: 1
+MODEL:
+  backbone: "big_resnet"
+  g_cond_mtd: "cBN"
+  d_cond_mtd: "PD"
+  apply_g_sn: True
+  apply_d_sn: True
+  apply_attn: True
+  attn_g_loc: [2]
+  attn_d_loc: [1]
+  z_dim: 8
+  g_shared_dim: 32
+  g_conv_dim: 16
+  d_conv_dim: 16
+  apply_g_ema: True
+  g_ema_decay: 0.9999
+  g_ema_start: 1000
+LOSS:
+  adv_loss: "hinge"
+OPTIMIZATION:
+  batch_size: 256
