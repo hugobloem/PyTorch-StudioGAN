@@ -467,7 +467,7 @@ class Configurations(object):
             else:
                 raise NotImplementedError
 
-            self.MODULES.AvgPool = nn.AvgPool3d
+            self.MODULES.AvgPool = nn.AvgPool2d
 
         # 3D
         elif self.DATA.num_dims == 3:
