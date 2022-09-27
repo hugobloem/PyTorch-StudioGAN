@@ -323,7 +323,7 @@ class Discriminator(nn.Module):
                 for block in blocklist:
                     h = block(h)
             h = self.activation(h)
-            h = torch.sum(h, dim=[-1, -2, -3][:self.num_dims])
+            h = torch.sum(h, dim=[-3, -2, -1][self.num_dims-1:])
             
             # adversarial training
             adv_output = torch.squeeze(self.linear1(h))

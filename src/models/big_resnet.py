@@ -59,7 +59,7 @@ class GenBlock(nn.Module):
 
 
 class Generator(nn.Module):
-    def __init__(self, z_dim, g_shared_dim, img_size, img_channels, g_conv_dim, apply_attn, attn_g_loc, g_cond_mtd, num_classes, g_init, g_depth,
+    def __init__(self, z_dim, g_shared_dim, img_size, img_channels, num_dims, g_conv_dim, apply_attn, attn_g_loc, g_cond_mtd, num_classes, g_init, g_depth,
                  mixed_precision, MODULES):
         super(Generator, self).__init__()
         g_in_dims_collection = {
@@ -84,6 +84,7 @@ class Generator(nn.Module):
         self.g_shared_dim = g_shared_dim
         self.g_cond_mtd = g_cond_mtd
         self.num_classes = num_classes
+        self.num_dims = num_dims
         self.mixed_precision = mixed_precision
         self.in_dims = g_in_dims_collection[str(img_size)]
         self.out_dims = g_out_dims_collection[str(img_size)]
@@ -92,6 +93,7 @@ class Generator(nn.Module):
         self.chunk_size = self.z_dim if self.g_cond_mtd == "W/O" else z_dim // (self.num_blocks + 1)
         self.hier_z_dim = self.chunk_size + self.g_shared_dim
         assert self.z_dim % (self.num_blocks + 1) == 0, "z_dim should be divided by the number of blocks"
+        assert self.num_dims == 2, "Only support 2D images"
 
         self.linear0 = MODULES.g_linear(in_features=self.chunk_size, out_features=self.in_dims[0] * self.bottom * self.bottom, bias=True)
 
@@ -237,7 +239,7 @@ class DiscBlock(nn.Module):
 
 class Discriminator(nn.Module):
     def __init__(self, img_size, img_channels, d_conv_dim, apply_d_sn, apply_attn, attn_d_loc, d_cond_mtd, aux_cls_type, d_embed_dim, normalize_d_embed,
-                 num_classes, d_init, d_depth, mixed_precision, MODULES):
+                 num_classes, num_dims, d_init, d_depth, mixed_precision, MODULES):
         super(Discriminator, self).__init__()
         d_in_dims_collection = {
             "32": [img_channels] + [d_conv_dim * 2, d_conv_dim * 2, d_conv_dim * 2],
@@ -268,6 +270,7 @@ class Discriminator(nn.Module):
         self.aux_cls_type = aux_cls_type
         self.normalize_d_embed = normalize_d_embed
         self.num_classes = num_classes
+        self.num_dims = num_dims
         self.mixed_precision = mixed_precision
         self.in_dims = d_in_dims_collection[str(img_size)]
         self.out_dims = d_out_dims_collection[str(img_size)]
