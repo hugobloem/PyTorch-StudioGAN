@@ -1,0 +1,353 @@
+[INFO] 2022-09-27 08:54:50 > Run name : gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:54:50 > cfgs.DATA =
+[INFO] 2022-09-27 08:54:50 > {
+  "name": "gpm",
+  "img_size": 64,
+  "num_classes": 1,
+  "img_channels": 3,
+  "num_dims": 2
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.MODEL =
+[INFO] 2022-09-27 08:54:50 > {
+  "backbone": "resnet",
+  "g_cond_mtd": "W/O",
+  "d_cond_mtd": "W/O",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": false,
+  "apply_d_sn": false,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": false,
+  "attn_g_loc": [
+    "N/A"
+  ],
+  "attn_d_loc": [
+    "N/A"
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 16,
+  "w_dim": "N/A",
+  "g_shared_dim": "N/A",
+  "g_conv_dim": 2,
+  "d_conv_dim": 2,
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": false,
+  "g_ema_decay": "N/A",
+  "g_ema_start": "N/A",
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.LOSS =
+[INFO] 2022-09-27 08:54:50 > {
+  "adv_loss": "wasserstein",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": true,
+  "gp_lambda": 10.0,
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.OPTIMIZATION =
+[INFO] 2022-09-27 08:54:50 > {
+  "type_": "Adam",
+  "batch_size": 96,
+  "acml_steps": 1,
+  "g_lr": 0.0002,
+  "d_lr": 0.0002,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.1,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 1,
+  "total_steps": 30000,
+  "world_size": 3
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.PRE =
+[INFO] 2022-09-27 08:54:50 > {
+  "apply_rflip": false,
+  "crop_long_edge": true,
+  "resize_size": 64
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.AUG =
+[INFO] 2022-09-27 08:54:50 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.RUN =
+[INFO] 2022-09-27 08:54:50 > {
+  "entity": null,
+  "project": "gpm_carb",
+  "cfg_file": "src/configs/GPM_carb/WGAN-GP.yaml",
+  "data_dir": "data/gpm_carb_256/",
+  "save_dir": "./output_carb/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 1073,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 8,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": false,
+  "langevin_rate": -1,
+  "langevin_noise_std": -1,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": false,
+  "load_data_in_memory": false,
+  "eval": false,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 100,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2022-09-27 08:54:50 > cfgs.STYLEGAN2 =
+[INFO] 2022-09-27 08:54:50 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2022-09-27 08:54:50 > Load gpm train dataset.
+[INFO] 2022-09-27 08:54:50 > Train dataset size: 1750
+[INFO] 2022-09-27 08:54:50 > Build a Generative Adversarial Network.
+[INFO] 2022-09-27 08:54:50 > Modules are located on './src/models.resnet'.
+[INFO] 2022-09-27 08:55:12 > Number of parameters: 18895
+[INFO] 2022-09-27 08:55:12 > Generator(
+  (linear0): Linear(in_features=16, out_features=512, bias=True)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(16, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(8, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(8, 4, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(8, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(4, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (3): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(4, 2, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(4, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(2, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (bn4): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (activation): ReLU(inplace=True)
+  (conv2d5): Conv2d(2, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2022-09-27 08:55:12 > Number of parameters: 19605
+[INFO] 2022-09-27 08:55:12 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscOptBlock(
+        (conv2d0): Conv2d(3, 2, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(3, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(2, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn0): BatchNorm2d(3, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (1): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(2, 4, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(2, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(4, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(4, 8, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(4, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(8, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (3): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(8, 16, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (4): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(16, 32, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (linear1): Linear(in_features=32, out_features=1, bias=True)
+)
+[INFO] 2022-09-27 08:55:20 > Start training!
+[INFO] 2022-09-27 08:55:46 > Step:    100 Progress: 0.3% Elapsed: 0:00:26 Gen_loss: -2.98 Dis_loss: -9.605 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:55:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:55:47 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_100.png
+[INFO] 2022-09-27 08:55:47 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:56:01 > Step:    200 Progress: 0.7% Elapsed: 0:00:41 Gen_loss: 2.336 Dis_loss: -20.12 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:56:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:56:01 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_200.png
+[INFO] 2022-09-27 08:56:01 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:56:16 > Step:    300 Progress: 1.0% Elapsed: 0:00:56 Gen_loss: 10.57 Dis_loss: -31.95 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:56:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:56:16 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_300.png
+[INFO] 2022-09-27 08:56:16 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:56:31 > Step:    400 Progress: 1.3% Elapsed: 0:01:11 Gen_loss: -0.7948 Dis_loss: -29.93 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:56:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:56:31 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_400.png
+[INFO] 2022-09-27 08:56:31 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:56:45 > Step:    500 Progress: 1.7% Elapsed: 0:01:25 Gen_loss: 16.07 Dis_loss: -62.99 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:56:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:56:46 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_500.png
+[INFO] 2022-09-27 08:56:46 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:57:00 > Step:    600 Progress: 2.0% Elapsed: 0:01:40 Gen_loss: -5.617 Dis_loss: -54.76 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:57:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:57:01 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_600.png
+[INFO] 2022-09-27 08:57:01 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:57:16 > Step:    700 Progress: 2.3% Elapsed: 0:01:56 Gen_loss: 20.59 Dis_loss: 4.481 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:57:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:57:16 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_700.png
+[INFO] 2022-09-27 08:57:16 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:57:31 > Step:    800 Progress: 2.7% Elapsed: 0:02:11 Gen_loss: 6.978 Dis_loss: -57.04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:57:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:57:31 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_800.png
+[INFO] 2022-09-27 08:57:31 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:57:45 > Step:    900 Progress: 3.0% Elapsed: 0:02:25 Gen_loss: -12.77 Dis_loss: -75.47 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:57:45 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:57:45 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_900.png
+[INFO] 2022-09-27 08:57:46 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50
+[INFO] 2022-09-27 08:58:00 > Step:   1000 Progress: 3.3% Elapsed: 0:02:40 Gen_loss: 15.32 Dis_loss: -75.56 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 08:58:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 08:58:01 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_08_54_50/generated_canvas_1000.png
+[INFO] 2022-09-27 08:58:01 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_08_54_50

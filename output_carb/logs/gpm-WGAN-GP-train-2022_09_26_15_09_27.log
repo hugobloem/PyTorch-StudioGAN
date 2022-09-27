@@ -1,0 +1,936 @@
+[INFO] 2022-09-26 15:09:27 > Run name : gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:09:27 > cfgs.DATA =
+[INFO] 2022-09-26 15:09:27 > {
+  "name": "gpm",
+  "img_size": 64,
+  "num_classes": 1,
+  "img_channels": 3,
+  "num_dims": 2
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.MODEL =
+[INFO] 2022-09-26 15:09:27 > {
+  "backbone": "resnet",
+  "g_cond_mtd": "W/O",
+  "d_cond_mtd": "W/O",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": false,
+  "apply_d_sn": false,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": false,
+  "attn_g_loc": [
+    "N/A"
+  ],
+  "attn_d_loc": [
+    "N/A"
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 16,
+  "w_dim": "N/A",
+  "g_shared_dim": "N/A",
+  "g_conv_dim": 2,
+  "d_conv_dim": 2,
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": false,
+  "g_ema_decay": "N/A",
+  "g_ema_start": "N/A",
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.LOSS =
+[INFO] 2022-09-26 15:09:27 > {
+  "adv_loss": "wasserstein",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": true,
+  "gp_lambda": 10.0,
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.OPTIMIZATION =
+[INFO] 2022-09-26 15:09:27 > {
+  "type_": "Adam",
+  "batch_size": 128,
+  "acml_steps": 1,
+  "g_lr": 0.0002,
+  "d_lr": 0.0002,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.5,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 2,
+  "total_steps": 30000,
+  "world_size": 2
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.PRE =
+[INFO] 2022-09-26 15:09:27 > {
+  "apply_rflip": true,
+  "crop_long_edge": true,
+  "resize_size": 64
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.AUG =
+[INFO] 2022-09-26 15:09:27 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.RUN =
+[INFO] 2022-09-26 15:09:27 > {
+  "entity": null,
+  "project": "gpm_carb",
+  "cfg_file": "src/configs/GPM_carb/WGAN-GP.yaml",
+  "data_dir": "data/gpm_carb_256/",
+  "save_dir": "./output_carb/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 2852,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 8,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": true,
+  "langevin_rate": -1,
+  "langevin_noise_std": 1.0,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": false,
+  "load_data_in_memory": false,
+  "eval": true,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 100,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2022-09-26 15:09:27 > cfgs.STYLEGAN2 =
+[INFO] 2022-09-26 15:09:27 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2022-09-26 15:09:27 > Load gpm train dataset.
+[INFO] 2022-09-26 15:09:27 > Train dataset size: 1750
+[INFO] 2022-09-26 15:09:27 > Load gpm train dataset.
+[INFO] 2022-09-26 15:09:27 > Eval dataset size: 1750
+[INFO] 2022-09-26 15:09:27 > Build a Generative Adversarial Network.
+[INFO] 2022-09-26 15:09:27 > Modules are located on './src/models.resnet'.
+[INFO] 2022-09-26 15:09:30 > Number of parameters: 18895
+[INFO] 2022-09-26 15:09:30 > Generator(
+  (linear0): Linear(in_features=16, out_features=512, bias=True)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(32, 16, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(32, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(16, 8, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(16, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(8, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (2): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(8, 4, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(8, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(4, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+    (3): ModuleList(
+      (0): GenBlock(
+        (bn1): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(4, 2, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(4, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(2, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      )
+    )
+  )
+  (bn4): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (activation): ReLU(inplace=True)
+  (conv2d5): Conv2d(2, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2022-09-26 15:09:30 > Number of parameters: 19605
+[INFO] 2022-09-26 15:09:30 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscOptBlock(
+        (conv2d0): Conv2d(3, 2, kernel_size=(1, 1), stride=(1, 1))
+        (conv2d1): Conv2d(3, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(2, 2, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn0): BatchNorm2d(3, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (1): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(2, 4, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(2, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(4, 4, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(2, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(4, 8, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(4, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(8, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(4, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (3): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(8, 16, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(8, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(16, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(8, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+    (4): ModuleList(
+      (0): DiscBlock(
+        (activation): ReLU(inplace=True)
+        (conv2d0): Conv2d(16, 32, kernel_size=(1, 1), stride=(1, 1))
+        (bn0): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (conv2d1): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv2d2): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (bn1): BatchNorm2d(16, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn2): BatchNorm2d(32, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (average_pooling): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (linear1): Linear(in_features=32, out_features=1, bias=True)
+)
+[INFO] 2022-09-26 15:09:35 > Start training!
+[INFO] 2022-09-26 15:10:32 > Step:    100 Progress: 0.3% Elapsed: 0:00:57 Gen_loss: -28.28 Dis_loss: -6.834 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:10:32 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:10:33 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_100.png
+[INFO] 2022-09-26 15:10:33 > Start Evaluation (100 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:10:33 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:10:39 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:11:12 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:11:24 > Inception score (Step: 100, 1750 generated images): 2.216918706893921
+[INFO] 2022-09-26 15:11:24 > FID score (Step: 100, Using train moments): 302.01512349042275
+[INFO] 2022-09-26 15:11:24 > Improved Precision (Step: 100, Using train images): 0.0
+[INFO] 2022-09-26 15:11:24 > Improved Recall (Step: 100, Using train images): 0.0
+[INFO] 2022-09-26 15:11:24 > Density (Step: 100, Using train images): 0.0
+[INFO] 2022-09-26 15:11:24 > Coverage (Step: 100, Using train images): 0.0
+[INFO] 2022-09-26 15:11:24 > Best FID score (Step: 100, Using train moments): 302.01512349042275
+[INFO] 2022-09-26 15:11:24 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:12:17 > Step:    200 Progress: 0.7% Elapsed: 0:02:42 Gen_loss: 6.341 Dis_loss: -28.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:12:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:12:17 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_200.png
+[INFO] 2022-09-26 15:12:18 > Start Evaluation (200 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:12:18 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:12:23 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:12:54 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:13:07 > Inception score (Step: 200, 1750 generated images): 2.083967447280884
+[INFO] 2022-09-26 15:13:07 > FID score (Step: 200, Using train moments): 290.6553172073788
+[INFO] 2022-09-26 15:13:07 > Improved Precision (Step: 200, Using train images): 0.004571428571428572
+[INFO] 2022-09-26 15:13:07 > Improved Recall (Step: 200, Using train images): 0.0
+[INFO] 2022-09-26 15:13:07 > Density (Step: 200, Using train images): 0.0009142857142857144
+[INFO] 2022-09-26 15:13:07 > Coverage (Step: 200, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:13:07 > Best FID score (Step: 200, Using train moments): 290.6553172073788
+[INFO] 2022-09-26 15:13:07 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:14:01 > Step:    300 Progress: 1.0% Elapsed: 0:04:25 Gen_loss: -6.134 Dis_loss: -95.54 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:14:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:14:01 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_300.png
+[INFO] 2022-09-26 15:14:01 > Start Evaluation (300 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:14:01 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:14:06 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:14:23 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:14:39 > Inception score (Step: 300, 1750 generated images): 2.0187783241271973
+[INFO] 2022-09-26 15:14:39 > FID score (Step: 300, Using train moments): 304.07807165438476
+[INFO] 2022-09-26 15:14:39 > Improved Precision (Step: 300, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 15:14:39 > Improved Recall (Step: 300, Using train images): 0.0
+[INFO] 2022-09-26 15:14:39 > Density (Step: 300, Using train images): 0.0004571428571428572
+[INFO] 2022-09-26 15:14:39 > Coverage (Step: 300, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:14:39 > Best FID score (Step: 200, Using train moments): 290.6553172073788
+[INFO] 2022-09-26 15:14:39 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:15:31 > Step:    400 Progress: 1.3% Elapsed: 0:05:55 Gen_loss: 51.23 Dis_loss: -336.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:15:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:15:31 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_400.png
+[INFO] 2022-09-26 15:15:31 > Start Evaluation (400 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:15:31 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:15:37 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:16:10 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:16:21 > Inception score (Step: 400, 1750 generated images): 2.101142406463623
+[INFO] 2022-09-26 15:16:21 > FID score (Step: 400, Using train moments): 303.65474149977604
+[INFO] 2022-09-26 15:16:21 > Improved Precision (Step: 400, Using train images): 0.0
+[INFO] 2022-09-26 15:16:21 > Improved Recall (Step: 400, Using train images): 0.0
+[INFO] 2022-09-26 15:16:21 > Density (Step: 400, Using train images): 0.0
+[INFO] 2022-09-26 15:16:21 > Coverage (Step: 400, Using train images): 0.0
+[INFO] 2022-09-26 15:16:21 > Best FID score (Step: 200, Using train moments): 290.6553172073788
+[INFO] 2022-09-26 15:16:21 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:17:00 > Step:    500 Progress: 1.7% Elapsed: 0:07:24 Gen_loss: -62.66 Dis_loss: -500.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:17:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:17:00 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_500.png
+[INFO] 2022-09-26 15:17:00 > Start Evaluation (500 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:17:00 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:17:04 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:17:22 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:17:33 > Inception score (Step: 500, 1750 generated images): 1.9827486276626587
+[INFO] 2022-09-26 15:17:33 > FID score (Step: 500, Using train moments): 326.5674149001876
+[INFO] 2022-09-26 15:17:33 > Improved Precision (Step: 500, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:17:33 > Improved Recall (Step: 500, Using train images): 0.0
+[INFO] 2022-09-26 15:17:33 > Density (Step: 500, Using train images): 0.0001142857142857143
+[INFO] 2022-09-26 15:17:33 > Coverage (Step: 500, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:17:33 > Best FID score (Step: 200, Using train moments): 290.6553172073788
+[INFO] 2022-09-26 15:17:33 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:18:12 > Step:    600 Progress: 2.0% Elapsed: 0:08:37 Gen_loss: 62.91 Dis_loss: -586.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:18:12 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:18:12 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_600.png
+[INFO] 2022-09-26 15:18:12 > Start Evaluation (600 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:18:12 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:18:16 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:18:28 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:18:38 > Inception score (Step: 600, 1750 generated images): 2.2415404319763184
+[INFO] 2022-09-26 15:18:38 > FID score (Step: 600, Using train moments): 325.9413472706294
+[INFO] 2022-09-26 15:18:38 > Improved Precision (Step: 600, Using train images): 0.016
+[INFO] 2022-09-26 15:18:38 > Improved Recall (Step: 600, Using train images): 0.0
+[INFO] 2022-09-26 15:18:38 > Density (Step: 600, Using train images): 0.0032
+[INFO] 2022-09-26 15:18:38 > Coverage (Step: 600, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 15:18:38 > Best FID score (Step: 200, Using train moments): 290.6553172073788
+[INFO] 2022-09-26 15:18:38 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:19:20 > Step:    700 Progress: 2.3% Elapsed: 0:09:44 Gen_loss: -24.54 Dis_loss: -1.115e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:19:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:19:20 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_700.png
+[INFO] 2022-09-26 15:19:20 > Start Evaluation (700 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:19:20 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:19:26 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:19:53 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:20:07 > Inception score (Step: 700, 1750 generated images): 1.9073957204818726
+[INFO] 2022-09-26 15:20:07 > FID score (Step: 700, Using train moments): 269.33176939739803
+[INFO] 2022-09-26 15:20:07 > Improved Precision (Step: 700, Using train images): 0.008
+[INFO] 2022-09-26 15:20:07 > Improved Recall (Step: 700, Using train images): 0.0
+[INFO] 2022-09-26 15:20:07 > Density (Step: 700, Using train images): 0.0016
+[INFO] 2022-09-26 15:20:07 > Coverage (Step: 700, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:20:07 > Best FID score (Step: 700, Using train moments): 269.33176939739803
+[INFO] 2022-09-26 15:20:07 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:20:59 > Step:    800 Progress: 2.7% Elapsed: 0:11:24 Gen_loss: 20.1 Dis_loss: -1.762e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:20:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:21:00 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_800.png
+[INFO] 2022-09-26 15:21:00 > Start Evaluation (800 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:21:00 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:21:05 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:21:19 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:21:33 > Inception score (Step: 800, 1750 generated images): 2.1214709281921387
+[INFO] 2022-09-26 15:21:33 > FID score (Step: 800, Using train moments): 277.3411285813712
+[INFO] 2022-09-26 15:21:33 > Improved Precision (Step: 800, Using train images): 0.03542857142857143
+[INFO] 2022-09-26 15:21:33 > Improved Recall (Step: 800, Using train images): 0.0
+[INFO] 2022-09-26 15:21:33 > Density (Step: 800, Using train images): 0.0070857142857142855
+[INFO] 2022-09-26 15:21:33 > Coverage (Step: 800, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:21:33 > Best FID score (Step: 700, Using train moments): 269.33176939739803
+[INFO] 2022-09-26 15:21:33 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:22:25 > Step:    900 Progress: 3.0% Elapsed: 0:12:50 Gen_loss: 16.59 Dis_loss: -1.968e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:22:25 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:22:26 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_900.png
+[INFO] 2022-09-26 15:22:26 > Start Evaluation (900 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:22:26 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:22:31 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:22:50 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:23:05 > Inception score (Step: 900, 1750 generated images): 2.0376415252685547
+[INFO] 2022-09-26 15:23:05 > FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:23:05 > Improved Precision (Step: 900, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:23:05 > Improved Recall (Step: 900, Using train images): 0.0
+[INFO] 2022-09-26 15:23:05 > Density (Step: 900, Using train images): 0.00034285714285714285
+[INFO] 2022-09-26 15:23:05 > Coverage (Step: 900, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:23:05 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:23:05 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:23:54 > Step:   1000 Progress: 3.3% Elapsed: 0:14:18 Gen_loss: -22.36 Dis_loss: -3.141e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:23:54 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:23:54 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1000.png
+[INFO] 2022-09-26 15:23:54 > Start Evaluation (1000 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:23:54 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:24:00 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:24:13 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:24:29 > Inception score (Step: 1000, 1750 generated images): 1.9563559293746948
+[INFO] 2022-09-26 15:24:29 > FID score (Step: 1000, Using train moments): 276.0296639174293
+[INFO] 2022-09-26 15:24:29 > Improved Precision (Step: 1000, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 15:24:29 > Improved Recall (Step: 1000, Using train images): 0.0
+[INFO] 2022-09-26 15:24:29 > Density (Step: 1000, Using train images): 0.0004571428571428572
+[INFO] 2022-09-26 15:24:29 > Coverage (Step: 1000, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:24:29 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:24:29 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:25:16 > Step:   1100 Progress: 3.7% Elapsed: 0:15:41 Gen_loss: 37.07 Dis_loss: -4.465e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:25:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:25:16 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1100.png
+[INFO] 2022-09-26 15:25:16 > Start Evaluation (1100 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:25:16 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:25:23 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:25:36 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:25:50 > Inception score (Step: 1100, 1750 generated images): 1.821886420249939
+[INFO] 2022-09-26 15:25:50 > FID score (Step: 1100, Using train moments): 266.1193226203975
+[INFO] 2022-09-26 15:25:50 > Improved Precision (Step: 1100, Using train images): 0.0
+[INFO] 2022-09-26 15:25:50 > Improved Recall (Step: 1100, Using train images): 0.0
+[INFO] 2022-09-26 15:25:50 > Density (Step: 1100, Using train images): 0.0
+[INFO] 2022-09-26 15:25:50 > Coverage (Step: 1100, Using train images): 0.0
+[INFO] 2022-09-26 15:25:50 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:25:50 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:26:37 > Step:   1200 Progress: 4.0% Elapsed: 0:17:02 Gen_loss: 64.59 Dis_loss: -6.262e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:26:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:26:38 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1200.png
+[INFO] 2022-09-26 15:26:38 > Start Evaluation (1200 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:26:38 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:26:44 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:26:57 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:27:10 > Inception score (Step: 1200, 1750 generated images): 1.7362284660339355
+[INFO] 2022-09-26 15:27:10 > FID score (Step: 1200, Using train moments): 275.2715155879546
+[INFO] 2022-09-26 15:27:10 > Improved Precision (Step: 1200, Using train images): 0.0
+[INFO] 2022-09-26 15:27:10 > Improved Recall (Step: 1200, Using train images): 0.0
+[INFO] 2022-09-26 15:27:10 > Density (Step: 1200, Using train images): 0.0
+[INFO] 2022-09-26 15:27:10 > Coverage (Step: 1200, Using train images): 0.0
+[INFO] 2022-09-26 15:27:10 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:27:10 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:27:59 > Step:   1300 Progress: 4.3% Elapsed: 0:18:23 Gen_loss: -177.0 Dis_loss: -6.655e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:27:59 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:27:59 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1300.png
+[INFO] 2022-09-26 15:27:59 > Start Evaluation (1300 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:27:59 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:28:05 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:28:19 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:28:32 > Inception score (Step: 1300, 1750 generated images): 1.7744508981704712
+[INFO] 2022-09-26 15:28:32 > FID score (Step: 1300, Using train moments): 287.62189475324794
+[INFO] 2022-09-26 15:28:32 > Improved Precision (Step: 1300, Using train images): 0.0
+[INFO] 2022-09-26 15:28:32 > Improved Recall (Step: 1300, Using train images): 0.0
+[INFO] 2022-09-26 15:28:32 > Density (Step: 1300, Using train images): 0.0
+[INFO] 2022-09-26 15:28:32 > Coverage (Step: 1300, Using train images): 0.0
+[INFO] 2022-09-26 15:28:32 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:28:32 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:29:20 > Step:   1400 Progress: 4.7% Elapsed: 0:19:45 Gen_loss: -160.6 Dis_loss: -8.068e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:29:20 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:29:21 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1400.png
+[INFO] 2022-09-26 15:29:21 > Start Evaluation (1400 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:29:21 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:29:27 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:29:41 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:29:52 > Inception score (Step: 1400, 1750 generated images): 2.0126774311065674
+[INFO] 2022-09-26 15:29:52 > FID score (Step: 1400, Using train moments): 288.9945204405295
+[INFO] 2022-09-26 15:29:52 > Improved Precision (Step: 1400, Using train images): 0.0
+[INFO] 2022-09-26 15:29:52 > Improved Recall (Step: 1400, Using train images): 0.0
+[INFO] 2022-09-26 15:29:52 > Density (Step: 1400, Using train images): 0.0
+[INFO] 2022-09-26 15:29:52 > Coverage (Step: 1400, Using train images): 0.0
+[INFO] 2022-09-26 15:29:52 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:29:52 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:30:27 > Step:   1500 Progress: 5.0% Elapsed: 0:20:52 Gen_loss: 424.5 Dis_loss: -9.127e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:30:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:30:27 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1500.png
+[INFO] 2022-09-26 15:30:27 > Start Evaluation (1500 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:30:27 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:30:31 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:30:41 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:30:52 > Inception score (Step: 1500, 1750 generated images): 2.0938191413879395
+[INFO] 2022-09-26 15:30:52 > FID score (Step: 1500, Using train moments): 288.35828285258145
+[INFO] 2022-09-26 15:30:52 > Improved Precision (Step: 1500, Using train images): 0.0
+[INFO] 2022-09-26 15:30:52 > Improved Recall (Step: 1500, Using train images): 0.0
+[INFO] 2022-09-26 15:30:52 > Density (Step: 1500, Using train images): 0.0
+[INFO] 2022-09-26 15:30:52 > Coverage (Step: 1500, Using train images): 0.0
+[INFO] 2022-09-26 15:30:52 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:30:52 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:31:27 > Step:   1600 Progress: 5.3% Elapsed: 0:21:52 Gen_loss: 177.5 Dis_loss: -8.902e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:31:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:31:27 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1600.png
+[INFO] 2022-09-26 15:31:27 > Start Evaluation (1600 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:31:27 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:31:31 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:31:42 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:31:52 > Inception score (Step: 1600, 1750 generated images): 1.9357094764709473
+[INFO] 2022-09-26 15:31:52 > FID score (Step: 1600, Using train moments): 273.3647965228528
+[INFO] 2022-09-26 15:31:52 > Improved Precision (Step: 1600, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:31:52 > Improved Recall (Step: 1600, Using train images): 0.0
+[INFO] 2022-09-26 15:31:52 > Density (Step: 1600, Using train images): 0.00034285714285714285
+[INFO] 2022-09-26 15:31:52 > Coverage (Step: 1600, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:31:52 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:31:52 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:32:27 > Step:   1700 Progress: 5.7% Elapsed: 0:22:52 Gen_loss: 767.8 Dis_loss: -8.871e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:32:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:32:27 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1700.png
+[INFO] 2022-09-26 15:32:27 > Start Evaluation (1700 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:32:27 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:32:31 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:32:42 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:32:52 > Inception score (Step: 1700, 1750 generated images): 1.9124163389205933
+[INFO] 2022-09-26 15:32:52 > FID score (Step: 1700, Using train moments): 264.458931237705
+[INFO] 2022-09-26 15:32:52 > Improved Precision (Step: 1700, Using train images): 0.0017142857142857142
+[INFO] 2022-09-26 15:32:52 > Improved Recall (Step: 1700, Using train images): 0.0
+[INFO] 2022-09-26 15:32:52 > Density (Step: 1700, Using train images): 0.00034285714285714285
+[INFO] 2022-09-26 15:32:52 > Coverage (Step: 1700, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:32:52 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:32:52 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:33:29 > Step:   1800 Progress: 6.0% Elapsed: 0:23:54 Gen_loss: 812.7 Dis_loss: -1.203e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:33:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:33:30 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1800.png
+[INFO] 2022-09-26 15:33:30 > Start Evaluation (1800 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:33:30 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:33:34 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:34:08 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:34:20 > Inception score (Step: 1800, 1750 generated images): 1.9275224208831787
+[INFO] 2022-09-26 15:34:20 > FID score (Step: 1800, Using train moments): 273.0900688921233
+[INFO] 2022-09-26 15:34:20 > Improved Precision (Step: 1800, Using train images): 0.0
+[INFO] 2022-09-26 15:34:20 > Improved Recall (Step: 1800, Using train images): 0.0
+[INFO] 2022-09-26 15:34:20 > Density (Step: 1800, Using train images): 0.0
+[INFO] 2022-09-26 15:34:20 > Coverage (Step: 1800, Using train images): 0.0
+[INFO] 2022-09-26 15:34:20 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:34:21 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:35:05 > Step:   1900 Progress: 6.3% Elapsed: 0:25:30 Gen_loss: -3.505e+03 Dis_loss: -5.648e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:35:05 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:35:05 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_1900.png
+[INFO] 2022-09-26 15:35:06 > Start Evaluation (1900 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:35:06 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:35:11 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:35:35 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:35:49 > Inception score (Step: 1900, 1750 generated images): 1.8070582151412964
+[INFO] 2022-09-26 15:35:49 > FID score (Step: 1900, Using train moments): 291.7337735023794
+[INFO] 2022-09-26 15:35:49 > Improved Precision (Step: 1900, Using train images): 0.0
+[INFO] 2022-09-26 15:35:49 > Improved Recall (Step: 1900, Using train images): 0.0
+[INFO] 2022-09-26 15:35:49 > Density (Step: 1900, Using train images): 0.0
+[INFO] 2022-09-26 15:35:49 > Coverage (Step: 1900, Using train images): 0.0
+[INFO] 2022-09-26 15:35:49 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:35:49 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:36:40 > Step:   2000 Progress: 6.7% Elapsed: 0:27:05 Gen_loss: -454.8 Dis_loss: -1.039e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:36:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:36:40 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2000.png
+[INFO] 2022-09-26 15:36:40 > Start Evaluation (2000 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:36:40 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:36:45 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:37:18 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:37:33 > Inception score (Step: 2000, 1750 generated images): 1.7744050025939941
+[INFO] 2022-09-26 15:37:33 > FID score (Step: 2000, Using train moments): 281.11628738220276
+[INFO] 2022-09-26 15:37:33 > Improved Precision (Step: 2000, Using train images): 0.0
+[INFO] 2022-09-26 15:37:33 > Improved Recall (Step: 2000, Using train images): 0.0
+[INFO] 2022-09-26 15:37:33 > Density (Step: 2000, Using train images): 0.0
+[INFO] 2022-09-26 15:37:33 > Coverage (Step: 2000, Using train images): 0.0
+[INFO] 2022-09-26 15:37:33 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:37:33 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:38:25 > Step:   2100 Progress: 7.0% Elapsed: 0:28:50 Gen_loss: 154.4 Dis_loss: -1.147e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:38:25 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:38:26 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2100.png
+[INFO] 2022-09-26 15:38:26 > Start Evaluation (2100 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:38:26 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:38:31 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:38:58 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:39:14 > Inception score (Step: 2100, 1750 generated images): 1.8104827404022217
+[INFO] 2022-09-26 15:39:14 > FID score (Step: 2100, Using train moments): 277.777993042959
+[INFO] 2022-09-26 15:39:14 > Improved Precision (Step: 2100, Using train images): 0.0
+[INFO] 2022-09-26 15:39:14 > Improved Recall (Step: 2100, Using train images): 0.0
+[INFO] 2022-09-26 15:39:14 > Density (Step: 2100, Using train images): 0.0
+[INFO] 2022-09-26 15:39:14 > Coverage (Step: 2100, Using train images): 0.0
+[INFO] 2022-09-26 15:39:14 > Best FID score (Step: 900, Using train moments): 262.64213361227127
+[INFO] 2022-09-26 15:39:14 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:40:04 > Step:   2200 Progress: 7.3% Elapsed: 0:30:29 Gen_loss: 63.62 Dis_loss: -1.227e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:40:04 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:40:04 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2200.png
+[INFO] 2022-09-26 15:40:04 > Start Evaluation (2200 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:40:04 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:40:09 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:40:36 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:40:49 > Inception score (Step: 2200, 1750 generated images): 1.7005255222320557
+[INFO] 2022-09-26 15:40:49 > FID score (Step: 2200, Using train moments): 261.91264795939946
+[INFO] 2022-09-26 15:40:49 > Improved Precision (Step: 2200, Using train images): 0.0034285714285714284
+[INFO] 2022-09-26 15:40:49 > Improved Recall (Step: 2200, Using train images): 0.0
+[INFO] 2022-09-26 15:40:49 > Density (Step: 2200, Using train images): 0.0006857142857142857
+[INFO] 2022-09-26 15:40:49 > Coverage (Step: 2200, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:40:49 > Best FID score (Step: 2200, Using train moments): 261.91264795939946
+[INFO] 2022-09-26 15:40:49 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:41:30 > Step:   2300 Progress: 7.7% Elapsed: 0:31:54 Gen_loss: 1.028e+03 Dis_loss: -1.417e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:41:30 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:41:30 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2300.png
+[INFO] 2022-09-26 15:41:30 > Start Evaluation (2300 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:41:30 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:41:34 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:41:53 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:42:04 > Inception score (Step: 2300, 1750 generated images): 1.7823066711425781
+[INFO] 2022-09-26 15:42:04 > FID score (Step: 2300, Using train moments): 254.79757999335033
+[INFO] 2022-09-26 15:42:04 > Improved Precision (Step: 2300, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:42:04 > Improved Recall (Step: 2300, Using train images): 0.0
+[INFO] 2022-09-26 15:42:04 > Density (Step: 2300, Using train images): 0.0001142857142857143
+[INFO] 2022-09-26 15:42:04 > Coverage (Step: 2300, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:42:04 > Best FID score (Step: 2300, Using train moments): 254.79757999335033
+[INFO] 2022-09-26 15:42:04 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:42:43 > Step:   2400 Progress: 8.0% Elapsed: 0:33:07 Gen_loss: 1.393e+03 Dis_loss: -1.679e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:42:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:42:43 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2400.png
+[INFO] 2022-09-26 15:42:43 > Start Evaluation (2400 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:42:43 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:42:47 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:43:06 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:43:18 > Inception score (Step: 2400, 1750 generated images): 1.7862497568130493
+[INFO] 2022-09-26 15:43:18 > FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:43:18 > Improved Precision (Step: 2400, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:43:18 > Improved Recall (Step: 2400, Using train images): 0.0
+[INFO] 2022-09-26 15:43:18 > Density (Step: 2400, Using train images): 0.0002285714285714286
+[INFO] 2022-09-26 15:43:18 > Coverage (Step: 2400, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:43:18 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:43:18 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:43:53 > Step:   2500 Progress: 8.3% Elapsed: 0:34:18 Gen_loss: 841.9 Dis_loss: -1.708e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:43:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:43:53 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2500.png
+[INFO] 2022-09-26 15:43:54 > Start Evaluation (2500 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:43:54 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:43:57 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:44:18 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:44:29 > Inception score (Step: 2500, 1750 generated images): 2.0006601810455322
+[INFO] 2022-09-26 15:44:29 > FID score (Step: 2500, Using train moments): 251.74938685339933
+[INFO] 2022-09-26 15:44:29 > Improved Precision (Step: 2500, Using train images): 0.008
+[INFO] 2022-09-26 15:44:29 > Improved Recall (Step: 2500, Using train images): 0.0
+[INFO] 2022-09-26 15:44:29 > Density (Step: 2500, Using train images): 0.0016
+[INFO] 2022-09-26 15:44:29 > Coverage (Step: 2500, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:44:29 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:44:29 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:45:08 > Step:   2600 Progress: 8.7% Elapsed: 0:35:32 Gen_loss: 1.579e+03 Dis_loss: -1.968e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:45:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:45:08 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2600.png
+[INFO] 2022-09-26 15:45:08 > Start Evaluation (2600 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:45:08 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:45:12 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:45:30 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:45:41 > Inception score (Step: 2600, 1750 generated images): 1.848811149597168
+[INFO] 2022-09-26 15:45:41 > FID score (Step: 2600, Using train moments): 253.5602446331798
+[INFO] 2022-09-26 15:45:41 > Improved Precision (Step: 2600, Using train images): 0.022285714285714287
+[INFO] 2022-09-26 15:45:41 > Improved Recall (Step: 2600, Using train images): 0.0
+[INFO] 2022-09-26 15:45:41 > Density (Step: 2600, Using train images): 0.0044571428571428574
+[INFO] 2022-09-26 15:45:41 > Coverage (Step: 2600, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:45:41 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:45:41 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:46:17 > Step:   2700 Progress: 9.0% Elapsed: 0:36:42 Gen_loss: 1.346e+03 Dis_loss: -2.114e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:46:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:46:18 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2700.png
+[INFO] 2022-09-26 15:46:18 > Start Evaluation (2700 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:46:18 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:46:22 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:46:42 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:46:53 > Inception score (Step: 2700, 1750 generated images): 1.875873327255249
+[INFO] 2022-09-26 15:46:53 > FID score (Step: 2700, Using train moments): 255.90341261575065
+[INFO] 2022-09-26 15:46:53 > Improved Precision (Step: 2700, Using train images): 0.004571428571428572
+[INFO] 2022-09-26 15:46:53 > Improved Recall (Step: 2700, Using train images): 0.0
+[INFO] 2022-09-26 15:46:53 > Density (Step: 2700, Using train images): 0.0009142857142857144
+[INFO] 2022-09-26 15:46:53 > Coverage (Step: 2700, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:46:53 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:46:53 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:47:28 > Step:   2800 Progress: 9.3% Elapsed: 0:37:53 Gen_loss: 2.525e+03 Dis_loss: -2.304e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:47:28 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:47:28 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2800.png
+[INFO] 2022-09-26 15:47:28 > Start Evaluation (2800 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:47:28 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:47:32 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:47:43 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:47:53 > Inception score (Step: 2800, 1750 generated images): 1.9445313215255737
+[INFO] 2022-09-26 15:47:53 > FID score (Step: 2800, Using train moments): 252.03945379340723
+[INFO] 2022-09-26 15:47:53 > Improved Precision (Step: 2800, Using train images): 0.021142857142857144
+[INFO] 2022-09-26 15:47:53 > Improved Recall (Step: 2800, Using train images): 0.0
+[INFO] 2022-09-26 15:47:53 > Density (Step: 2800, Using train images): 0.004228571428571429
+[INFO] 2022-09-26 15:47:53 > Coverage (Step: 2800, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:47:53 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:47:54 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:48:29 > Step:   2900 Progress: 9.7% Elapsed: 0:38:54 Gen_loss: -317.1 Dis_loss: -2.494e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:48:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:48:29 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_2900.png
+[INFO] 2022-09-26 15:48:29 > Start Evaluation (2900 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:48:29 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:48:33 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:48:44 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:48:55 > Inception score (Step: 2900, 1750 generated images): 1.7861684560775757
+[INFO] 2022-09-26 15:48:55 > FID score (Step: 2900, Using train moments): 255.15947053561814
+[INFO] 2022-09-26 15:48:55 > Improved Precision (Step: 2900, Using train images): 0.04228571428571429
+[INFO] 2022-09-26 15:48:55 > Improved Recall (Step: 2900, Using train images): 0.0
+[INFO] 2022-09-26 15:48:55 > Density (Step: 2900, Using train images): 0.008457142857142858
+[INFO] 2022-09-26 15:48:55 > Coverage (Step: 2900, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:48:55 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:48:55 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:49:29 > Step:   3000 Progress: 10.0% Elapsed: 0:39:54 Gen_loss: -336.0 Dis_loss: -2.636e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:49:29 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:49:29 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3000.png
+[INFO] 2022-09-26 15:49:30 > Start Evaluation (3000 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:49:30 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:49:33 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:49:44 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:49:55 > Inception score (Step: 3000, 1750 generated images): 1.7931674718856812
+[INFO] 2022-09-26 15:49:55 > FID score (Step: 3000, Using train moments): 254.89340666416362
+[INFO] 2022-09-26 15:49:55 > Improved Precision (Step: 3000, Using train images): 0.03257142857142857
+[INFO] 2022-09-26 15:49:55 > Improved Recall (Step: 3000, Using train images): 0.0
+[INFO] 2022-09-26 15:49:55 > Density (Step: 3000, Using train images): 0.006514285714285715
+[INFO] 2022-09-26 15:49:55 > Coverage (Step: 3000, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:49:55 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:49:55 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:50:31 > Step:   3100 Progress: 10.3% Elapsed: 0:40:55 Gen_loss: -295.1 Dis_loss: -2.714e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:50:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:50:31 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3100.png
+[INFO] 2022-09-26 15:50:31 > Start Evaluation (3100 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:50:31 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:50:35 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:50:45 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:50:57 > Inception score (Step: 3100, 1750 generated images): 1.7719603776931763
+[INFO] 2022-09-26 15:50:57 > FID score (Step: 3100, Using train moments): 255.2247407789761
+[INFO] 2022-09-26 15:50:57 > Improved Precision (Step: 3100, Using train images): 0.04057142857142857
+[INFO] 2022-09-26 15:50:57 > Improved Recall (Step: 3100, Using train images): 0.0
+[INFO] 2022-09-26 15:50:57 > Density (Step: 3100, Using train images): 0.008114285714285715
+[INFO] 2022-09-26 15:50:57 > Coverage (Step: 3100, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:50:57 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:50:57 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:51:37 > Step:   3200 Progress: 10.7% Elapsed: 0:42:01 Gen_loss: -257.1 Dis_loss: -3.115e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:51:37 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:51:37 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3200.png
+[INFO] 2022-09-26 15:51:37 > Start Evaluation (3200 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:51:37 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:51:41 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:52:05 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:52:17 > Inception score (Step: 3200, 1750 generated images): 1.7506743669509888
+[INFO] 2022-09-26 15:52:17 > FID score (Step: 3200, Using train moments): 256.3177606881866
+[INFO] 2022-09-26 15:52:17 > Improved Precision (Step: 3200, Using train images): 0.025142857142857144
+[INFO] 2022-09-26 15:52:17 > Improved Recall (Step: 3200, Using train images): 0.0
+[INFO] 2022-09-26 15:52:17 > Density (Step: 3200, Using train images): 0.005028571428571429
+[INFO] 2022-09-26 15:52:17 > Coverage (Step: 3200, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:52:17 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:52:17 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:52:55 > Step:   3300 Progress: 11.0% Elapsed: 0:43:20 Gen_loss: -243.2 Dis_loss: -3.215e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:52:55 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:52:56 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3300.png
+[INFO] 2022-09-26 15:52:56 > Start Evaluation (3300 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:52:56 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:52:59 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:53:16 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:53:28 > Inception score (Step: 3300, 1750 generated images): 1.7632033824920654
+[INFO] 2022-09-26 15:53:28 > FID score (Step: 3300, Using train moments): 253.38708003542618
+[INFO] 2022-09-26 15:53:28 > Improved Precision (Step: 3300, Using train images): 0.029142857142857144
+[INFO] 2022-09-26 15:53:28 > Improved Recall (Step: 3300, Using train images): 0.0
+[INFO] 2022-09-26 15:53:28 > Density (Step: 3300, Using train images): 0.0058285714285714295
+[INFO] 2022-09-26 15:53:28 > Coverage (Step: 3300, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:53:28 > Best FID score (Step: 2400, Using train moments): 250.86556279709853
+[INFO] 2022-09-26 15:53:28 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:54:07 > Step:   3400 Progress: 11.3% Elapsed: 0:44:32 Gen_loss: -302.6 Dis_loss: -3.611e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:54:07 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:54:08 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3400.png
+[INFO] 2022-09-26 15:54:08 > Start Evaluation (3400 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:54:08 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:54:12 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:54:31 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:54:43 > Inception score (Step: 3400, 1750 generated images): 1.8386367559432983
+[INFO] 2022-09-26 15:54:43 > FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 15:54:43 > Improved Precision (Step: 3400, Using train images): 0.011428571428571429
+[INFO] 2022-09-26 15:54:43 > Improved Recall (Step: 3400, Using train images): 0.0
+[INFO] 2022-09-26 15:54:43 > Density (Step: 3400, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 15:54:43 > Coverage (Step: 3400, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:54:43 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 15:54:43 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:55:22 > Step:   3500 Progress: 11.7% Elapsed: 0:45:47 Gen_loss: 761.6 Dis_loss: -3.232e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:55:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:55:23 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3500.png
+[INFO] 2022-09-26 15:55:23 > Start Evaluation (3500 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:55:23 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:55:27 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:55:46 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:55:58 > Inception score (Step: 3500, 1750 generated images): 1.9029967784881592
+[INFO] 2022-09-26 15:55:58 > FID score (Step: 3500, Using train moments): 269.29765082242545
+[INFO] 2022-09-26 15:55:58 > Improved Precision (Step: 3500, Using train images): 0.022857142857142857
+[INFO] 2022-09-26 15:55:58 > Improved Recall (Step: 3500, Using train images): 0.0
+[INFO] 2022-09-26 15:55:58 > Density (Step: 3500, Using train images): 0.004571428571428572
+[INFO] 2022-09-26 15:55:58 > Coverage (Step: 3500, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:55:58 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 15:55:58 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:56:32 > Step:   3600 Progress: 12.0% Elapsed: 0:46:57 Gen_loss: -470.3 Dis_loss: -3.715e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:56:32 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:56:33 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3600.png
+[INFO] 2022-09-26 15:56:33 > Start Evaluation (3600 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:56:33 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:56:36 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:56:53 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:57:04 > Inception score (Step: 3600, 1750 generated images): 1.910045862197876
+[INFO] 2022-09-26 15:57:04 > FID score (Step: 3600, Using train moments): 279.44545053367256
+[INFO] 2022-09-26 15:57:04 > Improved Precision (Step: 3600, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 15:57:04 > Improved Recall (Step: 3600, Using train images): 0.0
+[INFO] 2022-09-26 15:57:04 > Density (Step: 3600, Using train images): 0.0004571428571428572
+[INFO] 2022-09-26 15:57:04 > Coverage (Step: 3600, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:57:04 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 15:57:04 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:57:43 > Step:   3700 Progress: 12.3% Elapsed: 0:48:08 Gen_loss: 1.605e+03 Dis_loss: -3.88e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:57:43 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:57:44 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3700.png
+[INFO] 2022-09-26 15:57:44 > Start Evaluation (3700 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:57:44 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:57:47 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:58:09 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:58:21 > Inception score (Step: 3700, 1750 generated images): 1.9389742612838745
+[INFO] 2022-09-26 15:58:21 > FID score (Step: 3700, Using train moments): 278.80883681779386
+[INFO] 2022-09-26 15:58:21 > Improved Precision (Step: 3700, Using train images): 0.004571428571428572
+[INFO] 2022-09-26 15:58:21 > Improved Recall (Step: 3700, Using train images): 0.0
+[INFO] 2022-09-26 15:58:21 > Density (Step: 3700, Using train images): 0.0009142857142857144
+[INFO] 2022-09-26 15:58:21 > Coverage (Step: 3700, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 15:58:21 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 15:58:21 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:59:00 > Step:   3800 Progress: 12.7% Elapsed: 0:49:24 Gen_loss: 2.152e+03 Dis_loss: -4.056e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 15:59:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 15:59:00 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3800.png
+[INFO] 2022-09-26 15:59:01 > Start Evaluation (3800 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 15:59:01 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 15:59:04 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 15:59:26 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 15:59:39 > Inception score (Step: 3800, 1750 generated images): 1.9487920999526978
+[INFO] 2022-09-26 15:59:39 > FID score (Step: 3800, Using train moments): 281.6043265597664
+[INFO] 2022-09-26 15:59:39 > Improved Precision (Step: 3800, Using train images): 0.005142857142857143
+[INFO] 2022-09-26 15:59:39 > Improved Recall (Step: 3800, Using train images): 0.0
+[INFO] 2022-09-26 15:59:39 > Density (Step: 3800, Using train images): 0.0010285714285714286
+[INFO] 2022-09-26 15:59:39 > Coverage (Step: 3800, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 15:59:39 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 15:59:39 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:00:14 > Step:   3900 Progress: 13.0% Elapsed: 0:50:38 Gen_loss: 48.39 Dis_loss: -3.935e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 16:00:14 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 16:00:14 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_3900.png
+[INFO] 2022-09-26 16:00:14 > Start Evaluation (3900 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:00:14 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 16:00:18 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 16:00:39 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 16:00:51 > Inception score (Step: 3900, 1750 generated images): 1.9159448146820068
+[INFO] 2022-09-26 16:00:51 > FID score (Step: 3900, Using train moments): 280.90060566937626
+[INFO] 2022-09-26 16:00:51 > Improved Precision (Step: 3900, Using train images): 0.012
+[INFO] 2022-09-26 16:00:51 > Improved Recall (Step: 3900, Using train images): 0.0
+[INFO] 2022-09-26 16:00:51 > Density (Step: 3900, Using train images): 0.0025142857142857146
+[INFO] 2022-09-26 16:00:51 > Coverage (Step: 3900, Using train images): 0.001142857142857143
+[INFO] 2022-09-26 16:00:51 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 16:00:51 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:01:32 > Step:   4000 Progress: 13.3% Elapsed: 0:51:57 Gen_loss: 869.6 Dis_loss: -4.617e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 16:01:32 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 16:01:32 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_4000.png
+[INFO] 2022-09-26 16:01:33 > Start Evaluation (4000 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:01:33 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 16:01:36 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 16:01:55 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 16:02:11 > Inception score (Step: 4000, 1750 generated images): 1.9031274318695068
+[INFO] 2022-09-26 16:02:11 > FID score (Step: 4000, Using train moments): 279.85695643355405
+[INFO] 2022-09-26 16:02:11 > Improved Precision (Step: 4000, Using train images): 0.011428571428571429
+[INFO] 2022-09-26 16:02:11 > Improved Recall (Step: 4000, Using train images): 0.0
+[INFO] 2022-09-26 16:02:11 > Density (Step: 4000, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 16:02:11 > Coverage (Step: 4000, Using train images): 0.0005714285714285715
+[INFO] 2022-09-26 16:02:11 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 16:02:11 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:03:02 > Step:   4100 Progress: 13.7% Elapsed: 0:53:27 Gen_loss: 3.222e+03 Dis_loss: -4.823e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 16:03:02 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 16:03:03 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_4100.png
+[INFO] 2022-09-26 16:03:03 > Start Evaluation (4100 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:03:03 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 16:03:08 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-26 16:03:31 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-26 16:03:45 > Inception score (Step: 4100, 1750 generated images): 2.1144607067108154
+[INFO] 2022-09-26 16:03:45 > FID score (Step: 4100, Using train moments): 288.07310274121465
+[INFO] 2022-09-26 16:03:45 > Improved Precision (Step: 4100, Using train images): 0.012571428571428572
+[INFO] 2022-09-26 16:03:45 > Improved Recall (Step: 4100, Using train images): 0.0
+[INFO] 2022-09-26 16:03:45 > Density (Step: 4100, Using train images): 0.003085714285714286
+[INFO] 2022-09-26 16:03:45 > Coverage (Step: 4100, Using train images): 0.002285714285714286
+[INFO] 2022-09-26 16:03:45 > Best FID score (Step: 3400, Using train moments): 248.40476136250794
+[INFO] 2022-09-26 16:03:45 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:04:31 > Step:   4200 Progress: 14.0% Elapsed: 0:54:55 Gen_loss: -371.3 Dis_loss: -4.701e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-26 16:04:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-26 16:04:31 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_26_15_09_27/generated_canvas_4200.png
+[INFO] 2022-09-26 16:04:31 > Start Evaluation (4200 Step): gpm-WGAN-GP-train-2022_09_26_15_09_27
+[INFO] 2022-09-26 16:04:31 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-26 16:04:35 > Calculate FID score of generated images (1750 images).
