@@ -1,0 +1,27 @@
+DATA:
+  name: "gpm"
+  img_size: 64
+  num_classes: 1
+  img_channels: 3
+  num_dims: 2
+PRE:
+  apply_rflip: true
+MODEL:
+  backbone: "stylegan2"
+  z_dim: 15
+  g_conv_dim: N/A
+  d_conv_dim: N/A
+  g_act_fn: Auto
+  d_act_fn: Auto
+LOSS:
+  adv_loss: "wasserstein"
+  # apply_gp: True
+  # gp_lambda: 10.0
+OPTIMIZATION:
+  batch_size: 64
+  total_steps: 30000
+  g_lr: 0.0008
+  d_lr: 0.0008
+  beta1: 0.1
+  beta2: 0.999
+  d_updates_per_step: 1

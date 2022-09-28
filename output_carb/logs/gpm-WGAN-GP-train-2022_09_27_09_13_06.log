@@ -503,3 +503,292 @@
 [INFO] 2022-09-27 09:40:22 > Visualize (num_rows x 8) fake image canvans.
 [INFO] 2022-09-27 09:40:22 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_12000.png
 [INFO] 2022-09-27 09:40:22 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:40:36 > Step:  12100 Progress: 40.3% Elapsed: 0:27:22 Gen_loss: -1.047e+03 Dis_loss: 1.972 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:40:50 > Step:  12200 Progress: 40.7% Elapsed: 0:27:36 Gen_loss: -1.054e+03 Dis_loss: -3.612 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:41:04 > Step:  12300 Progress: 41.0% Elapsed: 0:27:50 Gen_loss: -1.13e+03 Dis_loss: 6.896 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:41:17 > Step:  12400 Progress: 41.3% Elapsed: 0:28:03 Gen_loss: -1.081e+03 Dis_loss: -2.891 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:41:31 > Step:  12500 Progress: 41.7% Elapsed: 0:28:16 Gen_loss: -1.06e+03 Dis_loss: -1.857 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:41:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:41:31 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_12500.png
+[INFO] 2022-09-27 09:41:31 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:41:44 > Step:  12600 Progress: 42.0% Elapsed: 0:28:30 Gen_loss: -1.005e+03 Dis_loss: -16.48 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:41:58 > Step:  12700 Progress: 42.3% Elapsed: 0:28:44 Gen_loss: -951.7 Dis_loss: -0.7134 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:42:12 > Step:  12800 Progress: 42.7% Elapsed: 0:28:58 Gen_loss: -885.3 Dis_loss: -17.08 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:42:25 > Step:  12900 Progress: 43.0% Elapsed: 0:29:11 Gen_loss: -779.1 Dis_loss: -14.58 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:42:38 > Step:  13000 Progress: 43.3% Elapsed: 0:29:24 Gen_loss: -694.1 Dis_loss: -5.843 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:42:38 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:42:38 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_13000.png
+[INFO] 2022-09-27 09:42:39 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:42:52 > Step:  13100 Progress: 43.7% Elapsed: 0:29:38 Gen_loss: -786.9 Dis_loss: 123.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:43:06 > Step:  13200 Progress: 44.0% Elapsed: 0:29:51 Gen_loss: -869.1 Dis_loss: 186.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:43:19 > Step:  13300 Progress: 44.3% Elapsed: 0:30:05 Gen_loss: 273.1 Dis_loss: 120.8 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:43:32 > Step:  13400 Progress: 44.7% Elapsed: 0:30:18 Gen_loss: 223.0 Dis_loss: -7.148 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:43:46 > Step:  13500 Progress: 45.0% Elapsed: 0:30:31 Gen_loss: 229.8 Dis_loss: 8.321 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:43:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:43:46 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_13500.png
+[INFO] 2022-09-27 09:43:46 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:43:59 > Step:  13600 Progress: 45.3% Elapsed: 0:30:45 Gen_loss: 45.65 Dis_loss: -2.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:44:13 > Step:  13700 Progress: 45.7% Elapsed: 0:30:59 Gen_loss: 8.751 Dis_loss: -14.79 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:44:26 > Step:  13800 Progress: 46.0% Elapsed: 0:31:12 Gen_loss: 162.0 Dis_loss: 12.62 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:44:40 > Step:  13900 Progress: 46.3% Elapsed: 0:31:26 Gen_loss: 492.9 Dis_loss: 8.465 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:44:53 > Step:  14000 Progress: 46.7% Elapsed: 0:31:39 Gen_loss: -367.9 Dis_loss: 3.181e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:44:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:44:53 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_14000.png
+[INFO] 2022-09-27 09:44:53 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:45:07 > Step:  14100 Progress: 47.0% Elapsed: 0:31:53 Gen_loss: -1.453e+03 Dis_loss: 172.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:45:20 > Step:  14200 Progress: 47.3% Elapsed: 0:32:06 Gen_loss: -4.684e+03 Dis_loss: -2.285e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:45:34 > Step:  14300 Progress: 47.7% Elapsed: 0:32:20 Gen_loss: -5.687e+03 Dis_loss: -6.281e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:45:47 > Step:  14400 Progress: 48.0% Elapsed: 0:32:33 Gen_loss: -3.322e+03 Dis_loss: -1.096e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:46:01 > Step:  14500 Progress: 48.3% Elapsed: 0:32:47 Gen_loss: -6.828e+03 Dis_loss: -5.073e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:46:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:46:01 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_14500.png
+[INFO] 2022-09-27 09:46:01 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:46:15 > Step:  14600 Progress: 48.7% Elapsed: 0:33:01 Gen_loss: -588.3 Dis_loss: 147.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:46:28 > Step:  14700 Progress: 49.0% Elapsed: 0:33:14 Gen_loss: -368.1 Dis_loss: 45.09 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:46:42 > Step:  14800 Progress: 49.3% Elapsed: 0:33:27 Gen_loss: -189.5 Dis_loss: 16.06 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:46:55 > Step:  14900 Progress: 49.7% Elapsed: 0:33:41 Gen_loss: -1.806e+03 Dis_loss: 62.41 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:47:09 > Step:  15000 Progress: 50.0% Elapsed: 0:33:54 Gen_loss: -1.306e+03 Dis_loss: 38.47 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:47:09 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:47:09 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_15000.png
+[INFO] 2022-09-27 09:47:09 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:47:22 > Step:  15100 Progress: 50.3% Elapsed: 0:34:08 Gen_loss: -1.031e+03 Dis_loss: 4.839 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:47:36 > Step:  15200 Progress: 50.7% Elapsed: 0:34:22 Gen_loss: -998.0 Dis_loss: 26.63 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:47:50 > Step:  15300 Progress: 51.0% Elapsed: 0:34:36 Gen_loss: -1.113e+03 Dis_loss: 1.38 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:48:03 > Step:  15400 Progress: 51.3% Elapsed: 0:34:49 Gen_loss: -1.092e+03 Dis_loss: 2.042 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:48:17 > Step:  15500 Progress: 51.7% Elapsed: 0:35:03 Gen_loss: -1.041e+03 Dis_loss: 4.612 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:48:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:48:17 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_15500.png
+[INFO] 2022-09-27 09:48:17 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:48:31 > Step:  15600 Progress: 52.0% Elapsed: 0:35:17 Gen_loss: -983.7 Dis_loss: -0.8748 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:48:45 > Step:  15700 Progress: 52.3% Elapsed: 0:35:30 Gen_loss: -942.8 Dis_loss: 12.65 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:48:58 > Step:  15800 Progress: 52.7% Elapsed: 0:35:44 Gen_loss: -894.4 Dis_loss: 6.171 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:49:12 > Step:  15900 Progress: 53.0% Elapsed: 0:35:58 Gen_loss: -805.4 Dis_loss: -0.7553 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:49:26 > Step:  16000 Progress: 53.3% Elapsed: 0:36:12 Gen_loss: -761.5 Dis_loss: -7.201 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:49:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:49:26 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_16000.png
+[INFO] 2022-09-27 09:49:26 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:49:40 > Step:  16100 Progress: 53.7% Elapsed: 0:36:26 Gen_loss: -804.8 Dis_loss: 4.087 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:49:54 > Step:  16200 Progress: 54.0% Elapsed: 0:36:40 Gen_loss: -756.2 Dis_loss: -8.62 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:50:10 > Step:  16300 Progress: 54.3% Elapsed: 0:36:56 Gen_loss: -622.0 Dis_loss: -2.654 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:50:23 > Step:  16400 Progress: 54.7% Elapsed: 0:37:09 Gen_loss: -961.1 Dis_loss: 0.1854 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:50:36 > Step:  16500 Progress: 55.0% Elapsed: 0:37:22 Gen_loss: -765.5 Dis_loss: 20.22 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:50:36 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:50:37 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_16500.png
+[INFO] 2022-09-27 09:50:37 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:50:50 > Step:  16600 Progress: 55.3% Elapsed: 0:37:36 Gen_loss: -667.1 Dis_loss: 0.1504 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:51:04 > Step:  16700 Progress: 55.7% Elapsed: 0:37:50 Gen_loss: -651.2 Dis_loss: -9.938 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:51:18 > Step:  16800 Progress: 56.0% Elapsed: 0:38:04 Gen_loss: -751.8 Dis_loss: -19.25 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:51:31 > Step:  16900 Progress: 56.3% Elapsed: 0:38:17 Gen_loss: -8.854e+03 Dis_loss: 6.908e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:51:46 > Step:  17000 Progress: 56.7% Elapsed: 0:38:32 Gen_loss: -102.8 Dis_loss: -2.805e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:51:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:51:51 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_17000.png
+[INFO] 2022-09-27 09:51:52 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:52:06 > Step:  17100 Progress: 57.0% Elapsed: 0:38:52 Gen_loss: -650.2 Dis_loss: 1.145e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:52:19 > Step:  17200 Progress: 57.3% Elapsed: 0:39:05 Gen_loss: -204.3 Dis_loss: -2.668e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:52:33 > Step:  17300 Progress: 57.7% Elapsed: 0:39:19 Gen_loss: -34.68 Dis_loss: -3.867e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:52:46 > Step:  17400 Progress: 58.0% Elapsed: 0:39:32 Gen_loss: -38.03 Dis_loss: -4.431e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:53:00 > Step:  17500 Progress: 58.3% Elapsed: 0:39:46 Gen_loss: -31.78 Dis_loss: -5.056e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:53:00 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:53:00 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_17500.png
+[INFO] 2022-09-27 09:53:00 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:53:14 > Step:  17600 Progress: 58.7% Elapsed: 0:40:00 Gen_loss: 13.92 Dis_loss: -6.006e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:53:28 > Step:  17700 Progress: 59.0% Elapsed: 0:40:14 Gen_loss: 37.59 Dis_loss: -6.955e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:53:41 > Step:  17800 Progress: 59.3% Elapsed: 0:40:27 Gen_loss: -49.29 Dis_loss: -7.415e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:53:54 > Step:  17900 Progress: 59.7% Elapsed: 0:40:40 Gen_loss: 185.4 Dis_loss: -8.709e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:54:08 > Step:  18000 Progress: 60.0% Elapsed: 0:40:53 Gen_loss: -7.056e+04 Dis_loss: 8.874e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:54:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:54:08 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_18000.png
+[INFO] 2022-09-27 09:54:08 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:54:22 > Step:  18100 Progress: 60.3% Elapsed: 0:41:07 Gen_loss: -2.172e+04 Dis_loss: -1.235e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:54:35 > Step:  18200 Progress: 60.7% Elapsed: 0:41:21 Gen_loss: -6.274e+03 Dis_loss: -4.561e+04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:54:48 > Step:  18300 Progress: 61.0% Elapsed: 0:41:34 Gen_loss: -1.144e+04 Dis_loss: 1.648e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:55:02 > Step:  18400 Progress: 61.3% Elapsed: 0:41:48 Gen_loss: -1.363e+04 Dis_loss: 1.054e+03 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:55:16 > Step:  18500 Progress: 61.7% Elapsed: 0:42:01 Gen_loss: -1.436e+04 Dis_loss: 615.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:55:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:55:16 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_18500.png
+[INFO] 2022-09-27 09:55:16 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:55:29 > Step:  18600 Progress: 62.0% Elapsed: 0:42:15 Gen_loss: -1.439e+04 Dis_loss: 388.2 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:55:47 > Step:  18700 Progress: 62.3% Elapsed: 0:42:33 Gen_loss: -1.432e+04 Dis_loss: 992.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:56:08 > Step:  18800 Progress: 62.7% Elapsed: 0:42:54 Gen_loss: -1.433e+04 Dis_loss: 576.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:56:28 > Step:  18900 Progress: 63.0% Elapsed: 0:43:14 Gen_loss: -1.434e+04 Dis_loss: 337.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:56:49 > Step:  19000 Progress: 63.3% Elapsed: 0:43:34 Gen_loss: -1.434e+04 Dis_loss: 339.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:56:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:56:49 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_19000.png
+[INFO] 2022-09-27 09:56:49 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:57:09 > Step:  19100 Progress: 63.7% Elapsed: 0:43:55 Gen_loss: -1.428e+04 Dis_loss: 583.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:57:31 > Step:  19200 Progress: 64.0% Elapsed: 0:44:17 Gen_loss: -1.424e+04 Dis_loss: 276.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:57:51 > Step:  19300 Progress: 64.3% Elapsed: 0:44:37 Gen_loss: -1.419e+04 Dis_loss: 216.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:58:14 > Step:  19400 Progress: 64.7% Elapsed: 0:44:59 Gen_loss: -1.408e+04 Dis_loss: 200.2 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:58:33 > Step:  19500 Progress: 65.0% Elapsed: 0:45:19 Gen_loss: -1.395e+04 Dis_loss: 339.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:58:33 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 09:58:34 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_19500.png
+[INFO] 2022-09-27 09:58:34 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 09:58:57 > Step:  19600 Progress: 65.3% Elapsed: 0:45:43 Gen_loss: -1.377e+04 Dis_loss: 119.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:59:21 > Step:  19700 Progress: 65.7% Elapsed: 0:46:07 Gen_loss: -1.359e+04 Dis_loss: 202.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 09:59:40 > Step:  19800 Progress: 66.0% Elapsed: 0:46:26 Gen_loss: -1.351e+04 Dis_loss: 157.1 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:00:02 > Step:  19900 Progress: 66.3% Elapsed: 0:46:48 Gen_loss: -1.34e+04 Dis_loss: 140.2 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:00:22 > Step:  20000 Progress: 66.7% Elapsed: 0:47:08 Gen_loss: -1.331e+04 Dis_loss: 96.37 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:00:22 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:00:22 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_20000.png
+[INFO] 2022-09-27 10:00:22 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:00:39 > Step:  20100 Progress: 67.0% Elapsed: 0:47:25 Gen_loss: -1.324e+04 Dis_loss: 135.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:00:55 > Step:  20200 Progress: 67.3% Elapsed: 0:47:41 Gen_loss: -1.313e+04 Dis_loss: 98.19 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:01:15 > Step:  20300 Progress: 67.7% Elapsed: 0:48:00 Gen_loss: -1.303e+04 Dis_loss: 119.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:01:33 > Step:  20400 Progress: 68.0% Elapsed: 0:48:19 Gen_loss: -1.291e+04 Dis_loss: 143.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:01:50 > Step:  20500 Progress: 68.3% Elapsed: 0:48:36 Gen_loss: -1.284e+04 Dis_loss: 96.04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:01:50 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:01:51 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_20500.png
+[INFO] 2022-09-27 10:01:51 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:02:09 > Step:  20600 Progress: 68.7% Elapsed: 0:48:55 Gen_loss: -1.28e+04 Dis_loss: 139.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:02:26 > Step:  20700 Progress: 69.0% Elapsed: 0:49:12 Gen_loss: -1.273e+04 Dis_loss: 95.88 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:02:48 > Step:  20800 Progress: 69.3% Elapsed: 0:49:34 Gen_loss: -1.259e+04 Dis_loss: 80.25 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:03:04 > Step:  20900 Progress: 69.7% Elapsed: 0:49:50 Gen_loss: -1.246e+04 Dis_loss: 61.99 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:03:18 > Step:  21000 Progress: 70.0% Elapsed: 0:50:03 Gen_loss: -1.236e+04 Dis_loss: 70.22 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:03:18 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:03:18 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_21000.png
+[INFO] 2022-09-27 10:03:18 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:03:33 > Step:  21100 Progress: 70.3% Elapsed: 0:50:18 Gen_loss: -1.225e+04 Dis_loss: 91.44 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:03:47 > Step:  21200 Progress: 70.7% Elapsed: 0:50:33 Gen_loss: -1.195e+04 Dis_loss: 22.94 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:04:05 > Step:  21300 Progress: 71.0% Elapsed: 0:50:51 Gen_loss: -1.167e+04 Dis_loss: 96.41 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:04:24 > Step:  21400 Progress: 71.3% Elapsed: 0:51:10 Gen_loss: -1.139e+04 Dis_loss: 6.986 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:04:44 > Step:  21500 Progress: 71.7% Elapsed: 0:51:29 Gen_loss: -1.114e+04 Dis_loss: 32.89 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:04:44 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:04:44 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_21500.png
+[INFO] 2022-09-27 10:04:44 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:05:00 > Step:  21600 Progress: 72.0% Elapsed: 0:51:46 Gen_loss: -1.087e+04 Dis_loss: 48.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:05:20 > Step:  21700 Progress: 72.3% Elapsed: 0:52:06 Gen_loss: -1.061e+04 Dis_loss: 54.88 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:05:39 > Step:  21800 Progress: 72.7% Elapsed: 0:52:25 Gen_loss: -1.027e+04 Dis_loss: 91.35 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:05:58 > Step:  21900 Progress: 73.0% Elapsed: 0:52:44 Gen_loss: -9.98e+03 Dis_loss: 43.27 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:06:17 > Step:  22000 Progress: 73.3% Elapsed: 0:53:03 Gen_loss: -9.652e+03 Dis_loss: 12.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:06:17 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:06:18 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_22000.png
+[INFO] 2022-09-27 10:06:18 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:06:35 > Step:  22100 Progress: 73.7% Elapsed: 0:53:21 Gen_loss: -9.457e+03 Dis_loss: 12.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:06:54 > Step:  22200 Progress: 74.0% Elapsed: 0:53:39 Gen_loss: -9.228e+03 Dis_loss: 25.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:07:12 > Step:  22300 Progress: 74.3% Elapsed: 0:53:57 Gen_loss: -8.92e+03 Dis_loss: 3.395 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:07:31 > Step:  22400 Progress: 74.7% Elapsed: 0:54:16 Gen_loss: -8.54e+03 Dis_loss: 29.98 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:07:49 > Step:  22500 Progress: 75.0% Elapsed: 0:54:35 Gen_loss: -8.293e+03 Dis_loss: 7.816 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:07:49 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:07:49 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_22500.png
+[INFO] 2022-09-27 10:07:49 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:08:06 > Step:  22600 Progress: 75.3% Elapsed: 0:54:52 Gen_loss: -8.048e+03 Dis_loss: 30.09 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:08:26 > Step:  22700 Progress: 75.7% Elapsed: 0:55:12 Gen_loss: -7.679e+03 Dis_loss: 9.958 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:08:45 > Step:  22800 Progress: 76.0% Elapsed: 0:55:31 Gen_loss: -7.38e+03 Dis_loss: 3.217 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:09:05 > Step:  22900 Progress: 76.3% Elapsed: 0:55:51 Gen_loss: -6.979e+03 Dis_loss: -4.986 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:09:24 > Step:  23000 Progress: 76.7% Elapsed: 0:56:10 Gen_loss: -6.645e+03 Dis_loss: -3.579 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:09:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:09:25 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_23000.png
+[INFO] 2022-09-27 10:09:25 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:09:42 > Step:  23100 Progress: 77.0% Elapsed: 0:56:28 Gen_loss: -5.948e+03 Dis_loss: -30.09 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:09:56 > Step:  23200 Progress: 77.3% Elapsed: 0:56:42 Gen_loss: -3.584e+03 Dis_loss: 164.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:10:10 > Step:  23300 Progress: 77.7% Elapsed: 0:56:56 Gen_loss: -1.685e+03 Dis_loss: 236.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:10:24 > Step:  23400 Progress: 78.0% Elapsed: 0:57:10 Gen_loss: -1.055e+03 Dis_loss: 551.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:10:39 > Step:  23500 Progress: 78.3% Elapsed: 0:57:25 Gen_loss: -1.953e+03 Dis_loss: 674.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:10:39 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:10:39 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_23500.png
+[INFO] 2022-09-27 10:10:39 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:10:54 > Step:  23600 Progress: 78.7% Elapsed: 0:57:40 Gen_loss: -1.043e+03 Dis_loss: 477.7 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:11:09 > Step:  23700 Progress: 79.0% Elapsed: 0:57:55 Gen_loss: 1.333e+03 Dis_loss: 713.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:11:24 > Step:  23800 Progress: 79.3% Elapsed: 0:58:10 Gen_loss: 2.622e+03 Dis_loss: 951.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:11:38 > Step:  23900 Progress: 79.7% Elapsed: 0:58:24 Gen_loss: 2.554e+03 Dis_loss: 276.9 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:11:54 > Step:  24000 Progress: 80.0% Elapsed: 0:58:39 Gen_loss: 2.234e+03 Dis_loss: 322.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:11:54 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:11:54 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_24000.png
+[INFO] 2022-09-27 10:11:54 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:12:09 > Step:  24100 Progress: 80.3% Elapsed: 0:58:55 Gen_loss: 1.543e+03 Dis_loss: 77.65 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:12:24 > Step:  24200 Progress: 80.7% Elapsed: 0:59:10 Gen_loss: 1.601e+03 Dis_loss: 118.0 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:12:38 > Step:  24300 Progress: 81.0% Elapsed: 0:59:24 Gen_loss: 1.212e+03 Dis_loss: 42.33 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:12:53 > Step:  24400 Progress: 81.3% Elapsed: 0:59:39 Gen_loss: 776.6 Dis_loss: 31.77 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:13:08 > Step:  24500 Progress: 81.7% Elapsed: 0:59:54 Gen_loss: 683.9 Dis_loss: 22.62 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:13:08 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:13:08 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_24500.png
+[INFO] 2022-09-27 10:13:08 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:13:23 > Step:  24600 Progress: 82.0% Elapsed: 1:00:09 Gen_loss: 735.0 Dis_loss: 31.6 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:13:37 > Step:  24700 Progress: 82.3% Elapsed: 1:00:23 Gen_loss: 711.2 Dis_loss: 1.75 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:13:52 > Step:  24800 Progress: 82.7% Elapsed: 1:00:38 Gen_loss: 804.8 Dis_loss: 18.04 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:14:07 > Step:  24900 Progress: 83.0% Elapsed: 1:00:53 Gen_loss: 955.7 Dis_loss: 11.52 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:14:24 > Step:  25000 Progress: 83.3% Elapsed: 1:01:10 Gen_loss: 1.075e+03 Dis_loss: 9.091 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:14:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:14:24 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_25000.png
+[INFO] 2022-09-27 10:14:25 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:14:41 > Step:  25100 Progress: 83.7% Elapsed: 1:01:27 Gen_loss: 1.152e+03 Dis_loss: 14.01 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:14:57 > Step:  25200 Progress: 84.0% Elapsed: 1:01:43 Gen_loss: 1.258e+03 Dis_loss: 5.823 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:15:13 > Step:  25300 Progress: 84.3% Elapsed: 1:01:59 Gen_loss: 1.396e+03 Dis_loss: 3.774 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:15:29 > Step:  25400 Progress: 84.7% Elapsed: 1:02:15 Gen_loss: 1.34e+03 Dis_loss: 1.043 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:15:46 > Step:  25500 Progress: 85.0% Elapsed: 1:02:32 Gen_loss: 1.394e+03 Dis_loss: 3.71 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:15:46 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:15:46 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_25500.png
+[INFO] 2022-09-27 10:15:47 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:16:04 > Step:  25600 Progress: 85.3% Elapsed: 1:02:49 Gen_loss: 1.632e+03 Dis_loss: -1.918 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:16:20 > Step:  25700 Progress: 85.7% Elapsed: 1:03:06 Gen_loss: 1.466e+03 Dis_loss: -0.8089 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:16:37 > Step:  25800 Progress: 86.0% Elapsed: 1:03:23 Gen_loss: 1.437e+03 Dis_loss: 3.83 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:16:52 > Step:  25900 Progress: 86.3% Elapsed: 1:03:38 Gen_loss: 1.595e+03 Dis_loss: 7.721 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:17:09 > Step:  26000 Progress: 86.7% Elapsed: 1:03:55 Gen_loss: 1.561e+03 Dis_loss: 5.466 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:17:09 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:17:10 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_26000.png
+[INFO] 2022-09-27 10:17:10 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:17:27 > Step:  26100 Progress: 87.0% Elapsed: 1:04:13 Gen_loss: 1.394e+03 Dis_loss: -0.5098 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:17:44 > Step:  26200 Progress: 87.3% Elapsed: 1:04:30 Gen_loss: 1.198e+03 Dis_loss: -0.677 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:18:01 > Step:  26300 Progress: 87.7% Elapsed: 1:04:47 Gen_loss: 1.381e+03 Dis_loss: -1.207 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:18:17 > Step:  26400 Progress: 88.0% Elapsed: 1:05:03 Gen_loss: 1.044e+03 Dis_loss: -4.287 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:18:35 > Step:  26500 Progress: 88.3% Elapsed: 1:05:21 Gen_loss: 998.3 Dis_loss: 0.1043 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:18:35 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:18:36 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_26500.png
+[INFO] 2022-09-27 10:18:36 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:18:53 > Step:  26600 Progress: 88.7% Elapsed: 1:05:39 Gen_loss: 971.6 Dis_loss: -3.034 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:19:11 > Step:  26700 Progress: 89.0% Elapsed: 1:05:57 Gen_loss: 919.5 Dis_loss: -3.232 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:19:28 > Step:  26800 Progress: 89.3% Elapsed: 1:06:13 Gen_loss: 922.5 Dis_loss: -0.6282 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:19:44 > Step:  26900 Progress: 89.7% Elapsed: 1:06:30 Gen_loss: 857.6 Dis_loss: 2.37 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:20:01 > Step:  27000 Progress: 90.0% Elapsed: 1:06:47 Gen_loss: 885.6 Dis_loss: -4.053 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:20:01 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:20:01 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_27000.png
+[INFO] 2022-09-27 10:20:01 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:20:20 > Step:  27100 Progress: 90.3% Elapsed: 1:07:05 Gen_loss: 981.4 Dis_loss: -1.299 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:20:38 > Step:  27200 Progress: 90.7% Elapsed: 1:07:23 Gen_loss: 965.8 Dis_loss: -2.745 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:20:55 > Step:  27300 Progress: 91.0% Elapsed: 1:07:41 Gen_loss: 566.9 Dis_loss: 13.07 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:21:13 > Step:  27400 Progress: 91.3% Elapsed: 1:07:59 Gen_loss: 626.9 Dis_loss: -0.2812 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:21:27 > Step:  27500 Progress: 91.7% Elapsed: 1:08:13 Gen_loss: 587.5 Dis_loss: -3.491 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:21:27 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:21:27 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_27500.png
+[INFO] 2022-09-27 10:21:27 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:21:42 > Step:  27600 Progress: 92.0% Elapsed: 1:08:28 Gen_loss: 535.1 Dis_loss: -6.668 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:21:56 > Step:  27700 Progress: 92.3% Elapsed: 1:08:42 Gen_loss: 532.3 Dis_loss: -2.671 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:22:11 > Step:  27800 Progress: 92.7% Elapsed: 1:08:57 Gen_loss: 481.9 Dis_loss: -5.5 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:22:25 > Step:  27900 Progress: 93.0% Elapsed: 1:09:11 Gen_loss: 480.4 Dis_loss: -6.349 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:22:40 > Step:  28000 Progress: 93.3% Elapsed: 1:09:26 Gen_loss: 467.5 Dis_loss: -6.123 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:22:40 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:22:40 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_28000.png
+[INFO] 2022-09-27 10:22:40 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:22:55 > Step:  28100 Progress: 93.7% Elapsed: 1:09:41 Gen_loss: 450.6 Dis_loss: -4.729 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:23:09 > Step:  28200 Progress: 94.0% Elapsed: 1:09:55 Gen_loss: 473.4 Dis_loss: -1.821 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:23:24 > Step:  28300 Progress: 94.3% Elapsed: 1:10:10 Gen_loss: 531.7 Dis_loss: -3.452 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:23:38 > Step:  28400 Progress: 94.7% Elapsed: 1:10:24 Gen_loss: 519.4 Dis_loss: -3.118 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:23:53 > Step:  28500 Progress: 95.0% Elapsed: 1:10:39 Gen_loss: 873.8 Dis_loss: -4.402 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:23:53 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:23:53 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_28500.png
+[INFO] 2022-09-27 10:23:53 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:24:07 > Step:  28600 Progress: 95.3% Elapsed: 1:10:53 Gen_loss: 774.7 Dis_loss: -7.4 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:24:22 > Step:  28700 Progress: 95.7% Elapsed: 1:11:08 Gen_loss: 831.3 Dis_loss: -7.683 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:24:36 > Step:  28800 Progress: 96.0% Elapsed: 1:11:22 Gen_loss: 840.9 Dis_loss: -10.97 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:24:51 > Step:  28900 Progress: 96.3% Elapsed: 1:11:37 Gen_loss: 851.9 Dis_loss: -11.26 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:25:06 > Step:  29000 Progress: 96.7% Elapsed: 1:11:52 Gen_loss: 867.2 Dis_loss: 1.699 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:25:06 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:25:06 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_29000.png
+[INFO] 2022-09-27 10:25:06 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:25:21 > Step:  29100 Progress: 97.0% Elapsed: 1:12:07 Gen_loss: 990.1 Dis_loss: -6.587 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:25:35 > Step:  29200 Progress: 97.3% Elapsed: 1:12:21 Gen_loss: 1.175e+03 Dis_loss: -8.43 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:25:50 > Step:  29300 Progress: 97.7% Elapsed: 1:12:36 Gen_loss: 1.194e+03 Dis_loss: -1.098 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:26:03 > Step:  29400 Progress: 98.0% Elapsed: 1:12:49 Gen_loss: 1.411e+03 Dis_loss: 0.4453 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:26:16 > Step:  29500 Progress: 98.3% Elapsed: 1:13:02 Gen_loss: 1.46e+03 Dis_loss: -1.519 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:26:16 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:26:16 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_29500.png
+[INFO] 2022-09-27 10:26:17 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:26:30 > Step:  29600 Progress: 98.7% Elapsed: 1:13:16 Gen_loss: 1.417e+03 Dis_loss: -2.537 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:26:43 > Step:  29700 Progress: 99.0% Elapsed: 1:13:29 Gen_loss: 1.302e+03 Dis_loss: -4.377 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:26:57 > Step:  29800 Progress: 99.3% Elapsed: 1:13:43 Gen_loss: 1.529e+03 Dis_loss: -9.511 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:27:10 > Step:  29900 Progress: 99.7% Elapsed: 1:13:56 Gen_loss: 1.371e+03 Dis_loss: -3.3 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:27:24 > Step:  30000 Progress: 100.0% Elapsed: 1:14:10 Gen_loss: 1.587e+03 Dis_loss: -7.398 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-27 10:27:24 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-27 10:27:24 > Save image canvas to ./output_carb/figures/gpm-WGAN-GP-train-2022_09_27_09_13_06/generated_canvas_30000.png
+[INFO] 2022-09-27 10:27:24 > Save model to ./output_carb/checkpoints/gpm-WGAN-GP-train-2022_09_27_09_13_06
+[INFO] 2022-09-27 10:27:24 > End of training!

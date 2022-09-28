@@ -41,7 +41,7 @@ class GenBlock(nn.Module):
 
 
 class Generator(nn.Module):
-    def __init__(self, z_dim, g_shared_dim, img_size, img_channels, g_conv_dim, apply_attn, attn_g_loc, g_cond_mtd, num_classes, g_init, g_depth,
+    def __init__(self, z_dim, g_shared_dim, img_size, num_dims, img_channels, g_conv_dim, apply_attn, attn_g_loc, g_cond_mtd, num_classes, g_init, g_depth,
                  mixed_precision, MODULES):
         super(Generator, self).__init__()
         self.in_dims = [512, 256, 128]
@@ -117,7 +117,7 @@ class DiscBlock(nn.Module):
 
 
 class Discriminator(nn.Module):
-    def __init__(self, img_size, img_channels, d_conv_dim, apply_d_sn, apply_attn, attn_d_loc, d_cond_mtd, aux_cls_type, d_embed_dim, normalize_d_embed,
+    def __init__(self, img_size, img_channels, num_dims, d_conv_dim, apply_d_sn, apply_attn, attn_d_loc, d_cond_mtd, aux_cls_type, d_embed_dim, normalize_d_embed,
                  num_classes, d_init, d_depth, mixed_precision, MODULES):
         super(Discriminator, self).__init__()
         self.in_dims = [img_channels] + [64, 128]

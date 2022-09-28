@@ -5,22 +5,25 @@ DATA:
   img_channels: 3
   num_dims: 2
 PRE:
-  apply_rflip: false
+  apply_rflip: true
 MODEL:
   backbone: "big_resnet"
-  z_dim: 15
-  g_conv_dim: 2
-  d_conv_dim: 2
+  z_dim: 30
+  g_conv_dim: 4
+  d_conv_dim: 4
   g_shared_dim: 2
+  apply_g_sn: true
+  apply_d_sn: true
 LOSS:
   adv_loss: "wasserstein"
-  apply_gp: True
+  apply_gp: false
   gp_lambda: 10.0
 OPTIMIZATION:
-  batch_size: 96
-  total_steps: 30000
-  g_lr: 0.0008
-  d_lr: 0.0008
+  batch_size: 128
+  total_steps: 1000000
+  g_lr: 0.0001
+  d_lr: 0.0004
   beta1: 0.1
   beta2: 0.999
   d_updates_per_step: 1
+  g_updates_per_step: 4

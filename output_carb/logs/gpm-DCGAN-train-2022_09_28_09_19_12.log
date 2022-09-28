@@ -1,0 +1,315 @@
+[INFO] 2022-09-28 09:19:13 > Run name : gpm-DCGAN-train-2022_09_28_09_19_12
+[INFO] 2022-09-28 09:19:13 > cfgs.DATA =
+[INFO] 2022-09-28 09:19:13 > {
+  "name": "gpm",
+  "img_size": 32,
+  "num_classes": 1,
+  "img_channels": 3,
+  "num_dims": 2
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.MODEL =
+[INFO] 2022-09-28 09:19:13 > {
+  "backbone": "deep_conv",
+  "g_cond_mtd": "W/O",
+  "d_cond_mtd": "W/O",
+  "aux_cls_type": "W/O",
+  "normalize_d_embed": false,
+  "d_embed_dim": "N/A",
+  "apply_g_sn": false,
+  "apply_d_sn": false,
+  "g_act_fn": "ReLU",
+  "d_act_fn": "ReLU",
+  "apply_attn": false,
+  "attn_g_loc": [
+    "N/A"
+  ],
+  "attn_d_loc": [
+    "N/A"
+  ],
+  "z_prior": "gaussian",
+  "z_dim": 128,
+  "w_dim": "N/A",
+  "g_shared_dim": "N/A",
+  "g_conv_dim": "N/A",
+  "d_conv_dim": "N/A",
+  "g_depth": "N/A",
+  "d_depth": "N/A",
+  "apply_g_ema": false,
+  "g_ema_decay": "N/A",
+  "g_ema_start": "N/A",
+  "g_init": "ortho",
+  "d_init": "ortho"
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.LOSS =
+[INFO] 2022-09-28 09:19:13 > {
+  "adv_loss": "vanilla",
+  "cond_lambda": "N/A",
+  "tac_gen_lambda": "N/A",
+  "tac_dis_lambda": "N/A",
+  "mh_lambda": "N/A",
+  "apply_fm": false,
+  "fm_lambda": "N/A",
+  "apply_r1_reg": false,
+  "r1_lambda": "N/A",
+  "m_p": "N/A",
+  "temperature": "N/A",
+  "apply_wc": false,
+  "wc_bound": "N/A",
+  "apply_gp": false,
+  "gp_lambda": "N/A",
+  "apply_dra": false,
+  "dra_labmda": "N/A",
+  "apply_maxgp": false,
+  "maxgp_lambda": "N/A",
+  "apply_cr": false,
+  "cr_lambda": "N/A",
+  "apply_bcr": false,
+  "real_lambda": "N/A",
+  "fake_lambda": "N/A",
+  "apply_zcr": false,
+  "radius": "N/A",
+  "g_lambda": "N/A",
+  "d_lambda": "N/A",
+  "apply_lo": false,
+  "lo_alpha": "N/A",
+  "lo_beta": "N/A",
+  "lo_rate": "N/A",
+  "lo_lambda": "N/A",
+  "lo_steps4train": "N/A",
+  "lo_steps4eval": "N/A",
+  "apply_topk": false,
+  "topk_gamma": "N/A",
+  "topk_nu": "N/A"
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.OPTIMIZATION =
+[INFO] 2022-09-28 09:19:13 > {
+  "type_": "Adam",
+  "batch_size": 64,
+  "acml_steps": 1,
+  "g_lr": 0.0002,
+  "d_lr": 0.0002,
+  "g_weight_decay": 0.0,
+  "d_weight_decay": 0.0,
+  "momentum": "N/A",
+  "nesterov": "N/A",
+  "alpha": "N/A",
+  "beta1": 0.5,
+  "beta2": 0.999,
+  "g_updates_per_step": 1,
+  "d_updates_per_step": 2,
+  "total_steps": 200000,
+  "world_size": 1
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.PRE =
+[INFO] 2022-09-28 09:19:13 > {
+  "apply_rflip": true,
+  "crop_long_edge": false,
+  "resize_size": null
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.AUG =
+[INFO] 2022-09-28 09:19:13 > {
+  "apply_diffaug": false,
+  "apply_ada": false,
+  "cr_aug_type": "W/O",
+  "bcr_aug_type": "W/O",
+  "diffaug_type": "W/O",
+  "ada_aug_type": "W/O",
+  "ada_initial_augment_p": "N/A",
+  "ada_target": "N/A",
+  "ada_kimg": "N/A",
+  "ada_interval": "N/A"
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.RUN =
+[INFO] 2022-09-28 09:19:13 > {
+  "entity": null,
+  "project": "gpm_carb",
+  "cfg_file": "src/configs/GPM_carb/DCGAN.yaml",
+  "data_dir": "data/gpm_carb_64/",
+  "save_dir": "./output_carb/",
+  "ckpt_dir": null,
+  "load_best": false,
+  "seed": 2933,
+  "distributed_data_parallel": false,
+  "backend": "nccl",
+  "total_nodes": 1,
+  "current_node": 0,
+  "num_workers": 8,
+  "synchronized_bn": false,
+  "mixed_precision": false,
+  "truncation_factor": -1.0,
+  "truncation_cutoff": null,
+  "batch_statistics": false,
+  "standing_statistics": false,
+  "standing_max_batch": -1,
+  "standing_step": -1,
+  "freezeD": -1,
+  "langevin_sampling": true,
+  "langevin_rate": -1,
+  "langevin_noise_std": 1.0,
+  "langevin_decay": -1,
+  "langevin_decay_steps": -1,
+  "langevin_steps": -1,
+  "train": true,
+  "load_train_hdf5": true,
+  "load_data_in_memory": true,
+  "eval": true,
+  "save_fake_images": true,
+  "vis_fake_images": false,
+  "k_nearest_neighbor": false,
+  "interpolation": false,
+  "frequency_analysis": false,
+  "tsne_analysis": false,
+  "intra_class_fid": false,
+  "GAN_train": false,
+  "GAN_test": false,
+  "resume_classifier_train": false,
+  "semantic_factorization": false,
+  "num_semantic_axis": -1,
+  "maximum_variations": -1,
+  "print_every": 100,
+  "save_every": 1000,
+  "eval_backbone": "Inception_V3",
+  "ref_dataset": "train"
+}
+[INFO] 2022-09-28 09:19:13 > cfgs.STYLEGAN2 =
+[INFO] 2022-09-28 09:19:13 > {
+  "cond_type": [
+    "PD",
+    "SPD",
+    "2C",
+    "D2DCE"
+  ],
+  "g_reg_interval": "N/A",
+  "d_reg_interval": "N/A",
+  "mapping_network": "N/A",
+  "style_mixing_p": "N/A",
+  "g_ema_kimg": "N/A",
+  "g_ema_rampup": "N/A",
+  "apply_pl_reg": false,
+  "pl_weight": "N/A",
+  "d_architecture": "N/A",
+  "d_epilogue_mbstd_group_size": "N/A"
+}
+[INFO] 2022-09-28 09:19:13 > Load gpm train dataset.
+[INFO] 2022-09-28 09:19:13 > Train dataset size: 1750
+[INFO] 2022-09-28 09:19:13 > Load gpm train dataset.
+[INFO] 2022-09-28 09:19:13 > Eval dataset size: 1750
+[INFO] 2022-09-28 09:19:13 > Build a Generative Adversarial Network.
+[INFO] 2022-09-28 09:19:13 > Modules are located on './src/models.deep_conv'.
+[INFO] 2022-09-28 09:19:15 > Number of parameters: 3812355
+[INFO] 2022-09-28 09:19:15 > Generator(
+  (linear0): Linear(in_features=128, out_features=8192, bias=True)
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): GenBlock(
+        (deconv0): ConvTranspose2d(512, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+        (bn0): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+      )
+    )
+    (1): ModuleList(
+      (0): GenBlock(
+        (deconv0): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+        (bn0): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+      )
+    )
+    (2): ModuleList(
+      (0): GenBlock(
+        (deconv0): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+        (bn0): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+      )
+    )
+  )
+  (conv4): Conv2d(64, 3, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (tanh): Tanh()
+)
+[INFO] 2022-09-28 09:19:15 > Number of parameters: 2931009
+[INFO] 2022-09-28 09:19:15 > Discriminator(
+  (blocks): ModuleList(
+    (0): ModuleList(
+      (0): DiscBlock(
+        (conv0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv1): Conv2d(64, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+        (bn0): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(64, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+      )
+    )
+    (1): ModuleList(
+      (0): DiscBlock(
+        (conv0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv1): Conv2d(128, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+        (bn0): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(128, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+      )
+    )
+    (2): ModuleList(
+      (0): DiscBlock(
+        (conv0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (conv1): Conv2d(256, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+        (bn0): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (bn1): BatchNorm2d(256, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+        (activation): ReLU(inplace=True)
+      )
+    )
+  )
+  (activation): ReLU(inplace=True)
+  (conv1): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (bn1): BatchNorm2d(512, eps=0.0001, momentum=0.1, affine=True, track_running_stats=True)
+  (linear1): Linear(in_features=512, out_features=1, bias=True)
+)
+[INFO] 2022-09-28 09:19:20 > Start training!
+[INFO] 2022-09-28 09:19:39 > Step:    100 Progress: 0.1% Elapsed: 0:00:19 Gen_loss: 11.23 Dis_loss: 0.003531 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:19:58 > Step:    200 Progress: 0.1% Elapsed: 0:00:38 Gen_loss: 8.069 Dis_loss: 0.0009203 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:20:16 > Step:    300 Progress: 0.1% Elapsed: 0:00:56 Gen_loss: 10.31 Dis_loss: 0.0001847 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:20:35 > Step:    400 Progress: 0.2% Elapsed: 0:01:15 Gen_loss: 13.43 Dis_loss: 0.003856 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:20:54 > Step:    500 Progress: 0.2% Elapsed: 0:01:34 Gen_loss: 7.871 Dis_loss: 0.0008411 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:21:13 > Step:    600 Progress: 0.3% Elapsed: 0:01:53 Gen_loss: 21.03 Dis_loss: 0.004197 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:21:33 > Step:    700 Progress: 0.4% Elapsed: 0:02:13 Gen_loss: 11.46 Dis_loss: 0.002433 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:21:52 > Step:    800 Progress: 0.4% Elapsed: 0:02:32 Gen_loss: 7.53 Dis_loss: 0.001067 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:22:11 > Step:    900 Progress: 0.4% Elapsed: 0:02:51 Gen_loss: 7.592 Dis_loss: 0.003088 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:22:31 > Step:   1000 Progress: 0.5% Elapsed: 0:03:11 Gen_loss: 1.534 Dis_loss: 2.515 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:22:31 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-28 09:22:31 > Save image canvas to ./output_carb/figures/gpm-DCGAN-train-2022_09_28_09_19_12/generated_canvas_1000.png
+[INFO] 2022-09-28 09:22:32 > Start Evaluation (1000 Step): gpm-DCGAN-train-2022_09_28_09_19_12
+[INFO] 2022-09-28 09:22:32 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-28 09:22:39 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-28 09:22:55 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-28 09:23:10 > Inception score (Step: 1000, 1750 generated images): 2.1972010135650635
+[INFO] 2022-09-28 09:23:10 > FID score (Step: 1000, Using train moments): 358.7476689495462
+[INFO] 2022-09-28 09:23:10 > Improved Precision (Step: 1000, Using train images): 0.08685714285714285
+[INFO] 2022-09-28 09:23:10 > Improved Recall (Step: 1000, Using train images): 0.0
+[INFO] 2022-09-28 09:23:10 > Density (Step: 1000, Using train images): 0.01862857142857143
+[INFO] 2022-09-28 09:23:10 > Coverage (Step: 1000, Using train images): 0.0034285714285714284
+[INFO] 2022-09-28 09:23:10 > Best FID score (Step: 1000, Using train moments): 358.7476689495462
+[INFO] 2022-09-28 09:23:11 > Save model to ./output_carb/checkpoints/gpm-DCGAN-train-2022_09_28_09_19_12
+[INFO] 2022-09-28 09:23:30 > Step:   1100 Progress: 0.5% Elapsed: 0:04:10 Gen_loss: 6.232 Dis_loss: 0.01297 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:23:49 > Step:   1200 Progress: 0.6% Elapsed: 0:04:29 Gen_loss: 6.964 Dis_loss: 0.003512 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:24:09 > Step:   1300 Progress: 0.7% Elapsed: 0:04:49 Gen_loss: 7.145 Dis_loss: 0.0194 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:24:28 > Step:   1400 Progress: 0.7% Elapsed: 0:05:08 Gen_loss: 3.53 Dis_loss: 0.01195 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:24:48 > Step:   1500 Progress: 0.8% Elapsed: 0:05:28 Gen_loss: 8.679 Dis_loss: 0.05716 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:25:08 > Step:   1600 Progress: 0.8% Elapsed: 0:05:47 Gen_loss: 1.202 Dis_loss: 0.0538 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:25:27 > Step:   1700 Progress: 0.9% Elapsed: 0:06:07 Gen_loss: 3.887 Dis_loss: 0.0291 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:25:47 > Step:   1800 Progress: 0.9% Elapsed: 0:06:27 Gen_loss: 4.178 Dis_loss: 0.08179 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:26:06 > Step:   1900 Progress: 0.9% Elapsed: 0:06:46 Gen_loss: 5.725 Dis_loss: 0.03984 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:26:26 > Step:   2000 Progress: 1.0% Elapsed: 0:07:06 Gen_loss: 4.275 Dis_loss: 0.1375 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:26:26 > Visualize (num_rows x 8) fake image canvans.
+[INFO] 2022-09-28 09:26:26 > Save image canvas to ./output_carb/figures/gpm-DCGAN-train-2022_09_28_09_19_12/generated_canvas_2000.png
+[INFO] 2022-09-28 09:26:26 > Start Evaluation (2000 Step): gpm-DCGAN-train-2022_09_28_09_19_12
+[INFO] 2022-09-28 09:26:26 > Calculate Inception score of generated images (1750 images).
+[INFO] 2022-09-28 09:26:34 > Calculate FID score of generated images (1750 images).
+[INFO] 2022-09-28 09:26:48 > Calculate improved precision-recall and density-coverage of generated images (1750 images).
+[INFO] 2022-09-28 09:27:04 > Inception score (Step: 2000, 1750 generated images): 2.6454434394836426
+[INFO] 2022-09-28 09:27:04 > FID score (Step: 2000, Using train moments): 239.27722005674352
+[INFO] 2022-09-28 09:27:04 > Improved Precision (Step: 2000, Using train images): 0.24685714285714286
+[INFO] 2022-09-28 09:27:04 > Improved Recall (Step: 2000, Using train images): 0.03142857142857143
+[INFO] 2022-09-28 09:27:04 > Density (Step: 2000, Using train images): 0.12205714285714286
+[INFO] 2022-09-28 09:27:04 > Coverage (Step: 2000, Using train images): 0.07828571428571429
+[INFO] 2022-09-28 09:27:04 > Best FID score (Step: 2000, Using train moments): 239.27722005674352
+[INFO] 2022-09-28 09:27:05 > Save model to ./output_carb/checkpoints/gpm-DCGAN-train-2022_09_28_09_19_12
+[INFO] 2022-09-28 09:27:24 > Step:   2100 Progress: 1.1% Elapsed: 0:08:04 Gen_loss: 8.503 Dis_loss: 0.0044 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:27:43 > Step:   2200 Progress: 1.1% Elapsed: 0:08:23 Gen_loss: 5.599 Dis_loss: 0.005805 Cls_loss: N/A Topk:  N/A ada_p: N/A 
+[INFO] 2022-09-28 09:28:03 > Step:   2300 Progress: 1.1% Elapsed: 0:08:43 Gen_loss: 4.753 Dis_loss: 0.004936 Cls_loss: N/A Topk:  N/A ada_p: N/A 
