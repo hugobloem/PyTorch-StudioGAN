@@ -1,0 +1,19 @@
+DATA:
+  name: "gpm"
+  img_size: 32
+  num_dims: 2
+  num_classes: 1
+MODEL:
+  backbone: "deep_conv"
+  g_conv_dim: "N/A"
+  d_conv_dim: "N/A"
+  z_dim: 16
+LOSS:
+  adv_loss: "wasserstein"
+  apply_gp: true
+  gp_lambda: 10.0
+OPTIMIZATION:
+  d_updates_per_step: 2
+  total_steps: 1000000
+PRE:
+  apply_rflip: false
